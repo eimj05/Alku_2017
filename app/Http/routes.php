@@ -34,7 +34,7 @@ Route::group(['middleware' => 'web'], function(){
 
      Route::post('profile', 'Cliente\ClienteController@update_avatar');
 
-     Route::post('imagen_curso', 'Curso1\Cursos1Controller@update_imagen');
+     //Route::post('imagen_curso', 'Curso1\Cursos1Controller@update_imagen');
 
     // Route::post('imagen_curso', ['as' => 'imagen_curso', 'uses' => 'Curso1\Cursos1Controller@update_imagen']);
 
