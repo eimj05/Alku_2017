@@ -21,7 +21,7 @@
             <div class="form-group {{ $errors->has('direccion') ? 'has-error' : ''}}">
                 {!! Form::label('direccion', 'Direccion', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('direccion', null, ['class' => 'form-control']) !!}
+                    {!! Form::textarea('direccion', null, ['class' => 'form-control']) !!}
                     {!! $errors->first('direccion', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>

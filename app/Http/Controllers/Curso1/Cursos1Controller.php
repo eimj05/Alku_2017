@@ -91,7 +91,6 @@ class Cursos1Controller extends Controller
             'costo' => $request['costo'],
             'capacitador' => $request['capacitador'],
             'cupoLimite' => $request['cupoLimite'],
-           // 'imagen' => $request['imagen'],
             'created_by' => $idu,
             'interes' => $request['interes']]);
         

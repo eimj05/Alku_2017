@@ -127,13 +127,15 @@
                             <!-- The user image in the menu -->
 
                             <li class="user-header">
-
-                                <img src="/uploads/avatars/{{ Auth::user()->avatar }}" class="img-circle" alt="User Image" />
-                               <!--     <a  href="{{ url('/addperfilimg') }}">Cambiar imagen</a>-->
+                            <a href="{{ url('/cliente/cliente/profile/')}}">
+                                <img src="/uploads/avatars/{{ Auth::user()->avatar }}" class="img-circle" alt="User Image" width="90" height="90" border="0" />
+                                </a>
+                                <p>{{ Auth::user()->name }}</p>
                                 <p><!-- Logo -->              
-                                    {{ Auth::user()->name }}
-                                    <small>Bienvenido</small>
+                                    <large>Bienvenido</large>
+
                                 </p>
+
                             </li>
                             <!-- Menu Body 
                             <li class="user-body">
@@ -150,7 +152,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="{{ url('/cliente/cliente/profile/')}}" class="btn btn-default btn-flat">
+                                    <a href="{{ url('/cliente/cliente/' . Crypt::encrypt(Auth::user()->id)) }}" class="btn btn-default btn-flat">
                                     {{ trans('adminlte_lang::message.profile') }}</a>
                                 </div>
                                 <div class="pull-right">

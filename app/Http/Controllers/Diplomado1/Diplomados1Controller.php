@@ -13,6 +13,8 @@ use App\Intereses1;
 use PDF;
 use Auth;
 use DB;
+use Image;
+use inputs;
 
 class Diplomados1Controller extends Controller
 {
@@ -87,7 +89,6 @@ class Diplomados1Controller extends Controller
             'costo' => $request['costo'],
             'capacitador' => $request['capacitador'],
             'cupoLimite' => $request['cupoLimite'],
-            'imagen' => $request['imagen'],
             'created_by' => $idu,
             'interes' => $request['interes']]);
 
@@ -124,6 +125,13 @@ class Diplomados1Controller extends Controller
         return view('diplomado1.diplomados1.edit', compact('diplomados1'));
     }
 
+     public function imagen($id)
+    {
+        $diplomados1 = Diplomados1::findOrFail($id);
+
+        return view('diplomado1.diplomados1.imagen ', compact('diplomados1'));
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -138,6 +146,23 @@ class Diplomados1Controller extends Controller
         $diplomados1->update($request->all());
 
         Session::flash('flash_message', 'Diplomados1 updated!');
+
+        return redirect('diplomado1/diplomados1');
+    }
+
+    public function update_imagen(Request $request){
+
+        //Handle the user upload image of the course
+        if($request->hasFile('imagen_diplomado')){
+            $imagen_diplomado = $request->file('imagen_diplomado');
+            $filename = time() . '.' . $imagen_diplomado->getClientOriginalExtension();
+            Image::make($imagen_diplomado)->resize(300,300)->save( public_path('/uploads/diplomados/' .$filename ));
+
+            $diplomados1 = $request->input('id');
+
+            DB::table('diplomados1s')->where('id', $diplomados1)->update(array('imagen_diplomado' => $filename));
+
+        }
 
         return redirect('diplomado1/diplomados1');
     }

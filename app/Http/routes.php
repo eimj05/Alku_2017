@@ -36,6 +36,9 @@ Route::group(['middleware' => 'web'], function(){
 
      Route::post('imagen_curso', 'Curso1\Cursos1Controller@update_imagen');
 
+     Route::post('imagen_diplomado', 'Diplomado1\Diplomados1Controller@update_imagen');
+
+
     // Route::post('imagen_curso', ['as' => 'imagen_curso', 'uses' => 'Curso1\Cursos1Controller@update_imagen']);
 
 /*Route::patch('curso1/cursos1/{cursos1}', [
@@ -308,6 +311,13 @@ Route::group(['middleware' => 'web'], function(){
     Route::get('diplomado1/diplomados1/{diplomados1}/edit', [
         'uses' => 'Diplomado1\Diplomados1Controller@edit',
         'as' => 'diplomado1.diplomados1.edit',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+
+     Route::get('diplomado1/diplomados1/{diplomados1}/imagen', [
+        'uses' => 'Diplomado1\Diplomados1Controller@imagen',
+        'as' => 'diplomado1.diplomados1.imagen',
         'middleware' => 'roles',
         'roles' => ['Admin','Empresa']
         ]);

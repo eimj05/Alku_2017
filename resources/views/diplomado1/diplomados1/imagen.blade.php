@@ -3,13 +3,13 @@
 @section('main-content')
 <div class="container">
 
-    <h1>Imagen del Curso</h1>
+    <h1>Imagen del Diplomado</h1>
 
 
     <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
             <tbody>
-                <tr><th> Nombre del Curso</th><td> {{ $cursos1->nombreCurso }} </td>
+                <tr><th> Nombre del Diplomado</th><td> {{ $diplomados1->nombreDiplomado }} </td>
             </tbody>
         </table>
     </div>
@@ -17,16 +17,16 @@
 
         <div align="center" class="row" >
             <div class="col-md-10 col-md-offset-1">
-            <img src="/uploads/cursos/{{$cursos1->imagen_curso}}" style="width:900px; height:400px; float:left; margin-right:25px;">
+            <img src="/uploads/diplomados/{{$diplomados1->imagen_diplomado}}" style="width:900px; height:400px; float:left; margin-right:25px;">
             </div>
 
             </div>
 <p></p>
             <div align="center">               
-                <form enctype="multipart/form-data" action="/imagen_curso" method="POST">
+                <form enctype="multipart/form-data" action="/imagen_diplomado" method="POST">
                 <h3>Actualizar Imagen</h3>
-                <input type="hidden" name="id" value="{{ $cursos1->id }}">
-                <input type="file" name="imagen_curso">
+                <input type="hidden" name="id" value="{{ $diplomados1->id }}">
+                <input type="file" name="imagen_diplomado">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <p></p>
                 <input type="submit" value="Guardar" class="pull-center btn btn-lg btn-primary">

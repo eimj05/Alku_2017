@@ -21,6 +21,8 @@
                     <td>
                         <a href="{{ url('/diplomado1/diplomados1/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Diplomado"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <a href="{{ url('/diplomado1/diplomados1/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Diplomado"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                        <a href="{{ url('/diplomado1/diplomados1/' . $item->id . '/imagen') }}" class="btn btn-primary btn-xs" title="Imagen Curso"><span class="glyphicon glyphicon-picture" aria-hidden="true"/></a>
+
                         {!! Form::open([
                             'method'=>'DELETE',
                             'url' => ['/diplomado1/diplomados1', $item->id],
