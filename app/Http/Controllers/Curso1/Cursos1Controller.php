@@ -15,6 +15,7 @@ use Auth;
 use DB;
 use Image;
 use inputs;
+use App\Ubicacion;
 
 class Cursos1Controller extends Controller
 {
@@ -110,8 +111,10 @@ class Cursos1Controller extends Controller
     {
 
         $cursos1 = Cursos1::findOrFail($id);
+        $ubicaciones = Cursos1::find($cursos1->id)->ubicacion()->get();
 
-        return view('curso1.cursos1.show', compact('cursos1'));
+
+        return view('curso1.cursos1.show', compact('cursos1','ubicaciones'));
     }
 
     /**
@@ -123,9 +126,20 @@ class Cursos1Controller extends Controller
      */
     public function edit($id)
     {
+        $ubicacion= Ubicacion::lists('title', 'id');
+
         $cursos1 = Cursos1::findOrFail($id);
 
-        return view('curso1.cursos1.edit', compact('cursos1'));
+        return view('curso1.cursos1.edit', compact('cursos1','ubicacion'));
+    }
+
+    public function ubicacion($id)
+    {
+        $id_curso = $id;
+
+        $ubicacion = Ubicacion::paginate(15);
+
+        return view('ubicacion.index', compact('ubicacion','id_curso'));
     }
 
     public function imagen($id)
@@ -147,6 +161,12 @@ class Cursos1Controller extends Controller
         
         $cursos1 = Cursos1::findOrFail($id);
         $cursos1->update($request->all());
+
+        $cursos1->ubicacion()->sync([]);
+
+        $cursos1->ubicacion()->attach($request->ubicacion);
+
+        
 
         Session::flash('flash_message', 'Cursos1 updated!');
 

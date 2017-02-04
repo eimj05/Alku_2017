@@ -24,7 +24,26 @@
                 <tr>
                     <th>ID</th><td>{{ $cursos1->id }}</td>
                 </tr>
-                <tr><th> Nombre </th><td> {{ $cursos1->nombreCurso }} </td></tr><tr><th> Descripcion </th><td> {{ $cursos1->descripcion }} </td></tr><tr><th> Fecha Inicio </th><td> {{ $cursos1->fechaInicio }} </td></tr><tr><th> Fecha Fin </th><td> {{ $cursos1->fechaFin }} </td></tr><tr><th> Hora Inicio </th><td> {{ $cursos1->horaInicio }} </td></tr><tr><th> Hora Fin </th><td> {{ $cursos1->horaFin }} </td></tr><tr><th> Costo </th><td> {{ $cursos1->costo }} </td></tr><tr><th> Capacitador </th><td> {{ $cursos1->capacitador }} </td></tr><tr><th> Cupo </th><td> {{ $cursos1->cupoLimite }} </td></tr>
+                <tr><th> Nombre </th><td> {{ $cursos1->nombreCurso }} </td></tr>
+                <tr><th> Descripcion </th><td> {{ $cursos1->descripcion }} </td></tr>
+                <tr><th> Fecha Inicio </th><td> {{ $cursos1->fechaInicio }} </td></tr>
+                <tr><th> Fecha Fin </th><td> {{ $cursos1->fechaFin }} </td></tr>
+                <tr><th> Hora Inicio </th><td> {{ $cursos1->horaInicio }} </td></tr>
+                <tr><th> Hora Fin </th><td> {{ $cursos1->horaFin }} </td></tr>
+                <tr><th> Costo </th><td> {{ $cursos1->costo }} </td></tr>
+                <tr><th> Capacitador </th><td> {{ $cursos1->capacitador }} </td></tr>
+                <tr><th> Cupo </th><td> {{ $cursos1->cupoLimite }} </td></tr>
+
+                <tr><th> Ubicacion </th><td> 
+                            @foreach($ubicaciones as $ubicacion )
+
+                           {{$ubicacion->title  }}
+
+                            @endforeach
+                                
+                            
+
+                            </td></tr>
             </tbody>
         </table>
     </div>

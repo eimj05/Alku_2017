@@ -183,3 +183,4 @@ class Diplomados1Controller extends Controller
         return redirect('diplomado1/diplomados1');
     }
 }
+

@@ -263,6 +263,19 @@ Route::group(['middleware' => 'web'], function(){
         'roles' => ['Admin','Empresa']
         ]);
 
+    Route::get('curso1/cursos1/{cursos1}/ubicacion', [
+        'uses' => 'UbicacionController@index',
+        'as' => 'ubicacion.index',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+
+   /* Route::get('ubicacion', [
+        'uses' => 'UbicacionController@index',
+        'as' => 'ubicacion.index',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);*/
 
 ////-----  DIPLOMADOS  ------//////
 
@@ -431,6 +444,42 @@ Route::group(['middleware' => 'web'], function(){
         ]);
 
 
+    // UBICACION
+
+    Route::post('ubicacion/create', 'UbicacionController@store');
+    
+        Route::get('ubicacion/create', [
+        'uses' => 'UbicacionController@create',
+        'as' => 'ubicacion.create',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+
+
+    Route::get('ubicacion', [
+        'uses' => 'UbicacionController@index',
+        'as' => 'ubicacion.index',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+    
+    Route::delete('ubicacion/{ubicacion}', [
+        'uses' => 'UbicacionController@destroy',
+        'as' => 'ubicacion.destroy',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+
+    Route::get('ubicacion/{ubicacion}', [
+        'uses' => 'UbicacionController@show',
+        'as' => 'ubicacion.show',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+
+
+
+
     //Mail
     Route::resource('mail', 'MailController');
 
@@ -479,6 +528,8 @@ Route::group(['middleware' => 'web'], function(){
         ]);
 
 });
+
+
 
 
 

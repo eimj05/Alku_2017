@@ -22,6 +22,7 @@
                         <a href="{{ url('/curso1/cursos1/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Curso"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <a href="{{ url('/curso1/cursos1/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Curso"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
                         <a href="{{ url('/curso1/cursos1/' . $item->id . '/imagen') }}" class="btn btn-primary btn-xs" title="Imagen Curso"><span class="glyphicon glyphicon-picture" aria-hidden="true"/></a>
+                        <a href="{{ url('/curso1/cursos1/' . $item->id . '/ubicacion') }}" class="btn btn-primary btn-xs" title="Ubicacion"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"/></a>
                         {!! Form::open([
                             'method'=>'DELETE',
                             'url' => ['/curso1/cursos1', $item->id],

@@ -17,6 +17,11 @@ class Cursos1 extends Model
         return $this->hasOne('App\Intereses1');
     }
 
+    public function ubicacion()
+    {
+        return $this->belongsToMany('App\Ubicacion','curso_ubicacion1','curso_id', 'ubicacion_id');
+    }
+
     protected $table = 'cursos1s';
 
     /**
