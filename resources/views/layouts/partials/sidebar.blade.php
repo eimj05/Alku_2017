@@ -38,10 +38,10 @@
             <li class="treeview">
                 <a href="#"><i class='glyphicon glyphicon-globe'></i> <span>Administracion</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
-                       <li><a href="{{ url('cliente/cliente') }}"><i class='fa  fa-users'></i> <span>{{ trans('Usuarios') }}</span></a></li>
-                        <li><a href="{{ url('interes1/intereses1') }}"><i class='glyphicon glyphicon-road'></i> <span>{{ trans('adminlte_lang::message.anotherlink5') }}</span></a></li>
-                        <li><a href="{{ url('roles1/roles1') }}"><i class='glyphicon glyphicon-briefcase'></i> <span>{{ trans('Roles') }}</span></a></li>
-                        <li><a href="{{ url('vendor') }}"><i class='fa fa-map-marker'></i> <span>{{ trans('Ubicacion') }}</span></a></li>
+                       <li><a href="{{ url('Usuarios') }}"><i class='fa  fa-users'></i> <span>{{ trans('Usuarios') }}</span></a></li>
+                        <li><a href="{{ url('Intereses') }}"><i class='glyphicon glyphicon-road'></i> <span>{{ trans('adminlte_lang::message.anotherlink5') }}</span></a></li>
+                        <li><a href="{{ url('Roles') }}"><i class='glyphicon glyphicon-briefcase'></i> <span>{{ trans('Roles') }}</span></a></li>
+                        <li><a href="{{ url('Ubicaciones') }}"><i class='fa fa-map-marker'></i> <span>{{ trans('Ubicaciones') }}</span></a></li>
                 </ul>
 
             <li><a href="{{ url('curso1/cursos1') }}"><i class='glyphicon glyphicon-pencil'></i> <span>{{ trans('adminlte_lang::message.anotherlink4') }}</span></a></li>

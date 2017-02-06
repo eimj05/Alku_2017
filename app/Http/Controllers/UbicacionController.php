@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Ubicacion;
 use Session;
+use Auth;
+use DB;
 
 
 
@@ -14,13 +16,26 @@ class UbicacionController extends Controller
 {
      
      public function index()
-    {
+    { 
+        $idu = Auth::id();
+        $rol = DB::table('cliente_roles1')->where('cliente_id','=', $idu)->value('roles1_id');
+
+
+    if($rol ==1) 
+        {
         $ubicacion = Ubicacion::paginate(15);
 
         return view('ubicacion.index', compact('ubicacion'));
-    }
+        }
+    elseif($rol ==2)
+        {
 
-    
+        $ubicacion = Ubicacion::where('created_by','=', $idu)->paginate(15);
+
+        return view('ubicacion.index', compact('ubicacion'));
+        }
+    }  
+
      public function create()
     {
        
@@ -30,16 +45,19 @@ class UbicacionController extends Controller
 
      public function store(Request $request)
     {
-        
-        $ubicacion = Ubicacion::create([
+        $idu = Auth::id();
+    
+        Ubicacion::create([
             'title' => $request['title'],
             'lat' => $request['lat'],
-            'lng' => $request['lng'],]);
+            'lng' => $request['lng'],
+            'created_by' => $idu,]);
+
 
         Session::flash('flash_message', 'Ubicacion added!');
 
 
-        return redirect('curso1/cursos1');
+        return redirect('Ubicaciones');
     }
 
     public function show($id)
@@ -61,7 +79,7 @@ class UbicacionController extends Controller
 
         Session::flash('flash_message', 'Ubicacion deleted!');
 
-        return redirect('ubicacion');
+        return redirect('Ubicaciones');
     }
 
 }

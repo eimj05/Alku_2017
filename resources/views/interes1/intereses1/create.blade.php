@@ -6,7 +6,7 @@
     <h1>Crear Interes</h1>
     <hr/>
 
-    {!! Form::open(['url' => '/interes1/intereses1', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => 'Intereses', 'class' => 'form-horizontal']) !!}
 
                 <div class="form-group {{ $errors->has('tipoInteres') ? 'has-error' : ''}}">
                 {!! Form::label('tipoInteres', 'Tipointeres', ['class' => 'col-sm-3 control-label']) !!}

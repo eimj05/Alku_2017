@@ -3,7 +3,7 @@
 @section('main-content')
 <div class="container">
 
-    <h1>Usuarios <a href="{{ url('/cliente/cliente/create') }}" class="btn btn-primary btn-xs" title="Agregar Usuario"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a> <a href="{{ url('/pdfusuarios') }}" class="btn btn-primary btn-xs" title="PDF"><span class="fa fa-file-pdf-o" aria-hidden="true"/></a></h1>
+    <h1>Usuarios <a href="{{ url('Usuarios/create') }}" class="btn btn-primary btn-xs" title="Agregar Usuario"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a> <a href="{{ url('/pdfusuarios') }}" class="btn btn-primary btn-xs" title="PDF"><span class="fa fa-file-pdf-o" aria-hidden="true"/></a></h1>
     <div class="table">
         <table class="table table-bordered table-striped table-hover">
             <thead>
@@ -26,11 +26,13 @@
                     <td><input type="checkbox" {{$item->hasRole('RegUser') ? 'checked' : ''}} name="role_reguser"></td>
 
                     <td>
-                        <a href="{{ url('/cliente/cliente/' . Crypt::encrypt($item->id)) }}" class="btn btn-success btn-xs" title="Ver Usuario"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
-                        <a href="{{ url('/cliente/cliente/' . Crypt::encrypt($item->id) . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Usuario"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                        <a href="{{ url('/Usuarios/' . Crypt::encrypt($item->id)) }}" class="btn btn-success btn-xs" title="Ver Usuario"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                        <a href="{{ url('/Usuarios/' . Crypt::encrypt($item->id) . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Usuario"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+
+
                         {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['/cliente/cliente', $item->id],
+                            'url' => ['/Usuarios', $item->id],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true" title="Borrar Usuario" />', array(

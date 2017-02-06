@@ -24,7 +24,24 @@
                 <tr>
                     <th>ID</th><td>{{ $diplomados1->id }}</td>
                 </tr>
-                <tr><th> Nombre </th><td> {{ $diplomados1->nombreDiplomado }} </td></tr><tr><th> Descripcion </th><td> {{ $diplomados1->descripcion }} </td></tr><tr><th> Fecha Inicio </th><td> {{ $diplomados1->fechaInicio }} </td></tr><tr><th> Fecha Fin </th><td> {{ $diplomados1->fechaFin }} </td></tr><tr><th> Costo </th><td> {{ $diplomados1->costo }} </td></tr><tr><th> Capacitador </th><td> {{ $diplomados1->capacitador }} </td></tr><tr><th> Cupo </th><td> {{ $diplomados1->cupoLimite }} </td></tr>
+                <tr><th> Nombre </th><td> {{ $diplomados1->nombreDiplomado }} </td></tr>
+                <tr><th> Descripcion </th><td> {{ $diplomados1->descripcion }} </td></tr>
+                <tr><th> Fecha Inicio </th><td> {{ $diplomados1->fechaInicio }} </td></tr>
+                <tr><th> Fecha Fin </th><td> {{ $diplomados1->fechaFin }} </td></tr>
+                <tr><th> Costo </th><td> {{ $diplomados1->costo }} </td></tr>
+                <tr><th> Capacitador </th><td> {{ $diplomados1->capacitador }} </td></tr>
+                <tr><th> Cupo </th><td> {{ $diplomados1->cupoLimite }} </td></tr>
+                <tr><th> Ubicacion </th><td> 
+                            @foreach($ubicaciones as $ubicacion )
+
+                           {{$ubicacion->title  }}
+
+                            @endforeach
+                                
+                            
+
+                            </td></tr>
+
             </tbody>
         </table>
     </div>

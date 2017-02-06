@@ -24,12 +24,12 @@
 <p></p>
             <div align="center">               
                 <form enctype="multipart/form-data" action="/imagen_diplomado" method="POST">
-                <h3>Actualizar Imagen</h3>
+                <h4>Actualizar Imagen</h4>
                 <input type="hidden" name="id" value="{{ $diplomados1->id }}">
                 <input type="file" name="imagen_diplomado">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <p></p>
-                <input type="submit" value="Guardar" class="pull-center btn btn-lg btn-primary">
+                <input type="submit" value="Guardar" class="pull-center btn btn-sm btn-primary">
             </form>
 
             </div> 

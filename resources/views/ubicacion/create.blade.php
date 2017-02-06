@@ -18,7 +18,7 @@
 <div class="container">
 	<div class="col-sm-8">
 		<h1>Agrega tu ubicación</h1>
-		{{Form::open(array('url'=>'/ubicacion/create', 'files'=>true))}}
+		{{Form::open(array('url'=>'/Ubicaciones/create', 'files'=>true))}}
 			<div class="form-group">
 				<label for="">Titulo</label>	
 				<input type="text" class="form-control input-sm" name="title" >

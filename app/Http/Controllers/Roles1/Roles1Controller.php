@@ -51,7 +51,7 @@ class Roles1Controller extends Controller
 
         Session::flash('flash_message', 'Roles1 added!');
 
-        return redirect('roles1/roles1');
+        return redirect('Roles');
     }
 
     /**
@@ -97,7 +97,7 @@ class Roles1Controller extends Controller
 
         Session::flash('flash_message', 'Roles1 updated!');
 
-        return redirect('roles1/roles1');
+        return redirect('Roles');
     }
 
     /**
@@ -113,6 +113,6 @@ class Roles1Controller extends Controller
 
         Session::flash('flash_message', 'Roles1 deleted!');
 
-        return redirect('roles1/roles1');
+        return redirect('Roles');
     }
 }

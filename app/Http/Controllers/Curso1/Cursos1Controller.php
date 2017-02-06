@@ -65,11 +65,14 @@ class Cursos1Controller extends Controller
     public function create()
     {
 
+        $ubicacion= Ubicacion::lists('title', 'id');
         $intereses= Intereses1::lists('tipoInteres','id');
         
 
 
-        return view('curso1.cursos1.create')->with('intereses', $intereses);
+       // return view('curso1.cursos1.create')->with('intereses', $intereses);
+        return view('curso1.cursos1.create', compact('intereses','ubicacion'));
+
     }
 
     /**
@@ -82,7 +85,7 @@ class Cursos1Controller extends Controller
         $idu = Auth::id();
        // Cursos1::create($request->all())->with('updated_by', $idu);
 
-        Cursos1::create([
+        $cursos1= Cursos1::create([
             'nombreCurso' => $request['nombreCurso'],
             'descripcion' => $request['descripcion'],
             'fechaInicio' => $request['fechaInicio'],
@@ -94,6 +97,11 @@ class Cursos1Controller extends Controller
             'cupoLimite' => $request['cupoLimite'],
             'created_by' => $idu,
             'interes' => $request['interes']]);
+
+        $cursos1->ubicacion()->sync([]);
+
+        $cursos1->ubicacion()->attach($request->ubicacion);
+
         
         Session::flash('flash_message', 'Cursos1 added!');
 
@@ -135,7 +143,6 @@ class Cursos1Controller extends Controller
 
     public function ubicacion($id)
     {
-        $id_curso = $id;
 
         $ubicacion = Ubicacion::paginate(15);
 

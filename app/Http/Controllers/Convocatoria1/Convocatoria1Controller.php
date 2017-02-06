@@ -10,6 +10,10 @@ use Illuminate\Http\Request;
 use Carbon\Carbon;
 use Session;
 use PDF;
+use App\Ubicacion;
+use Image;
+use DB;
+
 
 class Convocatoria1Controller extends Controller
 {
@@ -45,7 +49,10 @@ class Convocatoria1Controller extends Controller
      */
     public function create()
     {
-        return view('convocatoria1.convocatoria1.create');
+
+        $ubicacion= Ubicacion::lists('title', 'id');
+
+        return view('convocatoria1.convocatoria1.create' , compact('ubicacion'));
     }
 
     /**
@@ -56,7 +63,11 @@ class Convocatoria1Controller extends Controller
     public function store(Request $request)
     {
         
-        Convocatoria1::create($request->all());
+        $convocatoria1=Convocatoria1::create($request->all());
+
+        $convocatoria1->ubicacion()->sync([]);
+
+        $convocatoria1->ubicacion()->attach($request->ubicacion);
 
         Session::flash('flash_message', 'Convocatoria1 added!');
 
@@ -72,9 +83,12 @@ class Convocatoria1Controller extends Controller
      */
     public function show($id)
     {
-        $convocatoria1 = Convocatoria1::findOrFail($id);
 
-        return view('convocatoria1.convocatoria1.show', compact('convocatoria1'));
+        $convocatoria1 = Convocatoria1::findOrFail($id);
+        $ubicaciones = Convocatoria1::find($convocatoria1->id)->ubicacion()->get();
+
+
+        return view('convocatoria1.convocatoria1.show', compact('convocatoria1','ubicaciones'));
     }
 
     /**
@@ -86,11 +100,20 @@ class Convocatoria1Controller extends Controller
      */
     public function edit($id)
     {
+        $ubicacion= Ubicacion::lists('title', 'id');
+
         $convocatoria1 = Convocatoria1::findOrFail($id);
 
-        return view('convocatoria1.convocatoria1.edit', compact('convocatoria1'));
+        return view('convocatoria1.convocatoria1.edit', compact('convocatoria1','ubicacion'));
     }
 
+
+    public function imagen($id)
+    {
+        $convocatoria1 = Convocatoria1::findOrFail($id);
+
+        return view('convocatoria1.convocatoria1.imagen ', compact('convocatoria1'));
+    }
     /**
      * Update the specified resource in storage.
      *
@@ -104,7 +127,28 @@ class Convocatoria1Controller extends Controller
         $convocatoria1 = Convocatoria1::findOrFail($id);
         $convocatoria1->update($request->all());
 
+        $convocatoria1->ubicacion()->sync([]);
+
+        $convocatoria1->ubicacion()->attach($request->ubicacion);
+
         Session::flash('flash_message', 'Convocatoria1 updated!');
+
+        return redirect('convocatoria1/convocatoria1');
+    }
+
+    public function update_imagen(Request $request){
+
+        //Handle the user upload image of the course
+        if($request->hasFile('imagen_convocatoria')){
+            $imagen_convocatoria = $request->file('imagen_convocatoria');
+            $filename = time() . '.' . $imagen_convocatoria->getClientOriginalExtension();
+            Image::make($imagen_convocatoria)->resize(300,300)->save( public_path('/uploads/convocatorias/' .$filename ));
+
+            $convocatoria1 = $request->input('id');
+
+            DB::table('convocatoria1s')->where('id', $convocatoria1)->update(array('imagen_convocatoria' => $filename));
+
+        }
 
         return redirect('convocatoria1/convocatoria1');
     }

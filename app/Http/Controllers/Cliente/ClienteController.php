@@ -118,7 +118,7 @@ class ClienteController extends Controller
         Session::flash('flash_message', 'Cliente added!');
 
 
-        return redirect('cliente/cliente');
+        return redirect('Usuarios');
     }
 
     /**
@@ -187,7 +187,7 @@ class ClienteController extends Controller
 
         Session::flash('flash_message', 'Cliente updated!');
 
-        return redirect('cliente/cliente');
+        return redirect('Usuarios');
     }
 
     /**
@@ -216,6 +216,6 @@ class ClienteController extends Controller
 
         Session::flash('flash_message', 'Cliente deleted!');
 
-        return redirect('cliente/cliente');
+        return redirect('Usuarios');
     }
 }

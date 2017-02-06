@@ -15,6 +15,7 @@ use Auth;
 use DB;
 use Image;
 use inputs;
+use App\Ubicacion;
 
 class Diplomados1Controller extends Controller
 {
@@ -64,9 +65,11 @@ class Diplomados1Controller extends Controller
      */
     public function create()
     {
+        $ubicacion= Ubicacion::lists('title', 'id');
         $intereses= Intereses1::lists('tipoInteres','id');
 
-        return view('diplomado1.diplomados1.create')->with('intereses', $intereses);
+        //return view('diplomado1.diplomados1.create')->with('intereses', $intereses);
+        return view('diplomado1.diplomados1.create', compact('intereses','ubicacion'));
     }
 
     /**
@@ -79,7 +82,7 @@ class Diplomados1Controller extends Controller
         
         $idu = Auth::id();
         //Diplomados1::create($request->all());
-         Diplomados1::create([
+         $diplomados1=Diplomados1::create([
             'nombreDiplomado' => $request['nombreDiplomado'],
             'descripcion' => $request['descripcion'],
             'fechaInicio' => $request['fechaInicio'],
@@ -91,6 +94,10 @@ class Diplomados1Controller extends Controller
             'cupoLimite' => $request['cupoLimite'],
             'created_by' => $idu,
             'interes' => $request['interes']]);
+
+        $diplomados1->ubicacion()->sync([]);
+
+        $diplomados1->ubicacion()->attach($request->ubicacion);
 
         Session::flash('flash_message', 'Diplomados1 added!');
 
@@ -107,8 +114,10 @@ class Diplomados1Controller extends Controller
     public function show($id)
     {
         $diplomados1 = Diplomados1::findOrFail($id);
+        $ubicaciones = Diplomados1::find($diplomados1->id)->ubicacion()->get();
 
-        return view('diplomado1.diplomados1.show', compact('diplomados1'));
+
+        return view('diplomado1.diplomados1.show', compact('diplomados1','ubicaciones'));
     }
 
     /**
@@ -120,9 +129,11 @@ class Diplomados1Controller extends Controller
      */
     public function edit($id)
     {
+        $ubicacion= Ubicacion::lists('title', 'id');
+
         $diplomados1 = Diplomados1::findOrFail($id);
 
-        return view('diplomado1.diplomados1.edit', compact('diplomados1'));
+        return view('diplomado1.diplomados1.edit', compact('diplomados1','ubicacion'));
     }
 
      public function imagen($id)
@@ -144,6 +155,10 @@ class Diplomados1Controller extends Controller
         
         $diplomados1 = Diplomados1::findOrFail($id);
         $diplomados1->update($request->all());
+
+        $diplomados1->ubicacion()->sync([]);
+
+        $diplomados1->ubicacion()->attach($request->ubicacion);
 
         Session::flash('flash_message', 'Diplomados1 updated!');
 

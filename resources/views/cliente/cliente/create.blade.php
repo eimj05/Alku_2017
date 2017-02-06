@@ -6,7 +6,7 @@
     <h1>Crear Usuario</h1>
     <hr/>
 
-    {!! Form::open(['url' => '/cliente/cliente', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => '/Usuarios', 'class' => 'form-horizontal']) !!}
 
 
                 <div class="form-group {{ $errors->has('nombre') ? 'has-error' : ''}}">

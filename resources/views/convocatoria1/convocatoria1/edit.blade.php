@@ -46,13 +46,6 @@
                     {!! $errors->first('fechaCierre', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
-            <div class="form-group {{ $errors->has('imagen') ? 'has-error' : ''}}">
-                {!! Form::label('imagen', 'Imagen', ['class' => 'col-sm-3 control-label']) !!}
-                <div class="col-sm-6">
-                    {!! Form::textarea('imagen', null, ['class' => 'form-control']) !!}
-                    {!! $errors->first('imagen', '<p class="help-block">:message</p>') !!}
-                </div>
-            </div>
             <div class="form-group {{ $errors->has('contacto') ? 'has-error' : ''}}">
                 {!! Form::label('contacto', 'Contacto', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
@@ -60,6 +53,16 @@
                     {!! $errors->first('contacto', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
+
+            <div class="form-group {{ $errors->has('ubicacion') ? 'has-error' : ''}}">
+                     {!! Form::label('ubicacion','Ubicacion',['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-6">
+                    {{ Form::select('ubicacion', $ubicacion) }}
+
+                    {!! $errors->first('ubicacion', '<p class="help-block">:message</p>') !!}
+                   </div>  
+                </div>
+
 
 
     <div class="form-group">

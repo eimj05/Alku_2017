@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Convocatoria1 extends Model
 {
+
+    public function ubicacion()
+    {
+        return $this->belongsToMany('App\Ubicacion','convocatoria_ubicacion1','convocatoria_id', 'ubicacion_id');
+    }
     /**
      * The database table used by the model.
      *

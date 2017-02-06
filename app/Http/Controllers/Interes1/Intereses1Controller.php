@@ -52,7 +52,7 @@ class Intereses1Controller extends Controller
 
         Session::flash('flash_message', 'Intereses1 added!');
 
-        return redirect('interes1/intereses1');
+        return redirect('Intereses');
     }
 
     /**
@@ -98,7 +98,7 @@ class Intereses1Controller extends Controller
 
         Session::flash('flash_message', 'Intereses1 updated!');
 
-        return redirect('interes1/intereses1');
+        return redirect('Intereses');
     }
 
     /**
@@ -119,6 +119,6 @@ class Intereses1Controller extends Controller
 
         Session::flash('flash_message', 'Intereses1 deleted!');
 
-        return redirect('interes1/intereses1');
+        return redirect('Intereses');
     }
 }

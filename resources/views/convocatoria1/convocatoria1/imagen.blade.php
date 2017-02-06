@@ -3,13 +3,13 @@
 @section('main-content')
 <div class="container">
 
-    <h1>Imagen del Curso</h1>
+    <h1>Imagen de la Convocatoria</h1>
 
 
     <div class="table-responsive">
         <table class="table table-bordered table-striped table-hover">
             <tbody>
-                <tr><th> Nombre del Curso</th><td> {{ $cursos1->nombreCurso }} </td>
+                <tr><th> Nombre de la Convocatoria</th><td> {{ $convocatoria1->nombreConvocatoria }} </td>
             </tbody>
         </table>
     </div>
@@ -17,16 +17,16 @@
 
         <div align="center" class="row" >
             <div class="col-md-10 col-md-offset-1">
-            <img src="/uploads/cursos/{{$cursos1->imagen_curso}}" style="width:900px; height:400px; float:left; margin-right:25px;">
+            <img src="/uploads/convocatorias/{{$convocatoria1->imagen_convocatoria}}" style="width:900px; height:400px; float:left; margin-right:25px;">
             </div>
 
             </div>
 <p></p>
             <div align="center">               
-                <form enctype="multipart/form-data" action="/imagen_curso" method="POST">
+                <form enctype="multipart/form-data" action="/imagen_convocatoria" method="POST">
                 <h4>Actualizar Imagen</h4>
-                <input type="hidden" name="id" value="{{ $cursos1->id }}">
-                <input type="file" name="imagen_curso">
+                <input type="hidden" name="id" value="{{ $convocatoria1->id }}">
+                <input type="file" name="imagen_convocatoria">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <p></p>
                 <input type="submit" value="Guardar" class="pull-center btn btn-sm btn-primary">

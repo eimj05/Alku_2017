@@ -6,7 +6,7 @@
     <h1>Crear Rol</h1>
     <hr/>
 
-    {!! Form::open(['url' => '/roles1/roles1', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => '/Roles', 'class' => 'form-horizontal']) !!}
 
                 <div class="form-group {{ $errors->has('tipoRol') ? 'has-error' : ''}}">
                 {!! Form::label('tipoRol', 'Tipo rol', ['class' => 'col-sm-3 control-label']) !!}

@@ -15,6 +15,11 @@ class Diplomados1 extends Model
     {
         return $this->hasOne('App\Intereses1');
     }
+
+    public function ubicacion()
+    {
+        return $this->belongsToMany('App\Ubicacion','diplomado_ubicacion1','diplomado_id', 'ubicacion_id');
+    }
     
     protected $table = 'diplomados1s';
 

@@ -4,10 +4,10 @@
 <div class="container">
 
     <h1>Detalle Rol 
-        <a href="{{ url('roles1/roles1/' . $roles1->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Rol"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+        <a href="{{ url('Roles/' . $roles1->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Rol"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
         {!! Form::open([
             'method'=>'DELETE',
-            'url' => ['roles1/roles1', $roles1->id],
+            'url' => ['Roles', $roles1->id],
             'style' => 'display:inline'
         ]) !!}
             {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true"/>', array(

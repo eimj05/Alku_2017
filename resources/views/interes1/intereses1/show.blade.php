@@ -4,10 +4,10 @@
 <div class="container">
 
     <h1>Interes
-        <a href="{{ url('interes1/intereses1/' . $intereses1->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Interes"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+        <a href="{{ url('Intereses/' . $intereses1->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Interes"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
         {!! Form::open([
             'method'=>'DELETE',
-            'url' => ['interes1/intereses1', $intereses1->id],
+            'url' => ['Intereses', $intereses1->id],
             'style' => 'display:inline'
         ]) !!}
             {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true"/>', array(

@@ -38,6 +38,9 @@ Route::group(['middleware' => 'web'], function(){
 
      Route::post('imagen_diplomado', 'Diplomado1\Diplomados1Controller@update_imagen');
 
+     Route::post('imagen_convocatoria', 'Convocatoria1\Convocatoria1Controller@update_imagen');
+
+
 
     // Route::post('imagen_curso', ['as' => 'imagen_curso', 'uses' => 'Curso1\Cursos1Controller@update_imagen']);
 
@@ -52,49 +55,49 @@ Route::group(['middleware' => 'web'], function(){
      ////-----  USUARIOS  ------//////
 
 
-    Route::get('cliente/cliente', [
+    Route::get('Usuarios', [
         'uses' => 'Cliente\ClienteController@index',
         'as' => 'cliente.cliente.index',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-    Route::post('cliente/cliente', [
+    Route::post('Usuarios', [
         'uses' => 'Cliente\ClienteController@store',
         'as' => 'cliente.cliente.store',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-    Route::get('cliente/cliente/create', [
+    Route::get('Usuarios/create', [
         'uses' => 'Cliente\ClienteController@create',
         'as' => 'cliente.cliente.create',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-     Route::patch('cliente/cliente/{cliente}', [
+     Route::patch('Usuarios/{cliente}', [
         'uses' => 'Cliente\ClienteController@update',
         'as' => 'cliente.cliente.update',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-     Route::delete('cliente/cliente/{cliente}', [
+     Route::delete('Usuarios/{cliente}', [
         'uses' => 'Cliente\ClienteController@destroy',
         'as' => 'cliente.cliente.destroy',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-    Route::get('cliente/cliente/{cliente}', [
+    Route::get('Usuarios/{cliente}', [
         'uses' => 'Cliente\ClienteController@show',
         'as' => 'cliente.cliente.show',
         'middleware' => 'roles',
         'roles' => ['Admin','Empresa']
         ]);
 
-    Route::get('cliente/cliente/{cliente}/edit', [
+    Route::get('Usuarios/{cliente}/edit', [
         'uses' => 'Cliente\ClienteController@edit',
         'as' => 'cliente.cliente.edit',
         'middleware' => 'roles',
@@ -104,49 +107,49 @@ Route::group(['middleware' => 'web'], function(){
 
 ////-----  INTERESES  ------//////
 
-    Route::get('interes1/intereses1', [
+    Route::get('Intereses', [
         'uses' => 'Interes1\Intereses1Controller@index',
         'as' => 'interes1.intereses1.index',
         'middleware' => 'roles',
         'roles' => ['Admin','Empresa']
         ]);
 
-    Route::post('interes1/intereses1', [
+    Route::post('Intereses', [
         'uses' => 'Interes1\Intereses1Controller@store',
         'as' => 'interes1.intereses1.store',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-    Route::get('interes1/intereses1/create', [
+    Route::get('Intereses/create', [
         'uses' => 'Interes1\Intereses1Controller@create',
         'as' => 'interes1.intereses1.create',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-     Route::patch('interes1/intereses1/{intereses1}', [
+     Route::patch('Intereses/{intereses1}', [
         'uses' => 'Interes1\Intereses1Controller@update',
         'as' => 'interes1.intereses1.update',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-     Route::delete('interes1/intereses1/{intereses1}', [
+     Route::delete('Intereses/{intereses1}', [
         'uses' => 'Interes1\Intereses1Controller@destroy',
         'as' => 'interes1.intereses1.destroy',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-    Route::get('interes1/intereses1/{intereses1}', [
+    Route::get('Intereses/{intereses1}', [
         'uses' => 'Interes1\Intereses1Controller@show',
         'as' => 'interes1.intereses1.show',
         'middleware' => 'roles',
         'roles' => ['Admin','Empresa']
         ]);
 
-    Route::get('interes1/intereses1/{intereses1}/edit', [
+    Route::get('Intereses/{intereses1}/edit', [
         'uses' => 'Interes1\Intereses1Controller@edit',
         'as' => 'interes1.intereses1.edit',
         'middleware' => 'roles',
@@ -155,49 +158,49 @@ Route::group(['middleware' => 'web'], function(){
 
 ////-----  ROLES  ------//////
 
-    Route::get('roles1/roles1', [
+    Route::get('Roles', [
         'uses' => 'Roles1\Roles1Controller@index',
         'as' => 'roles1.roles1.index',
         'middleware' => 'roles',
         'roles' => ['Admin','Empresa']
         ]);
 
-    Route::post('roles1/roles1', [
+    Route::post('Roles', [
         'uses' => 'Roles1\Roles1Controller@store',
         'as' => 'roles1.roles1.store',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-    Route::get('roles1/roles1/create', [
+    Route::get('Roles/create', [
         'uses' => 'Roles1\Roles1Controller@create',
         'as' => 'roles1.roles1.create',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-     Route::patch('roles1/roles1/{roles1}', [
+     Route::patch('Roles/{roles1}', [
         'uses' => 'Roles1\Roles1Controller@update',
         'as' => 'roles1.roles1.update',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-     Route::delete('roles1/roles1/{roles1}', [
+     Route::delete('Roles/{roles1}', [
         'uses' => 'Roles1\Roles1Controller@destroy',
         'as' => 'roles1.roles1.destroy',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
 
-    Route::get('roles1/roles1/{roles1}', [
+    Route::get('Roles/{roles1}', [
         'uses' => 'Roles1\Roles1Controller@show',
         'as' => 'roles1.roles1.show',
         'middleware' => 'roles',
         'roles' => ['Admin','Empresa']
         ]);
 
-    Route::get('roles1/roles1/{roles1}/edit', [
+    Route::get('Roles/{roles1}/edit', [
         'uses' => 'Roles1\Roles1Controller@edit',
         'as' => 'roles1.roles1.edit',
         'middleware' => 'roles',
@@ -377,12 +380,19 @@ Route::group(['middleware' => 'web'], function(){
         'uses' => 'Convocatoria1\Convocatoria1Controller@show',
         'as' => 'convocatoria1.convocatoria1.show',
         'middleware' => 'roles',
-        'roles' => ['Admin']
+        'roles' => ['Admin','Empresa']
         ]);
 
     Route::get('convocatoria1/convocatoria1/{convocatoria1}/edit', [
         'uses' => 'Convocatoria1\Convocatoria1Controller@edit',
         'as' => 'convocatoria1.convocatoria1.edit',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+        ]);
+
+    Route::get('convocatoria1/convocatoria1/{convocatoria1}/imagen', [
+        'uses' => 'Convocatoria1\Convocatoria1Controller@imagen',
+        'as' => 'convocatoria1.convocatoria1.imagen',
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
@@ -446,9 +456,9 @@ Route::group(['middleware' => 'web'], function(){
 
     // UBICACION
 
-    Route::post('ubicacion/create', 'UbicacionController@store');
+        Route::post('Ubicaciones/create', 'UbicacionController@store');
     
-        Route::get('ubicacion/create', [
+        Route::get('Ubicaciones/create', [
         'uses' => 'UbicacionController@create',
         'as' => 'ubicacion.create',
         'middleware' => 'roles',
@@ -456,21 +466,21 @@ Route::group(['middleware' => 'web'], function(){
         ]);
 
 
-    Route::get('ubicacion', [
+    Route::get('Ubicaciones', [
         'uses' => 'UbicacionController@index',
         'as' => 'ubicacion.index',
         'middleware' => 'roles',
         'roles' => ['Admin','Empresa']
         ]);
     
-    Route::delete('ubicacion/{ubicacion}', [
+    Route::delete('Ubicaciones/{ubicacion}', [
         'uses' => 'UbicacionController@destroy',
         'as' => 'ubicacion.destroy',
         'middleware' => 'roles',
         'roles' => ['Admin','Empresa']
         ]);
 
-    Route::get('ubicacion/{ubicacion}', [
+    Route::get('Ubicaciones/{ubicacion}', [
         'uses' => 'UbicacionController@show',
         'as' => 'ubicacion.show',
         'middleware' => 'roles',

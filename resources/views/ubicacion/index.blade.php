@@ -3,7 +3,7 @@
 @section('main-content')
 <div class="container">
 
-    <h1>Ubicaciones<a href="{{ url('ubicacion/create') }}" class="btn btn-primary btn-xs" title="Agregar Ubicacion"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a></h1>
+    <h1>Ubicaciones<a href="{{ url('Ubicaciones/create') }}" class="btn btn-primary btn-xs" title="Agregar Ubicacion"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a></h1>
     <div class="table">
         <table class="table table-bordered table-striped table-hover">
             <thead>
@@ -22,11 +22,11 @@
                     <td>{{ $item->lng }}</td>
                    
                     <td>
-                        <a href="{{ url('/ubicacion/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Ubicacion"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                        <a href="{{ url('/Ubicaciones/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Ubicacion"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <!--<a href="{{ url('/cliente/cliente/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Usuario"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>-->
                         {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['/ubicacion', $item->id],
+                            'url' => ['/Ubicaciones', $item->id],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true" title="Borrar Ubicación" />', array(
