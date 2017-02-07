@@ -4,10 +4,10 @@
 <div class="container">
 
     <h1>Convocatorias
-        <a href="{{ url('convocatoria1/convocatoria1/' . $convocatoria1->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Convocatoria"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+        <a href="{{ url('Convocatorias/' . $convocatoria1->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Convocatoria"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
         {!! Form::open([
             'method'=>'DELETE',
-            'url' => ['convocatoria1/convocatoria1', $convocatoria1->id],
+            'url' => ['Convocatorias', $convocatoria1->id],
             'style' => 'display:inline'
         ]) !!}
             {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true"/>', array(

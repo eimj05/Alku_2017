@@ -7,7 +7,7 @@
 
     {!! Form::model($convocatoria1, [
         'method' => 'PATCH',
-        'url' => ['/convocatoria1/convocatoria1', $convocatoria1->id],
+        'url' => ['/Convocatorias', $convocatoria1->id],
         'class' => 'form-horizontal'
     ]) !!}
 

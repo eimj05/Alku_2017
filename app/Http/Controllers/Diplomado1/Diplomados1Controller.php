@@ -101,7 +101,7 @@ class Diplomados1Controller extends Controller
 
         Session::flash('flash_message', 'Diplomados1 added!');
 
-        return redirect('diplomado1/diplomados1');
+        return redirect('Diplomados');
     }
 
     /**
@@ -162,7 +162,7 @@ class Diplomados1Controller extends Controller
 
         Session::flash('flash_message', 'Diplomados1 updated!');
 
-        return redirect('diplomado1/diplomados1');
+        return redirect('Diplomados');
     }
 
     public function update_imagen(Request $request){
@@ -179,7 +179,7 @@ class Diplomados1Controller extends Controller
 
         }
 
-        return redirect('diplomado1/diplomados1');
+        return redirect('Diplomados');
     }
 
     /**
@@ -195,7 +195,7 @@ class Diplomados1Controller extends Controller
 
         Session::flash('flash_message', 'Diplomados1 deleted!');
 
-        return redirect('diplomado1/diplomados1');
+        return redirect('Diplomados');
     }
 }
 

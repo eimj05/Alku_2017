@@ -71,7 +71,7 @@ class Convocatoria1Controller extends Controller
 
         Session::flash('flash_message', 'Convocatoria1 added!');
 
-        return redirect('convocatoria1/convocatoria1');
+        return redirect('Convocatorias');
     }
 
     /**
@@ -133,7 +133,7 @@ class Convocatoria1Controller extends Controller
 
         Session::flash('flash_message', 'Convocatoria1 updated!');
 
-        return redirect('convocatoria1/convocatoria1');
+        return redirect('Convocatorias');
     }
 
     public function update_imagen(Request $request){
@@ -150,7 +150,7 @@ class Convocatoria1Controller extends Controller
 
         }
 
-        return redirect('convocatoria1/convocatoria1');
+        return redirect('Convocatorias');
     }
 
     /**
@@ -166,6 +166,6 @@ class Convocatoria1Controller extends Controller
 
         Session::flash('flash_message', 'Convocatoria1 deleted!');
 
-        return redirect('convocatoria1/convocatoria1');
+        return redirect('Convocatorias');
     }
 }

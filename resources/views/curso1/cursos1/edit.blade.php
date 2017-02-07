@@ -7,7 +7,7 @@
 
     {!! Form::model($cursos1, [
         'method' => 'PATCH',
-        'url' => ['/curso1/cursos1', $cursos1->id],
+        'url' => ['/Cursos', $cursos1->id],
         'class' => 'form-horizontal'
     ]) !!}
 

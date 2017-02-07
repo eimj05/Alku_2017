@@ -6,7 +6,7 @@
     <h1>Crear Diplomado</h1>
     <hr/>
 
-    {!! Form::open(['url' => '/diplomado1/diplomados1', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => '/Diplomados', 'class' => 'form-horizontal']) !!}
 
                 <div class="form-group {{ $errors->has('nombreDiplomado') ? 'has-error' : ''}}">
                 {!! Form::label('nombreDiplomado', 'Nombre Diplomado', ['class' => 'col-sm-3 control-label']) !!}

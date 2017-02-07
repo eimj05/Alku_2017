@@ -6,7 +6,7 @@
     <h1>Crear Convocatoria</h1>
     <hr/>
 
-    {!! Form::open(['url' => '/convocatoria1/convocatoria1', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => '/Convocatorias', 'class' => 'form-horizontal']) !!}
 
                 <div class="form-group {{ $errors->has('nombreConvocatoria') ? 'has-error' : ''}}">
                 {!! Form::label('nombreConvocatoria', 'Nombre Convocatoria', ['class' => 'col-sm-3 control-label']) !!}

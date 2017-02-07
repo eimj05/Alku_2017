@@ -44,11 +44,10 @@
                         <li><a href="{{ url('Ubicaciones') }}"><i class='fa fa-map-marker'></i> <span>{{ trans('Ubicaciones') }}</span></a></li>
                 </ul>
 
-            <li><a href="{{ url('curso1/cursos1') }}"><i class='glyphicon glyphicon-pencil'></i> <span>{{ trans('adminlte_lang::message.anotherlink4') }}</span></a></li>
-            {{--<li><a href="{{ url('diplomados') }}"><i class='fa fa-link'></i> <span>{{ trans('adminlte_lang::message.anotherlink') }}</span></a></li>--}}
-            <li><a href="{{ url('diplomado1/diplomados1') }}"><i class='glyphicon glyphicon-book'></i> <span>{{ trans('adminlte_lang::message.anotherlink1') }}</span></a></li>
-            <li><a href="{{ url('convocatoria1/convocatoria1') }}"><i class='glyphicon glyphicon-bullhorn'></i> <span>{{ trans('adminlte_lang::message.anotherlink3') }}</span></a></li>
-            <li><a href="{{ url('contacto') }}"><i class="fa fa-fw fa-envelope"></i> <span>Notificaciones</span></a></li>
+            <li><a href="{{ url('Cursos') }}"><i class='glyphicon glyphicon-pencil'></i> <span>{{ trans('adminlte_lang::message.anotherlink4') }}</span></a></li>
+            <li><a href="{{ url('Diplomados') }}"><i class='glyphicon glyphicon-book'></i> <span>{{ trans('adminlte_lang::message.anotherlink1') }}</span></a></li>
+            <li><a href="{{ url('Convocatorias') }}"><i class='glyphicon glyphicon-bullhorn'></i> <span>{{ trans('adminlte_lang::message.anotherlink3') }}</span></a></li>
+            <li><a href="{{ url('Notificaciones') }}"><i class="fa fa-fw fa-envelope"></i> <span>Notificaciones</span></a></li>
 
             
 

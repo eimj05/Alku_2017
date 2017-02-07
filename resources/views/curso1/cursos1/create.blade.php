@@ -6,7 +6,7 @@
     <h1>Crear Curso</h1>
     <hr/>
 
-    {!! Form::open(['url' => '/curso1/cursos1', 'class' => 'form-horizontal']) !!}
+    {!! Form::open(['url' => '/Cursos', 'class' => 'form-horizontal']) !!}
 
                 <div class="form-group {{ $errors->has('nombreCurso') ? 'has-error' : ''}}">
                 {!! Form::label('nombreCurso', 'Nombre curso', ['class' => 'col-sm-3 control-label']) !!}

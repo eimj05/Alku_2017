@@ -105,7 +105,7 @@ class Cursos1Controller extends Controller
         
         Session::flash('flash_message', 'Cursos1 added!');
 
-        return redirect('curso1/cursos1');
+        return redirect('Cursos');
     }
 
     /**
@@ -177,7 +177,7 @@ class Cursos1Controller extends Controller
 
         Session::flash('flash_message', 'Cursos1 updated!');
 
-        return redirect('curso1/cursos1');
+        return redirect('Cursos');
     }
 
     public function update_imagen(Request $request){
@@ -197,7 +197,7 @@ class Cursos1Controller extends Controller
 
         }
 
-        return redirect('curso1/cursos1');
+        return redirect('Cursos');
 
     }
 
@@ -214,6 +214,6 @@ class Cursos1Controller extends Controller
 
         Session::flash('flash_message', 'Cursos1 deleted!');
 
-        return redirect('curso1/cursos1');
+        return redirect('Cursos');
     }
 }

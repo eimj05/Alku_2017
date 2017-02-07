@@ -49,7 +49,7 @@ class ClienteController extends Controller
 
     public function profile()
     {
-        return view ('cliente.cliente.profile', array('user' =>Auth::user()));
+        return view ('cliente.cliente.fotoperfil', array('user' =>Auth::user()));
     }
 
 
@@ -67,7 +67,7 @@ class ClienteController extends Controller
 
         }
 
-        return view ('cliente.cliente.profile', array('user' =>Auth::user()));
+        return view ('cliente.cliente.fotoperfil', array('user' =>Auth::user()));
 
     }
 
