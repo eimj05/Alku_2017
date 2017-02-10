@@ -9,6 +9,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Auth;
+use App\Cliente;
 
 /**
  * Class HomeController
@@ -37,7 +39,14 @@ class HomeController extends Controller
     }
 
      public function contacto(){
-        return view('contacto');
+
+        $idu = Auth::id();
+        $cliente = Cliente::findOrFail($idu);
+
+
+        //return view('contacto')->with('idu', $idu);
+
+        return view('contacto', compact('cliente'));
    }
 
     public function nogrant()

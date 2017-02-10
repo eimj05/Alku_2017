@@ -7,15 +7,15 @@
 
 <div class="container">
 
-    <h1>Enviar Notificacion</h1>
+    <h1>Enviar Notificacion </h1>
+
     <hr/>
 		{!!Form::open(['route'=>'mail.store','method'=>'POST','class' => 'form-horizontal'])!!}
 
             <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
                 {!! Form::label('name', 'Remitente', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!!Form::text('name', null, ['class' => 'form-control'])!!}
-                    {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+                    <input name="name" class="form-control" type="text" readonly="" value="{{$cliente->name}}">
                 </div>
             </div>
             <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">

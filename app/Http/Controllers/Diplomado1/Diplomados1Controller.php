@@ -65,7 +65,9 @@ class Diplomados1Controller extends Controller
      */
     public function create()
     {
-        $ubicacion= Ubicacion::lists('title', 'id');
+        $idu = Auth::id();
+
+        $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
         $intereses= Intereses1::lists('tipoInteres','id');
 
         //return view('diplomado1.diplomados1.create')->with('intereses', $intereses);
@@ -129,8 +131,9 @@ class Diplomados1Controller extends Controller
      */
     public function edit($id)
     {
-        $ubicacion= Ubicacion::lists('title', 'id');
+        $idu = Auth::id();
 
+        $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
         $diplomados1 = Diplomados1::findOrFail($id);
 
         return view('diplomado1.diplomados1.edit', compact('diplomados1','ubicacion'));

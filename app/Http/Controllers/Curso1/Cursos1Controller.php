@@ -65,7 +65,8 @@ class Cursos1Controller extends Controller
     public function create()
     {
 
-        $ubicacion= Ubicacion::lists('title', 'id');
+        $idu = Auth::id();
+        $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
         $intereses= Intereses1::lists('tipoInteres','id');
         
 
@@ -134,7 +135,9 @@ class Cursos1Controller extends Controller
      */
     public function edit($id)
     {
-        $ubicacion= Ubicacion::lists('title', 'id');
+        $idu = Auth::id();
+
+        $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
 
         $cursos1 = Cursos1::findOrFail($id);
 

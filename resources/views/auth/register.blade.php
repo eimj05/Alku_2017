@@ -25,15 +25,17 @@
         @endif
 
         <div class="register-box-body">
-            <p class="login-box-msg">Registrar un nuevo Usuario</p>
-            <div class="form-box" >
+         
+           <p class="login-box-msg"> Registrate como Usuario </p>
+
+           <!--  <div class="form-box" >
             <p>El Password debe contener al menos 3 caracteres de c/u de las siguientes categorias:</p>
             <li>Mayusculas (A - Z)</li>
             <li>Minusculas (a - z)</li>
             <li>Numeros (0 - 9)</li>
             <li>Caracteres Especiales: (!, $, #, %, @)</li>
             <p></p>
-            </div>
+            </div> -->
             <form action="{{ url('/register') }}" method="post">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group has-feedback">
@@ -45,7 +47,7 @@
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
-                    <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password" id="clave" />
+                    <input type="password" class="form-control" placeholder="{{ trans('adminlte_lang::message.password') }}" name="password" id="clave"  />
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="form-group has-feedback">
@@ -76,20 +78,20 @@
 
                     </div>
 
-                 <div class="col-xs-10" align="center">
+               <!--  <div class="col-xs-10" align="center">
                             {!! app('captcha')->display(); !!}
-                        </div>
+                        </div>-->
 
                     <div class="col-xs- col-xs-push-1">
                         <button align="center" type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('adminlte_lang::message.register') }}</button>
-                    </div><!-- /.col -->
+                    </div><!-- /.col -->    
                 </div>
                 
             </form>
 
             @include('auth.partials.social_login')
 <p>
-            <a href="{{ url('/login') }}" class="text-center"> {{ trans('adminlte_lang::message.membreship') }}</a>
+            <a href="{{ url('/login') }}" class="text-center"> Ya soy Usuario</a>
         </div><!-- /.form-box -->
     </div><!-- /.register-box -->
 
@@ -106,7 +108,7 @@
             });
         });
     </script>
-
+<!-- 
     <script>
     jQuery.fn.fortalezaClave = function(){
         $(this).each(function(){
@@ -148,6 +150,7 @@
         $("#clave").fortalezaClave();
     });
     </script>
+    -->
 
 </body>
 

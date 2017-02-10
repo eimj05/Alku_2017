@@ -13,7 +13,7 @@ use Redirect;
 
 class MailController extends Controller
 {
-    
+
     public function store(Request $request)
     {
 		$mail = $request->input('email');

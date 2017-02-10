@@ -428,7 +428,7 @@ Route::group(['middleware' => 'web'], function(){
         'uses' => 'HomeController@contacto',
         'as' => 'contacto',
         'middleware' => 'roles',
-        'roles' => ['Admin']
+        'roles' => ['Admin','Empresa']
         ]);
 
 

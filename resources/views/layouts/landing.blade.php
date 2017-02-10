@@ -23,7 +23,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <meta name="twitter:site" content="@acachawiki" />
     <meta name="twitter:creator" content="@acacha1" />
 
-    <title>Alku 2016</title>
+    <title>Alku</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet">
@@ -320,7 +320,7 @@ Landing page based on Pratt: http://blacktie.co/demo/pratt/
     <div class="container">
         <p>
 
-            <strong>Copyright &copy; 2016 <a></a>.</strong> PHE Development Corporation
+            <strong>Copyright &copy; 2017 <a></a>.</strong> PHE Development Corporation
 
         </p>
 
