@@ -42,6 +42,15 @@ Route::group(['middleware' => 'web'], function(){
 
 
 
+     ////-----  FrontEnd  ------//////
+
+    Route::get('FCursos', [
+        'uses' => 'FrontendController@index',
+        'as' => 'frontend.cursos',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa','RegUser']
+        ]);
+
 
      ////-----  USUARIOS  ------//////
 
