@@ -16,6 +16,33 @@ Route::get('/', function () {
 });
 
 
+ ////-----  FrontEnd  ------//////
+
+  
+
+    Route::get('FCursosinfo', function (){
+        return view('frontend.cursosinfo'); 
+    });
+
+    Route::get('FDiplomadosinfo', function (){
+        return view('frontend.diplomadosinfo'); 
+    });
+
+    Route::get('FConvocatoriasinfo', function (){
+        return view('frontend.convocatoriasinfo'); 
+    });
+
+   
+
+//    Route::get('FConvocatoriasinfo', [
+  //      'uses' => 'FrontendController@convocatoriasinfo',
+    //    'as' => 'frontend.convocatoriasinfo',
+      //  'middleware' => 'roles',
+       // 'roles' => ['Admin','Empresa','RegUser']
+       // ]);
+
+
+
 Route::group(['middleware' => 'web'], function(){
     Route::auth();
     // Route::get('/welcome', 'HomeController@welcome');
@@ -42,15 +69,7 @@ Route::group(['middleware' => 'web'], function(){
 
 
 
-     ////-----  FrontEnd  ------//////
-
-    Route::get('FCursos', [
-        'uses' => 'FrontendController@index',
-        'as' => 'frontend.cursos',
-        'middleware' => 'roles',
-        'roles' => ['Admin','Empresa','RegUser']
-        ]);
-
+    
 
      ////-----  USUARIOS  ------//////
 

@@ -15,7 +15,37 @@ class FrontendController extends Controller
      */
     public function index()
     {
-        return view('frontend.landing2');    }
+        return view('frontend.landing');    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function cursosinfo()
+    {
+        return view('frontend.cursosinfo');    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function diplomadosinfo()
+    {
+        return view('frontend.diplomadosinfo');    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function convocatoriasinfo()
+    {
+        return view('frontend.convocatoriasinfo');    }
 
     /**
      * Show the form for creating a new resource.

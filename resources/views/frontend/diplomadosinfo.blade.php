@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +7,7 @@
     <meta name="googlebot" content="index,follow,snippet,archive">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Universal - All In 1 Template</title>
+    <title>Alku</title>
 
     <meta name="keywords" content="">
 
@@ -43,18 +42,16 @@
     <link rel="apple-touch-icon" sizes="120x120" href="fcss/img/apple-touch-icon-120x120.png" />
     <link rel="apple-touch-icon" sizes="144x144" href="fcss/img/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="fcss/img/apple-touch-icon-152x152.png" />
-
     <!-- owl carousel css -->
 
     <link href="fcss/css/owl.carousel.css" rel="stylesheet">
     <link href="fcss/css/owl.theme.css" rel="stylesheet">
-
 </head>
 
 <body>
 
-
     <div id="all">
+
         <header>
 
             <!-- *** TOP ***
@@ -63,24 +60,24 @@ _________________________________________________________ -->
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-5 contact">
-                            <p class="hidden-sm hidden-xs">Contact us on +420 777 555 333 or hello@universal.com.</p>
+                            <p class="hidden-sm hidden-xs">Contactanos al 999 217 7056 o alku@ph3.com.mx.</p>
                             <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>  <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                             </p>
                         </div>
-                        <div class="col-xs-7">
+                      <!--  <div class="col-xs-7">
                             <div class="social">
                                 <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
                                 <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
                                 <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
                                 <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                             </div>
-
+-->
                             <div class="login">
-                                <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Sign in</span></a>
-                                <a href="customer-register.html"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Sign up</span></a>
+                                <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
+                                <a href="customer-register.html"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
                             </div>
 
-                        </div>
+                        </div>  
                     </div>
                 </div>
             </div>
@@ -128,8 +125,8 @@ _________________________________________________________ -->
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="dropdown use-yamm yamm-fw">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features<b class="caret"></b></a>
+                               <!-- <li class="dropdown use-yamm yamm-fw">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Caracteristicas<b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="yamm-content">
@@ -173,9 +170,9 @@ _________________________________________________________ -->
                                             </div>
                                         </li>
                                     </ul>
-                                </li>
+                                </li>-->
                                 <li class="dropdown use-yamm yamm-fw">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portafolio <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
                                         <li>
                                             <div class="yamm-content">
@@ -184,50 +181,36 @@ _________________________________________________________ -->
                                                         <img src="fcss/img/template-homepage.png" class="img-responsive hidden-xs" alt="">
                                                     </div>
                                                     <div class="col-sm-3">
-                                                        <h5>Portfolio</h5>
+                                                        <h5>Portafolio</h5>
                                                         <ul>
-                                                            <li><a href="portfolio-2.html">2 columns</a>
+                                                            <li><a href="portfolio-2.html">Cursos</a>
                                                             </li>
-                                                            <li><a href="portfolio-no-space-2.html">2 columns with negative space</a>
+                                                            <li><a href="portfolio-no-space-2.html">Diplomados</a>
                                                             </li>
-                                                            <li><a href="portfolio-3.html">3 columns</a>
+                                                            <li><a href="portfolio-3.html">Convocatorias</a>
                                                             </li>
-                                                            <li><a href="portfolio-no-space-3.html">3 columns with negative space</a>
-                                                            </li>
-                                                            <li><a href="portfolio-4.html">4 columns</a>
-                                                            </li>
-                                                            <li><a href="portfolio-no-space-4.html">4 columns with negative space</a>
-                                                            </li>
-                                                            <li><a href="portfolio-detail.html">Portfolio - detail</a>
-                                                            </li>
-                                                            <li><a href="portfolio-detail-2.html">Portfolio - detail 2</a>
-                                                            </li>
+                                                        
                                                         </ul>
                                                     </div>
                                                     <div class="col-sm-3">
-                                                        <h5>About</h5>
+                                                        <h5>Acerca de...</h5>
                                                         <ul>
-                                                            <li><a href="about.html">About us</a>
+                                                            <li><a href="about.html">Acerca de Nosotros</a>
                                                             </li>
-                                                            <li><a href="team.html">Our team</a>
+                                                            <li><a href="team.html">Nuestro Equipo</a>
                                                             </li>
-                                                            <li><a href="team-member.html">Team member</a>
-                                                            </li>
-                                                            <li><a href="services.html">Services</a>
+                                        
+                                                            <li><a href="services.html">Nuestros Servicios</a>
                                                             </li>
                                                         </ul>
-                                                        <h5>Marketing</h5>
-                                                        <ul>
-                                                            <li><a href="packages.html">Packages</a>
-                                                            </li>
-                                                        </ul>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
                                         </li>
                                     </ul>
                                 </li>
-                                <!-- ========== FULL WIDTH MEGAMENU ================== -->
+                                <!-- ========== FULL WIDTH MEGAMENU ================== 
                                 <li class="dropdown use-yamm yamm-fw">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">All Pages <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -362,21 +345,18 @@ _________________________________________________________ -->
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- /.yamm-content -->
+                                            
                                         </li>
                                     </ul>
                                 </li>
-                                <!-- ========== FULL WIDTH MEGAMENU END ================== -->
+                                <! ========== FULL WIDTH MEGAMENU END ================== -->
 
                                 <li class="dropdown">
-                                    <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                                    <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="contact.html">Contact option 1</a>
+                                        <li><a href="contact.html">Contactanos</a>
                                         </li>
-                                        <li><a href="contact2.html">Contact option 2</a>
-                                        </li>
-                                        <li><a href="contact3.html">Contact option 3</a>
-                                        </li>
+                                
 
                                     </ul>
                                 </li>
@@ -455,13 +435,15 @@ _________________________________________________________ -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <h1>Portfolio - 2 columns</h1>
+                        <h1>Informacion Diplomados</h1>
                     </div>
                     <div class="col-md-5">
                         <ul class="breadcrumb">
-                            <li><a href="index.html">Home</a>
+                            <li><a href="{{ url('/') }}">Inicio</a>
                             </li>
-                            <li>Portfolio - 2 columns</li>
+                            <li><a href="blog.html">Diplomados</a>
+                            </li>
+                            <li>Informacion</li>
                         </ul>
 
                     </div>
@@ -472,290 +454,145 @@ _________________________________________________________ -->
         <div id="content">
             <div class="container">
 
-                <section>
+                <div class="row">
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="heading">
-                                <h2>Portfolio</h2>
-                            </div>
+                    <!-- *** LEFT COLUMN ***
+            _________________________________________________________ -->
 
-                            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-                        </div>
-                    </div>
+                    <div class="col-md-9" id="blog-post">
 
-                    <div class="row portfolio">
-                        <div class="col-sm-6">
-                            <div class="box-image">
-                                <div class="image">
-                                    <img src="fcss/img/portfolio-1.jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="bg"></div>
-                                <div class="name">
-                                    <h3><a href="portfolio-detail.html">Portfolio box-image</a></h3> 
-                                </div>
-                                <div class="text">
-                                    <p class="hidden-sm">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                                    <p class="buttons">
-                                        <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                        <a href="#" class="btn btn-template-transparent-primary">Website</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image -->
 
-                        </div>
+                        <p class="lead">This is the lead paragraph of the article. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
 
-                        <div class="col-sm-6">
-                            <div class="box-image">
-                                <div class="image">
-                                    <img src="fcss/img/portfolio-2.jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="bg"></div>
-                                <div class="name">
-                                    <h3><a href="portfolio-detail.html">Portfolio box-image</a></h3> 
-                                </div>
-                                <div class="text">
-                                    <p class="hidden-sm">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                                    <p class="buttons">
-                                        <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                        <a href="#" class="btn btn-template-transparent-primary">Website</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image -->
+                        <div id="post-content">
+                            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                                semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
+                                fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+                            <p>
+                                <img src="fcss/img/blog2.jpg" class="img-responsive" alt="Example blog post alt">
+                            </p>
+
+                            <h2>Header Level 2</h2>
+
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                <li>Aliquam tincidunt mauris eu risus.</li>
+                            </ol>
+
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada
+                                    tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+                            </blockquote>
+
+                            <h3>Header Level 3</h3>
+
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
+                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                <li>Aliquam tincidunt mauris eu risus.</li>
+                            </ul>
+
+                            <p>
+                                <img src="fcss/img/blog.jpg" class="img-responsive" alt="Example blog post alt">
+                            </p>
+
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
+                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
 
                         </div>
+                        
+                        <!-- /#comments -->
 
-                        <div class="col-sm-6">
-                            <div class="box-image">
-                                <div class="image">
-                                    <img src="fcss/img/portfolio-3.jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="bg"></div>
-                                <div class="name">
-                                    <h3><a href="portfolio-detail.html">Portfolio box-image</a></h3> 
-                                </div>
-                                <div class="text">
-                                    <p class="hidden-sm">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                                    <p class="buttons">
-                                        <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                        <a href="#" class="btn btn-template-transparent-primary">Website</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image -->
 
-                        </div>
+                        
+                        <!-- /#comment-form -->
 
-                        <div class="col-sm-6">
-                            <div class="box-image">
-                                <div class="image">
-                                    <img src="fcss/img/portfolio-4.jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="bg"></div>
-                                <div class="name">
-                                    <h3><a href="portfolio-detail.html">Portfolio box-image</a></h3> 
-                                </div>
-                                <div class="text">
-                                    <p class="hidden-sm">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                                    <p class="buttons">
-                                        <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                        <a href="#" class="btn btn-template-transparent-primary">Website</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image -->
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="box-image">
-                                <div class="image">
-                                    <img src="fcss/img/portfolio-5.jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="bg"></div>
-                                <div class="name">
-                                    <h3><a href="portfolio-detail.html">Portfolio box-image</a></h3> 
-                                </div>
-                                <div class="text">
-                                    <p class="hidden-sm">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                                    <p class="buttons">
-                                        <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                        <a href="#" class="btn btn-template-transparent-primary">Website</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image -->
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="box-image">
-                                <div class="image">
-                                    <img src="fcss/img/portfolio-6.jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="bg"></div>
-                                <div class="name">
-                                    <h3><a href="portfolio-detail.html">Portfolio box-image</a></h3> 
-                                </div>
-                                <div class="text">
-                                    <p class="hidden-sm">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                                    <p class="buttons">
-                                        <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                        <a href="#" class="btn btn-template-transparent-primary">Website</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image -->
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="box-image">
-                                <div class="image">
-                                    <img src="fcss/img/portfolio-7.jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="bg"></div>
-                                <div class="name">
-                                    <h3><a href="portfolio-detail.html">Portfolio box-image</a></h3> 
-                                </div>
-                                <div class="text">
-                                    <p class="hidden-sm">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                                    <p class="buttons">
-                                        <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                        <a href="#" class="btn btn-template-transparent-primary">Website</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image -->
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="box-image">
-                                <div class="image">
-                                    <img src="fcss/img/portfolio-9.jpg" alt="" class="img-responsive">
-                                </div>
-                                <div class="bg"></div>
-                                <div class="name">
-                                    <h3><a href="portfolio-detail.html">Portfolio box-image</a></h3> 
-                                </div>
-                                <div class="text">
-                                    <p class="hidden-sm">Pellentesque habitant morbi tristique senectus et netus et malesuada</p>
-                                    <p class="buttons">
-                                        <a href="portfolio-detail.html" class="btn btn-template-transparent-primary">View</a>
-                                        <a href="#" class="btn btn-template-transparent-primary">Website</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image -->
-                        </div>
 
                     </div>
+                    <!-- /#blog-post -->
 
-                </section>
+                    <!-- *** LEFT COLUMN END *** -->
+
+                    <!-- *** RIGHT COLUMN ***
+                _________________________________________________________ -->
+
+                    <div class="col-md-3">
+
+                        <!-- *** MENUS AND WIDGETS ***
+ _________________________________________________________ -->
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Text widget</h3>
+                            </div>
+
+                            <div class="panel-body text-widget">
+                                <p>Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage mr be. Hold do at tore in park feet near my case.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Search</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <form role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+
+            <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        
+
+                        <!-- *** MENUS AND FILTERS END *** -->
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <!-- *** RIGHT COLUMN END *** -->
+
+
+                </div>
+                <!-- /.row -->
 
             </div>
             <!-- /.container -->
-
-            <section class="bar background-pentagon no-mb">
-                <div class="container">
-                    <div class="row showcase">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="item">
-                                <div class="icon"><i class="fa fa-align-justify"></i>
-                                </div>
-                                <h4><span class="counter">580</span><br>
-
-		Websites</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="item">
-                                <div class="icon"><i class="fa fa-users"></i>
-                                </div>
-                                <h4><span class="counter">100</span><br>
-
-		Satisfied Clients</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="item">
-                                <div class="icon"><i class="fa fa-copy"></i>
-                                </div>
-                                <h4><span class="counter">320</span><br>
-
-		Projects</h4>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="item">
-                                <div class="icon"><i class="fa fa-font"></i>
-                                </div>
-                                <h4><span class="counter">923</span><br> 
-
-		Magazines and Brochures</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.row -->
-                </div>
-                <!-- /.container -->
-            </section>
-            <!-- /.bar -->
-
-         <!--   <section class="bar background-gray no-mb">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="heading text-center">
-                                <h2>Our clients</h2>
-                            </div>
-
-                            <ul class="owl-carousel customers">
-                                <li class="item">
-                                    <img src="fcss/img/customer-1.png" alt="" class="img-responsive">
-                                </li>
-                                <li class="item">
-                                    <img src="fcss/img/customer-2.png" alt="" class="img-responsive">
-                                </li>
-                                <li class="item">
-                                    <img src="fcss/img/customer-3.png" alt="" class="img-responsive">
-                                </li>
-                                <li class="item">
-                                    <img src="fcss/img/customer-4.png" alt="" class="img-responsive">
-                                </li>
-                                <li class="item">
-                                    <img src="fcss/img/customer-5.png" alt="" class="img-responsive">
-                                </li>
-                                <li class="item">
-                                    <img src="fcss/img/customer-6.png" alt="" class="img-responsive">
-                                </li>
-                            </ul>
-                            <!-- /.owl-carousel -->
-
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
         </div>
         <!-- /#content -->
 
-        <!-- *** GET IT ***
 
-        
+        <!-- *** GET IT ***
 _________________________________________________________ -->
 
         <div id="get-it">
             <div class="container">
                 <div class="col-md-8 col-sm-12">
-                    <h3>Do you want cool website like this one?</h3>
+                    <h3>¿Te gustaria unirte a nuestro equipo y publicar tus Cursos?</h3>
                 </div>
                 <div class="col-md-4 col-sm-12">
-                    <a href="#" class="btn btn-template-transparent-primary">Buy this template now</a>
+                    <a href="#" class="btn btn-template-transparent-primary">Envianos un email</a>
                 </div>
             </div>
         </div>
-
 
         <!-- *** GET IT END *** -->
 
@@ -764,94 +601,56 @@ _________________________________________________________ -->
 _________________________________________________________ -->
 
         <footer id="footer">
-            <div class="container">
-                <div class="col-md-3 col-sm-6">
-                    <h4>About us</h4>
+        <div class="container" >
+              
 
-                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
-                    <hr>
+            <div class="container" >
+                <div class="col-md-6 col-sm-6">
+                    <h4>Acerca de Nosotros</h4>
 
-                    <h4>Join our monthly newsletter</h4>
+                    <p>Somos una empresa joven, que ofrece la plataforma "Alku" para la difusion de Cursos, Diplomados y Convocatorias. </p>
 
-                    <form>
-                        <div class="input-group">
 
-                            <input type="text" class="form-control">
-
-                            <span class="input-group-btn">
-
-                        <button class="btn btn-default" type="button"><i class="fa fa-send"></i></button>
-
-                    </span>
-
-                        </div>
+                    
                         <!-- /input-group -->
-                    </form>
+                
 
                     <hr class="hidden-md hidden-lg hidden-sm">
 
                 </div>
+               
                 <!-- /.col-md-3 -->
 
-                <div class="col-md-3 col-sm-6">
+                <!-- /.col-md-3 -->
 
-                    <h4>Blog</h4>
+                    <div class="col-md-3 col-sm-6">
+                    <h4></h4>
 
-                    <div class="blog-entries">
-                        <div class="item same-height-row clearfix">
-                            <div class="image same-height-always">
-                                <a href="#">
-                                    <img class="img-responsive" src="fcss/img/detailsquare.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="name same-height-always">
-                                <h5><a href="#">Blog post name</a></h5>
-                            </div>
-                        </div>
+                    <p></p>
 
-                        <div class="item same-height-row clearfix">
-                            <div class="image same-height-always">
-                                <a href="#">
-                                    <img class="img-responsive" src="fcss/img/detailsquare.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="name same-height-always">
-                                <h5><a href="#">Blog post name</a></h5>
-                            </div>
-                        </div>
 
-                        <div class="item same-height-row clearfix">
-                            <div class="image same-height-always">
-                                <a href="#">
-                                    <img class="img-responsive" src="fcss/img/detailsquare.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="name same-height-always">
-                                <h5><a href="#">Very very long blog post name</a></h5>
-                            </div>
-                        </div>
-                    </div>
+                    
+                        <!-- /input-group -->
+                
 
-                    <hr class="hidden-md hidden-lg">
+                    <hr class="hidden-md hidden-lg hidden-sm">
 
                 </div>
-                <!-- /.col-md-3 -->
-
                 <div class="col-md-3 col-sm-6">
 
-                    <h4>Contact</h4>
+                    <h4>Contacto</h4>
 
-                    <p><strong>Universal Ltd.</strong>
-                        <br>13/25 New Avenue
-                        <br>Newtown upon River
-                        <br>45Y 73J
-                        <br>England
+                    <p><strong>Calle 47b</strong>
+                        <br>866
+                        <br>Por calle 102 y 100-2
+                        <br>97302
+                        <br>Merida
                         <br>
-                        <strong>Great Britain</strong>
+                        <strong>Yucatan, Mexico</strong>
                     </p>
 
-                    <a href="contact.html" class="btn btn-small btn-template-main">Go to contact page</a>
+                    <a href="contact.html" class="btn btn-small btn-template-main">Ir a la pagina de Contacto</a>
 
                     <hr class="hidden-md hidden-lg hidden-sm">
 
@@ -860,44 +659,7 @@ _________________________________________________________ -->
 
 
 
-                <div class="col-md-3 col-sm-6">
-
-                    <h4>Photostream</h4>
-
-                    <div class="photostream">
-                        <div>
-                            <a href="#">
-                                <img src="fcss/img/detailsquare.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="fcss/img/detailsquare2.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="fcss/img/detailsquare3.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="fcss/img/detailsquare3.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="fcss/img/detailsquare2.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                        <div>
-                            <a href="#">
-                                <img src="fcss/img/detailsquare.jpg" class="img-responsive" alt="#">
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
+               
                 <!-- /.col-md-3 -->
             </div>
             <!-- /.container -->
@@ -909,11 +671,10 @@ _________________________________________________________ -->
         <!-- *** COPYRIGHT ***
 _________________________________________________________ -->
 
-        <div id="copyright">
+       <div id="copyright">
             <div class="container">
                 <div class="col-md-12">
-                    <p class="pull-left">&copy; 2015. Your company / name goes here</p>
-                    <p class="pull-right">Template by <a href="https://bootstrapious.com">Bootstrapious</a> & <a href="https://remoteplease.com">Remote Please</a>
+                    <p class="pull-left">&copy; 2017. PH3 Development Corporation</p>
                          <!-- Not removing these links is part of the license conditions of the template. Thanks for understanding :) If you want to use the template without the attribution links, you can do so after supporting further themes development at https://bootstrapious.com/donate  -->
                     </p>
 
@@ -928,6 +689,7 @@ _________________________________________________________ -->
 
     </div>
     <!-- /#all -->
+
 
     <!-- #### JAVASCRIPT FILES ### -->
 
@@ -944,9 +706,6 @@ _________________________________________________________ -->
     <script src="fcss/js/front.js"></script>
 
     
-
-    <!-- owl carousel -->
-    <script src="fcss/js/owl.carousel.min.js"></script>
 
 
 

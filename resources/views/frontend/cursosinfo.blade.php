@@ -431,427 +431,153 @@ _________________________________________________________ -->
 
         <!-- *** LOGIN MODAL END *** -->
 
-        <section>
-            <!-- *** HOMEPAGE CAROUSEL ***
- _________________________________________________________ -->
-
-            <div class="home-carousel">
-
-                <div class="dark-mask"></div>
-
-                <div class="container">
-                    <div class="homepage owl-carousel">
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-5 right">
-                                    <p>
-                                        <img src="fcss/img/logo.png" alt="">
-                                    </p>
-                                    <h1>Plataforma de Vinculación</h1>
-                                    <p>Cursos, Diplomados, Convocatorias.
-                                        <br />Bolsa de Trabajo Proximamente</p>
-                                </div>
-                                <div class="col-sm-7">
-                                    <img class="img-responsive" src="fcss/img/template-homepage.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-
-                                <div class="col-sm-7 text-center">
-                                    <img class="img-responsive" src="fcss/img/template-mac.png" alt="">
-                                </div>
-
-                                <div class="col-sm-5">
-                                    <h2>Cursos</h2>
-                                    <ul class="list-style-none">
-                                        <li>Cursos de Java</li>
-                                        <li>Cursos de PHP</li>
-                                        <li>Cursos de Laravel</li>
-                                        <li>Cursos de Ingles</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-5 right">
-                                    <h1>Diplomados</h1>
-                                    <ul class="list-style-none">
-                                        <li>Diplomados en diseño Web</li>
-                                        <li>Marketing y Ventas Inmobilirias</li>
-                                        <li>Creacion de Microempresas</li>
-                                        <li>Diplomados en Seguridad Informatica</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-7">
-                                    <img class="img-responsive" src="fcss/img/template-easy-customize.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-7">
-                                    <img class="img-responsive" src="fcss/img/template-easy-code.png" alt="">
-                                </div>
-                                <div class="col-sm-5">
-                                    <h1>Convocatorias</h1>
-                                    <ul class="list-style-none">
-                                        <li>Convocatorias Becas al Extranjero</li>
-                                        <li>Convocatorias Sistema Nacional de Investigadores SNI</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.project owl-slider -->
-                </div>
-            </div>
-
-            <!-- *** HOMEPAGE CAROUSEL END *** -->
-        </section>
-
-        <section class="bar background-white">
-            <div class="container">
-                <div class="col-md-12">
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-desktop"></i>
-                                </div>
-                                <h3>Cursos</h3>
-                                <p>Contamos con una amplia gama de cursos de diferentes intereses, tales como Php, Java, Oracle, Ingles.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-area-chart"></i>
-                                </div>
-                                <h3>Diplomados</h3>
-                                <p>Contamos con una amplia gama de Diplomados de diferentes intereses, tales como Diseño Web, Marketing, Seguridad Informatica.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-globe"></i>
-                                </div>
-                                <h3>Convocatorias</h3>
-                                <p>Contamos con la información de diferentes Convocatorias difundidas por diferentes organizaciones tales como Conacyt, Inadem, Sejuve.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-            </div>
-        </section>
-
-        <!-- <section class="bar background-pentagon no-mb">
+        <div id="heading-breadcrumbs">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Testimonials</h2>
-                        </div>
-
-                        <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.</p>
-
-
-                        <!-- *** TESTIMONIALS CAROUSEL ***
- _________________________________________________________ 
-
-                        <ul class="owl-carousel testimonials same-height-row">
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown
-                                            belly, slightly domed and divided by arches into stiff sections.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-1.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-md-7">
+                        <h1>Informacion Cursos</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb">
+                            <li><a href="{{ url('/') }}">Inicio</a>
                             </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to
-                                            me? " he thought. It wasn't a dream.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-2.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <li><a href="blog.html">Cursos</a>
                             </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-
-                                        <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded
-                                            frame.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-3.png">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made
-                                            him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            <li>Informacion</li>
                         </ul>
-                        <!-- /.owl-carousel 
 
-                        <!-- *** TESTIMONIALS CAROUSEL END *** 
                     </div>
-
                 </div>
             </div>
-        </section>
-        <!-- /.bar -->
+        </div>
 
-        <section class="bar background-image-fixed-2 no-mb color-white text-center">
-            <div class="dark-mask"></div>
+        <div id="content">
             <div class="container">
+
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="icon icon-lg"><i class="fa fa-file-code-o"></i>
+
+                    <!-- *** LEFT COLUMN ***
+            _________________________________________________________ -->
+
+                    <div class="col-md-9" id="blog-post">
+
+
+                        <p class="lead">This is the lead paragraph of the article. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
+
+                        <div id="post-content">
+                            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                                semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
+                                fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+                            <p>
+                                <img src="fcss/img/blog2.jpg" class="img-responsive" alt="Example blog post alt">
+                            </p>
+
+                            <h2>Header Level 2</h2>
+
+                            <ol>
+                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                <li>Aliquam tincidunt mauris eu risus.</li>
+                            </ol>
+
+                            <blockquote>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada
+                                    tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+                            </blockquote>
+
+                            <h3>Header Level 3</h3>
+
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
+                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                <li>Aliquam tincidunt mauris eu risus.</li>
+                            </ul>
+
+                            <p>
+                                <img src="fcss/img/blog.jpg" class="img-responsive" alt="Example blog post alt">
+                            </p>
+
+                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
+                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
+                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+
                         </div>
-                        <h3 class="text-uppercase">¿Te gustaria ver el contenido desde tu Smartphone?</h3>
-                        <p class="lead">Descarga nuestra aplicacion desde Google Play, Buscanos como Alku</p>
-                        <!--<p class="text-center">
-                            <a href="index2.html" class="btn btn-template-transparent-black btn-lg">Check other homepage</a>
-                        </p>-->
+                        
+                        <!-- /#comments -->
+
+
+                        
+                        <!-- /#comment-form -->
+
+
                     </div>
+                    <!-- /#blog-post -->
+
+                    <!-- *** LEFT COLUMN END *** -->
+
+                    <!-- *** RIGHT COLUMN ***
+                _________________________________________________________ -->
+
+                    <div class="col-md-3">
+
+                        <!-- *** MENUS AND WIDGETS ***
+ _________________________________________________________ -->
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Text widget</h3>
+                            </div>
+
+                            <div class="panel-body text-widget">
+                                <p>Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage mr be. Hold do at tore in park feet near my case.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default sidebar-menu">
+
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Search</h3>
+                            </div>
+
+                            <div class="panel-body">
+                                <form role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="input-group-btn">
+
+            <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+        </span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        
+
+                        <!-- *** MENUS AND FILTERS END *** -->
+
+                    </div>
+                    <!-- /.col-md-3 -->
+
+                    <!-- *** RIGHT COLUMN END *** -->
+
 
                 </div>
-            </div>
-        </section>
-
-        <section class="bar background-white no-mb">
-            <div class="container">
-
-                <div class="col-md-12">
-                    <div class="heading text-center">
-                        <h2>From our blog</h2>
-                    </div>
-
-                    <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies
-                        mi vitae est. Mauris placerat eleifend leo. <span class="accent">Check our blog!</span>
-                    </p>
-
-                    <!-- *** BLOG HOMEPAGE ***
-_________________________________________________________ -->
-
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-4.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="blog-post.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">Fashion now</a></h4>
-                                    <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="blog-post.html" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-3.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="blog-post.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">Fashion now</a></h4>
-                                    <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="blog-post.html" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-5.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="blog-post.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">What to do</a></h4>
-                                    <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="blog-post.html" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-6.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="blog-post.html" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Read more</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">5 ways to look awesome</a></h4>
-                                    <p class="author-category">By <a href="#">John Snow</a> in <a href="blog.html">Webdesign</a>
-                                    </p>
-                                    <p class="intro">Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people.</p>
-                                    <p class="read-more"><a href="blog-post.html" class="btn btn-template-main">Continue reading</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                    </div>
-                    <!-- /.row -->
-
-                    <!-- *** BLOG HOMEPAGE END *** -->
-
-                </div>
+                <!-- /.row -->
 
             </div>
             <!-- /.container -->
-        </section>
-        <!-- /.bar -->
-
-      <!--  <section class="bar background-gray no-mb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Nuestros Colaboradores</h2>
-                        </div>
-
-                        <ul class="owl-carousel customers">
-                            <li class="item">
-                                <img src="fcss/img/customer-1.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-2.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-3.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-4.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-5.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-6.png" alt="" class="img-responsive">
-                            </li>
-                        </ul>
-                        <!-- /.owl-carousel 
-                    </div>
-
-                </div>
-            </div>
-        </section>-->
+        </div>
+        <!-- /#content -->
 
 
         <!-- *** GET IT ***
@@ -868,7 +594,6 @@ _________________________________________________________ -->
             </div>
         </div>
 
-
         <!-- *** GET IT END *** -->
 
 
@@ -877,37 +602,11 @@ _________________________________________________________ -->
 
         <footer id="footer">
         <div class="container" >
-                <div class="col-md-3 col-sm-6">
-                    <h4></h4>
+              
 
-                    <p></p>
-
-
-                    
-                        <!-- /input-group -->
-                
-
-                    <hr class="hidden-md hidden-lg hidden-sm">
-
-                </div>
-
-        <div class="container" >
-                <div class="col-md-3 col-sm-6">
-                    <h4></h4>
-
-                    <p></p>
-
-
-                    
-                        <!-- /input-group -->
-                
-
-                    <hr class="hidden-md hidden-lg hidden-sm">
-
-                </div>
 
             <div class="container" >
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-6 col-sm-6">
                     <h4>Acerca de Nosotros</h4>
 
                     <p>Somos una empresa joven, que ofrece la plataforma "Alku" para la difusion de Cursos, Diplomados y Convocatorias. </p>
@@ -920,10 +619,24 @@ _________________________________________________________ -->
                     <hr class="hidden-md hidden-lg hidden-sm">
 
                 </div>
+               
                 <!-- /.col-md-3 -->
 
                 <!-- /.col-md-3 -->
 
+                    <div class="col-md-3 col-sm-6">
+                    <h4></h4>
+
+                    <p></p>
+
+
+                    
+                        <!-- /input-group -->
+                
+
+                    <hr class="hidden-md hidden-lg hidden-sm">
+
+                </div>
                 <div class="col-md-3 col-sm-6">
 
                     <h4>Contacto</h4>
@@ -958,10 +671,10 @@ _________________________________________________________ -->
         <!-- *** COPYRIGHT ***
 _________________________________________________________ -->
 
-        <div id="copyright">
+       <div id="copyright">
             <div class="container">
                 <div class="col-md-12">
-                    <p class="pull-left">&copy; 2017. PHE Development Corporation / Alku</p>
+                    <p class="pull-left">&copy; 2017. PH3 Development Corporation</p>
                          <!-- Not removing these links is part of the license conditions of the template. Thanks for understanding :) If you want to use the template without the attribution links, you can do so after supporting further themes development at https://bootstrapious.com/donate  -->
                     </p>
 
@@ -976,6 +689,7 @@ _________________________________________________________ -->
 
     </div>
     <!-- /#all -->
+
 
     <!-- #### JAVASCRIPT FILES ### -->
 
@@ -992,9 +706,6 @@ _________________________________________________________ -->
     <script src="fcss/js/front.js"></script>
 
     
-
-    <!-- owl carousel -->
-    <script src="fcss/js/owl.carousel.min.js"></script>
 
 
 
