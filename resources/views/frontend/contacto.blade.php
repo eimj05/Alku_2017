@@ -431,423 +431,135 @@ _________________________________________________________ -->
 
         <!-- *** LOGIN MODAL END *** -->
 
-        <section>
-            <!-- *** HOMEPAGE CAROUSEL ***
- _________________________________________________________ -->
-
-            <div class="home-carousel">
-
-                <div class="dark-mask"></div>
-
-                <div class="container">
-                    <div class="homepage owl-carousel">
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-5 right">
-                                    <p>
-                                        <img src="fcss/img/logo.png" alt="">
-                                    </p>
-                                    <h1>Plataforma de Vinculación</h1>
-                                    <p>Cursos, Diplomados, Convocatorias.
-                                        <br />Bolsa de Trabajo Proximamente</p>
-                                </div>
-                                <div class="col-sm-7">
-                                    <img class="img-responsive" src="fcss/img/template-homepage.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-
-                                <div class="col-sm-7 text-center">
-                                    <img class="img-responsive" src="fcss/img/template-mac.png" alt="">
-                                </div>
-
-                                <div class="col-sm-5">
-                                    <h2>Cursos</h2>
-                                    <ul class="list-style-none">
-                                        <li>Cursos de Java</li>
-                                        <li>Cursos de PHP</li>
-                                        <li>Cursos de Laravel</li>
-                                        <li>Cursos de Ingles</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-5 right">
-                                    <h1>Diplomados</h1>
-                                    <ul class="list-style-none">
-                                        <li>Diplomados en diseño Web</li>
-                                        <li>Marketing y Ventas Inmobilirias</li>
-                                        <li>Creacion de Microempresas</li>
-                                        <li>Diplomados en Seguridad Informatica</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-7">
-                                    <img class="img-responsive" src="fcss/img/template-easy-customize.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-7">
-                                    <img class="img-responsive" src="fcss/img/template-easy-code.png" alt="">
-                                </div>
-                                <div class="col-sm-5">
-                                    <h1>Convocatorias</h1>
-                                    <ul class="list-style-none">
-                                        <li>Convocatorias Becas al Extranjero</li>
-                                        <li>Convocatorias Sistema Nacional de Investigadores SNI</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.project owl-slider -->
-                </div>
-            </div>
-
-            <!-- *** HOMEPAGE CAROUSEL END *** -->
-        </section>
-
-        <section class="bar background-white">
-            <div class="container">
-                <div class="col-md-12">
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-desktop"></i>
-                                </div>
-                                <h3><a href="{{ url('Fcursoslist') }}">Cursos</h3>
-                                <p>Contamos con una amplia gama de cursos de diferentes intereses, tales como Php, Java, Oracle, Ingles.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-area-chart"></i>
-                                </div>
-                                <h3><a href="{{ url('Fdiplomadoslist') }}">Diplomados</h3>
-                                <p>Contamos con una amplia gama de Diplomados de diferentes intereses, tales como Diseño Web, Marketing, Seguridad Informatica.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-globe"></i>
-                                </div>
-                                <h3><a href="{{ url('Fconvocatoriaslist') }}"></a>Convocatorias</h3>
-                                <p>Contamos con la información de diferentes Convocatorias difundidas por diferentes organizaciones tales como Conacyt, Inadem, Sejuve.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-            </div>
-        </section>
-
-        <!-- <section class="bar background-pentagon no-mb">
+        <div id="heading-breadcrumbs">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Testimonials</h2>
-                        </div>
-
-                        <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.</p>
-
-
-                        <!-- *** TESTIMONIALS CAROUSEL ***
- _________________________________________________________ 
-
-                        <ul class="owl-carousel testimonials same-height-row">
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown
-                                            belly, slightly domed and divided by arches into stiff sections.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-1.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-md-7">
+                        <h1>Contact</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb">
+                            <li><a href="index.html">Home</a>
                             </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to
-                                            me? " he thought. It wasn't a dream.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-2.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-
-                                        <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded
-                                            frame.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-3.png">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made
-                                            him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            <li>Contact</li>
                         </ul>
-                        <!-- /.owl-carousel 
 
-                        <!-- *** TESTIMONIALS CAROUSEL END *** 
                     </div>
-
                 </div>
             </div>
-        </section>
-        <!-- /.bar -->
+        </div>
 
-        <section class="bar background-image-fixed-2 no-mb color-white text-center">
-            <div class="dark-mask"></div>
-            <div class="container">
+        <div id="content">
+            <div class="container" id="contact">
+
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="icon icon-lg"><i class="fa fa-file-code-o"></i>
-                        </div>
-                        <h3 class="text-uppercase">¿Te gustaria ver el contenido desde tu Smartphone?</h3>
-                        <p class="lead">Descarga nuestra aplicacion desde Google Play, Buscanos como Alku</p>
-                        <!--<p class="text-center">
-                            <a href="index2.html" class="btn btn-template-transparent-black btn-lg">Check other homepage</a>
-                        </p>-->
+                    <div class="col-md-8">
+
+                        <section>
+
+                            <div class="heading">
+                                <h2>We are here to help you</h2>
+                            </div>
+
+                            <p class="lead">Are you curious about something? Do you have some kind of problem with our products? As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built gay party world. Of so am he remember
+                                although required. Bachelor unpacked be advanced at. Confined in declared marianne is vicinity.</p>
+                            <p>Please feel free to contact us, our customer service center is working for you 24/7.</p>
+
+                            <div class="heading">
+                                <h3>Contact form</h3>
+                            </div>
+
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="firstname">Firstname</label>
+                                            <input type="text" class="form-control" id="firstname">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="lastname">Lastname</label>
+                                            <input type="text" class="form-control" id="lastname">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="text" class="form-control" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="subject">Subject</label>
+                                            <input type="text" class="form-control" id="subject">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label for="message">Message</label>
+                                            <textarea id="message" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12 text-center">
+                                        <button type="submit" class="btn btn-template-main"><i class="fa fa-envelope-o"></i> Send message</button>
+
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </form>
+
+                        </section>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <section>
+
+                            <h3 class="text-uppercase">Address</h3>
+
+                            <p>13/25 New Avenue
+                                <br>New Heaven
+                                <br>45Y 73J
+                                <br>England
+                                <br>
+                                <strong>Great Britain</strong>
+                            </p>
+
+                            <h3 class="text-uppercase">Call center</h3>
+
+                            <p class="text-muted">This number is toll free if calling from Great Britain otherwise we advise you to use the electronic form of communication.</p>
+                            <p><strong>+33 555 444 333</strong>
+                            </p>
+
+
+
+                            <h3 class="text-uppercase">Electronic support</h3>
+
+                            <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
+                            <ul>
+                                <li><strong><a href="mailto:">info@fakeemail.com</a></strong>
+                                </li>
+                                <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
+                            </ul>
+
+                        </section>
+
                     </div>
 
                 </div>
-            </div>
-        </section>
+                <!-- /.row -->
 
-        <section class="bar background-white no-mb">
-            <div class="container">
-
-                <div class="col-md-12">
-                    <div class="heading text-center">
-                        <h2>¿Que Ofrece nuestra plataforma?</h2>
-                    </div>
-
-                    <p class="lead">    Alku es una plataforma digital que su objetivo principal es la difusion y vinculacion de Cursos, Diplomados y Convocatorias, con nosotros encontraras la oferta mas actual del mercado. Proximamente vinculo con diferentes empresas para bolsa de trabajo. <span class="accent">Checa nuestras ofertas!</span>
-                    </p>
-
-                    <!-- *** BLOG HOMEPAGE ***
-_________________________________________________________ -->
-
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-4.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="{{ url('FCursosinfo') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="{{ url('FCursosinfo') }}">Cursos</a></h4>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="{{ url('FCursosinfo') }}" class="btn btn-template-main">Continuar leyendo</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-3.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="{{ url('FDiplomadosinfo') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="{{ url('FDiplomadosinfo') }}">Diplomados</a></h4>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="{{ url('FDiplomadosinfo') }}" class="btn btn-template-main">Continuar leyendo</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-5.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="{{ url('FConvocatoriasinfo') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="{{ url('FConvocatoriasinfo') }}">Convocatorias</a></h4>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="{{ url('FConvocatoriasinfo') }}" class="btn btn-template-main">Continuar leyendo</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-6.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="#" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">Bolsa de Trabajo</a></h4>
-                                    </p>
-                                    <p class="intro">Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people.</p>
-                                    <p class="read-more"><a href="#" class="btn btn-template-main">Continuar leyendo</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                    </div>
-                    <!-- /.row -->
-
-                    <!-- *** BLOG HOMEPAGE END *** -->
-
-                </div>
 
             </div>
-            <!-- /.container -->
-        </section>
-        <!-- /.bar -->
+            <!-- /#contact.container -->
+        </div>
+        <!-- /#content -->
 
-      <!--  <section class="bar background-gray no-mb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Nuestros Colaboradores</h2>
-                        </div>
-
-                        <ul class="owl-carousel customers">
-                            <li class="item">
-                                <img src="fcss/img/customer-1.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-2.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-3.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-4.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-5.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-6.png" alt="" class="img-responsive">
-                            </li>
-                        </ul>
-                        <!-- /.owl-carousel 
-                    </div>
-
-                </div>
-            </div>
-        </section>-->
-
+        <div id="map">
+        </div>
 
         <!-- *** GET IT ***
 _________________________________________________________ -->
@@ -976,8 +688,16 @@ _________________________________________________________ -->
 
     
 
-    <!-- owl carousel -->
-    <script src="fcss/js/owl.carousel.min.js"></script>
+    <!-- gmaps -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q"></script>
+
+    <script src="fcss/js/gmaps.js"></script>
+    <script src="fcss/js/gmaps.init.js"></script>
+
+    <!-- gmaps end -->
+
+
 
 
 

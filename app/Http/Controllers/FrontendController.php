@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Cursos1;
+use App\Diplomados1;
+use App\Convocatoria1;
+
 
 class FrontendController extends Controller
 {
@@ -13,9 +17,11 @@ class FrontendController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function cursosindex()
     {
-        return view('frontend.landing');    }
+        $cursos1 = Cursos1::paginate(15);
+        return view('frontend.fcursos', compact('cursos1'));  
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -23,9 +29,12 @@ class FrontendController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function cursosinfo()
+    public function diplomadosindex()
     {
-        return view('frontend.cursosinfo');    }
+        $diplomados1 = Diplomados1::paginate(15);
+        return view('frontend.fdiplomados', compact('diplomados1'));
+
+   }
 
     /**
      * Show the form for creating a new resource.
@@ -33,9 +42,11 @@ class FrontendController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function diplomadosinfo()
+    public function convocatoriasindex()
     {
-        return view('frontend.diplomadosinfo');    }
+        $convocatoria1 = Convocatoria1::paginate(15);
+        return view('frontend.fconvocatorias', compact('convocatoria1'));
+    }
 
     /**
      * Show the form for creating a new resource.

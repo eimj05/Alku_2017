@@ -32,14 +32,15 @@ Route::get('/', function () {
         return view('frontend.convocatoriasinfo'); 
     });
 
-   
+    Route::get('Fcontacto', function (){
+        return view('frontend.contacto'); 
+    });
 
-//    Route::get('FConvocatoriasinfo', [
-  //      'uses' => 'FrontendController@convocatoriasinfo',
-    //    'as' => 'frontend.convocatoriasinfo',
-      //  'middleware' => 'roles',
-       // 'roles' => ['Admin','Empresa','RegUser']
-       // ]);
+
+   Route::get('Fcursoslist', 'FrontendController@cursosindex');
+   Route::get('Fdiplomadoslist', 'FrontendController@diplomadosindex');
+   Route::get('Fconvocatoriaslist', 'FrontendController@convocatoriasindex');
+
 
 
 

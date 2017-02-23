@@ -395,6 +395,7 @@ _________________________________________________________ -->
 
         </header>
 
+
         <!-- *** LOGIN MODAL ***
 _________________________________________________________ -->
 
@@ -431,423 +432,85 @@ _________________________________________________________ -->
 
         <!-- *** LOGIN MODAL END *** -->
 
-        <section>
-            <!-- *** HOMEPAGE CAROUSEL ***
- _________________________________________________________ -->
-
-            <div class="home-carousel">
-
-                <div class="dark-mask"></div>
-
-                <div class="container">
-                    <div class="homepage owl-carousel">
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-5 right">
-                                    <p>
-                                        <img src="fcss/img/logo.png" alt="">
-                                    </p>
-                                    <h1>Plataforma de Vinculación</h1>
-                                    <p>Cursos, Diplomados, Convocatorias.
-                                        <br />Bolsa de Trabajo Proximamente</p>
-                                </div>
-                                <div class="col-sm-7">
-                                    <img class="img-responsive" src="fcss/img/template-homepage.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-
-                                <div class="col-sm-7 text-center">
-                                    <img class="img-responsive" src="fcss/img/template-mac.png" alt="">
-                                </div>
-
-                                <div class="col-sm-5">
-                                    <h2>Cursos</h2>
-                                    <ul class="list-style-none">
-                                        <li>Cursos de Java</li>
-                                        <li>Cursos de PHP</li>
-                                        <li>Cursos de Laravel</li>
-                                        <li>Cursos de Ingles</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-5 right">
-                                    <h1>Diplomados</h1>
-                                    <ul class="list-style-none">
-                                        <li>Diplomados en diseño Web</li>
-                                        <li>Marketing y Ventas Inmobilirias</li>
-                                        <li>Creacion de Microempresas</li>
-                                        <li>Diplomados en Seguridad Informatica</li>
-                                    </ul>
-                                </div>
-                                <div class="col-sm-7">
-                                    <img class="img-responsive" src="fcss/img/template-easy-customize.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-7">
-                                    <img class="img-responsive" src="fcss/img/template-easy-code.png" alt="">
-                                </div>
-                                <div class="col-sm-5">
-                                    <h1>Convocatorias</h1>
-                                    <ul class="list-style-none">
-                                        <li>Convocatorias Becas al Extranjero</li>
-                                        <li>Convocatorias Sistema Nacional de Investigadores SNI</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.project owl-slider -->
-                </div>
-            </div>
-
-            <!-- *** HOMEPAGE CAROUSEL END *** -->
-        </section>
-
-        <section class="bar background-white">
-            <div class="container">
-                <div class="col-md-12">
-
-
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-desktop"></i>
-                                </div>
-                                <h3><a href="{{ url('Fcursoslist') }}">Cursos</h3>
-                                <p>Contamos con una amplia gama de cursos de diferentes intereses, tales como Php, Java, Oracle, Ingles.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-area-chart"></i>
-                                </div>
-                                <h3><a href="{{ url('Fdiplomadoslist') }}">Diplomados</h3>
-                                <p>Contamos con una amplia gama de Diplomados de diferentes intereses, tales como Diseño Web, Marketing, Seguridad Informatica.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="box-simple">
-                                <div class="icon">
-                                    <i class="fa fa-globe"></i>
-                                </div>
-                                <h3><a href="{{ url('Fconvocatoriaslist') }}"></a>Convocatorias</h3>
-                                <p>Contamos con la información de diferentes Convocatorias difundidas por diferentes organizaciones tales como Conacyt, Inadem, Sejuve.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-            </div>
-        </section>
-
-        <!-- <section class="bar background-pentagon no-mb">
+        <div id="heading-breadcrumbs">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Testimonials</h2>
-                        </div>
-
-                        <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.</p>
-
-
-                        <!-- *** TESTIMONIALS CAROUSEL ***
- _________________________________________________________ 
-
-                        <ul class="owl-carousel testimonials same-height-row">
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown
-                                            belly, slightly domed and divided by arches into stiff sections.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-1.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="col-md-7">
+                        <h1>Portafolio de Cursos</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <ul class="breadcrumb">
+                            <li><a href="/">Home</a>
                             </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to
-                                            me? " he thought. It wasn't a dream.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-2.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-
-                                        <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded
-                                            frame.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-3.png">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made
-                                            him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                            <li>Cursos</li>
                         </ul>
-                        <!-- /.owl-carousel 
 
-                        <!-- *** TESTIMONIALS CAROUSEL END *** 
                     </div>
-
                 </div>
             </div>
-        </section>
-        <!-- /.bar -->
+        </div>
 
-        <section class="bar background-image-fixed-2 no-mb color-white text-center">
-            <div class="dark-mask"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="icon icon-lg"><i class="fa fa-file-code-o"></i>
-                        </div>
-                        <h3 class="text-uppercase">¿Te gustaria ver el contenido desde tu Smartphone?</h3>
-                        <p class="lead">Descarga nuestra aplicacion desde Google Play, Buscanos como Alku</p>
-                        <!--<p class="text-center">
-                            <a href="index2.html" class="btn btn-template-transparent-black btn-lg">Check other homepage</a>
-                        </p>-->
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="bar background-white no-mb">
+        <div id="content">
             <div class="container">
 
-                <div class="col-md-12">
-                    <div class="heading text-center">
-                        <h2>¿Que Ofrece nuestra plataforma?</h2>
-                    </div>
-
-                    <p class="lead">    Alku es una plataforma digital que su objetivo principal es la difusion y vinculacion de Cursos, Diplomados y Convocatorias, con nosotros encontraras la oferta mas actual del mercado. Proximamente vinculo con diferentes empresas para bolsa de trabajo. <span class="accent">Checa nuestras ofertas!</span>
-                    </p>
-
-                    <!-- *** BLOG HOMEPAGE ***
-_________________________________________________________ -->
+                <section>
 
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-4.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="{{ url('FCursosinfo') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="{{ url('FCursosinfo') }}">Cursos</a></h4>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="{{ url('FCursosinfo') }}" class="btn btn-template-main">Continuar leyendo</a>
-                                    </p>
-                                </div>
+                        <div class="col-md-12">
+                            <div class="heading">
+                                <h2>Cursos</h2>
                             </div>
-                            <!-- /.box-image-text -->
 
+                            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
+                                ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                         </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-3.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="{{ url('FDiplomadosinfo') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="{{ url('FDiplomadosinfo') }}">Diplomados</a></h4>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="{{ url('FDiplomadosinfo') }}" class="btn btn-template-main">Continuar leyendo</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-5.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="{{ url('FConvocatoriasinfo') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="{{ url('FConvocatoriasinfo') }}">Convocatorias</a></h4>
-                                    </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="{{ url('FConvocatoriasinfo') }}" class="btn btn-template-main">Continuar leyendo</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
-                        <div class="col-md-3 col-sm-6">
-                            <div class="box-image-text blog">
-                                <div class="top">
-                                    <div class="image">
-                                        <img src="fcss/img/portfolio-6.jpg" alt="" class="img-responsive">
-                                    </div>
-                                    <div class="bg"></div>
-                                    <div class="text">
-                                        <p class="buttons">
-                                            <a href="#" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="blog-post.html">Bolsa de Trabajo</a></h4>
-                                    </p>
-                                    <p class="intro">Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people.</p>
-                                    <p class="read-more"><a href="#" class="btn btn-template-main">Continuar leyendo</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- /.box-image-text -->
-
-                        </div>
-
                     </div>
-                    <!-- /.row -->
 
-                    <!-- *** BLOG HOMEPAGE END *** -->
+       <!-- *** Listar Cursos *** -->
 
-                </div>
+        <div class="container">
+      <div class="input-group"> <span class="input-group-addon">Buscar</span>
+        <input id="filtrar" type="text" class="form-control" placeholder="Filtra por tus preferencias y dale clic en Ver Detalles para mas informacion">
+      </div>
+
+        <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Nº</th>
+            <th>Nombre del Curso</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>            
+            <th>Interes</th>
+            <th>Detalles</th>
+          </tr>
+        </thead>
+        <tbody class="buscar">
+
+          {{-- */$x=0;/* --}}
+            @foreach($cursos1 as $item)
+                {{-- */$x++;/* --}}
+                <tr>
+                    <td>{{ $x }}</td>
+                    <td>{{ $item->nombreCurso }}</td><td>{{ $item->fechaInicio }}</td><td>{{ $item->fechaFin }}</td><td>{{ $item->interes }}</td>
+                    <td>
+                        <a href="{{ url('/Cursos/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                        
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+      </table>
+
+    </div>
+
+
+
 
             </div>
             <!-- /.container -->
-        </section>
-        <!-- /.bar -->
 
-      <!--  <section class="bar background-gray no-mb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Nuestros Colaboradores</h2>
-                        </div>
-
-                        <ul class="owl-carousel customers">
-                            <li class="item">
-                                <img src="fcss/img/customer-1.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-2.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-3.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-4.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-5.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-6.png" alt="" class="img-responsive">
-                            </li>
-                        </ul>
-                        <!-- /.owl-carousel 
-                    </div>
-
-                </div>
-            </div>
-        </section>-->
-
+           
+        <!-- /#content -->
 
         <!-- *** GET IT ***
 _________________________________________________________ -->
@@ -968,16 +631,31 @@ _________________________________________________________ -->
     </script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <script src="fcss/js/jquery.cookie.js"></script>
-    <script src="fcss/js/waypoints.min.js"></script>
-    <script src="fcss/js/jquery.counterup.min.js"></script>
-    <script src="fcss/js/jquery.parallax-1.1.3.js"></script>
-    <script src="fcss/js/front.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+    <script src="js/front.js"></script>
 
     
+    <script type="text/javascript">
+        $(document).ready(function () {
+            (function ($) {
+                $('#filtrar').keyup(function () {
+                    var rex = new RegExp($(this).val(), 'i');
+                    $('.buscar tr').hide();
+                    $('.buscar tr').filter(function () {
+                        return rex.test($(this).text());
+                    }).show();
+                })
+            }(jQuery));
+        });
+    </script>    
+
+
 
     <!-- owl carousel -->
-    <script src="fcss/js/owl.carousel.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
 
 
 
