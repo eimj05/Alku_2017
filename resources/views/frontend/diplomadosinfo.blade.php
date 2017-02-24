@@ -183,11 +183,11 @@ _________________________________________________________ -->
                                                     <div class="col-sm-3">
                                                         <h5>Portafolio</h5>
                                                         <ul>
-                                                            <li><a href="portfolio-2.html">Cursos</a>
+                                                            <li><a href="{{ url('Fcursoslist') }}">Cursos</a>
                                                             </li>
-                                                            <li><a href="portfolio-no-space-2.html">Diplomados</a>
+                                                            <li><a href="{{ url('Fdiplomadoslist') }}">Diplomados</a>
                                                             </li>
-                                                            <li><a href="portfolio-3.html">Convocatorias</a>
+                                                            <li><a href="{{ url('Fconvocatoriaslist') }}">Convocatorias</a>
                                                             </li>
                                                         
                                                         </ul>
@@ -195,7 +195,7 @@ _________________________________________________________ -->
                                                     <div class="col-sm-3">
                                                         <h5>Acerca de...</h5>
                                                         <ul>
-                                                            <li><a href="about.html">Acerca de Nosotros</a>
+                                                            <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
                                                             <li><a href="team.html">Nuestro Equipo</a>
                                                             </li>
@@ -354,7 +354,7 @@ _________________________________________________________ -->
                                 <li class="dropdown">
                                     <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="contact.html">Contactanos</a>
+                                        <li><a href="{{ url('Fcontacto') }}">Contactanos</a>
                                         </li>
                                 
 

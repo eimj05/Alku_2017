@@ -195,7 +195,7 @@ _________________________________________________________ -->
                                                     <div class="col-sm-3">
                                                         <h5>Acerca de...</h5>
                                                         <ul>
-                                                            <li><a href="about.html">Acerca de Nosotros</a>
+                                                            <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
                                                             <li><a href="team.html">Nuestro Equipo</a>
                                                             </li>

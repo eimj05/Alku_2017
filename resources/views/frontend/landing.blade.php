@@ -195,7 +195,7 @@ _________________________________________________________ -->
                                                     <div class="col-sm-3">
                                                         <h5>Acerca de...</h5>
                                                         <ul>
-                                                            <li><a href="about.html">Acerca de Nosotros</a>
+                                                            <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
                                                             <li><a href="team.html">Nuestro Equipo</a>
                                                             </li>
@@ -517,14 +517,13 @@ _________________________________________________________ -->
             <div class="container">
                 <div class="col-md-12">
 
-
                     <div class="row">
                         <div class="col-md-4">
                             <div class="box-simple">
                                 <div class="icon">
                                     <i class="fa fa-desktop"></i>
                                 </div>
-                                <h3><a href="{{ url('Fcursoslist') }}">Cursos</h3>
+                                <h3><a href="{{ url('Fcursoslist') }}">Cursos</a></h3>
                                 <p>Contamos con una amplia gama de cursos de diferentes intereses, tales como Php, Java, Oracle, Ingles.</p>
                             </div>
                         </div>
@@ -533,7 +532,7 @@ _________________________________________________________ -->
                                 <div class="icon">
                                     <i class="fa fa-area-chart"></i>
                                 </div>
-                                <h3><a href="{{ url('Fdiplomadoslist') }}">Diplomados</h3>
+                                <h3><a href="{{ url('Fdiplomadoslist') }}">Diplomados</a></h3>
                                 <p>Contamos con una amplia gama de Diplomados de diferentes intereses, tales como Diseño Web, Marketing, Seguridad Informatica.</p>
                             </div>
                         </div>
@@ -542,7 +541,7 @@ _________________________________________________________ -->
                                 <div class="icon">
                                     <i class="fa fa-globe"></i>
                                 </div>
-                                <h3><a href="{{ url('Fconvocatoriaslist') }}"></a>Convocatorias</h3>
+                                <h3><a href="{{ url('Fconvocatoriaslist') }}">Convocatorias</a></h3>
                                 <p>Contamos con la información de diferentes Convocatorias difundidas por diferentes organizaciones tales como Conacyt, Inadem, Sejuve.</p>
                             </div>
                         </div>

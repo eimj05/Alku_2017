@@ -36,6 +36,10 @@ Route::get('/', function () {
         return view('frontend.contacto'); 
     });
 
+       Route::get('Facerca', function (){
+        return view('frontend.acerca'); 
+    });
+
 
    Route::get('Fcursoslist', 'FrontendController@cursosindex');
    Route::get('Fdiplomadoslist', 'FrontendController@diplomadosindex');

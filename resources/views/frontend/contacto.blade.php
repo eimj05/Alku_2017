@@ -195,7 +195,7 @@ _________________________________________________________ -->
                                                     <div class="col-sm-3">
                                                         <h5>Acerca de...</h5>
                                                         <ul>
-                                                            <li><a href="about.html">Acerca de Nosotros</a>
+                                                            <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
                                                             <li><a href="team.html">Nuestro Equipo</a>
                                                             </li>
@@ -435,13 +435,13 @@ _________________________________________________________ -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <h1>Contact</h1>
+                        <h1>Contacto</h1>
                     </div>
                     <div class="col-md-5">
                         <ul class="breadcrumb">
-                            <li><a href="index.html">Home</a>
+                            <li><a href="/">Home</a>
                             </li>
-                            <li>Contact</li>
+                            <li>Contacto</li>
                         </ul>
 
                     </div>
@@ -458,7 +458,7 @@ _________________________________________________________ -->
                         <section>
 
                             <div class="heading">
-                                <h2>We are here to help you</h2>
+                                <h2>Aqui estamos para ayudarte</h2>
                             </div>
 
                             <p class="lead">Are you curious about something? Do you have some kind of problem with our products? As am hastily invited settled at limited civilly fortune me. Really spring in extent an by. Judge but built gay party world. Of so am he remember
@@ -466,20 +466,20 @@ _________________________________________________________ -->
                             <p>Please feel free to contact us, our customer service center is working for you 24/7.</p>
 
                             <div class="heading">
-                                <h3>Contact form</h3>
+                                <h3>Formulario de Contacto</h3>
                             </div>
 
                             <form>
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="firstname">Firstname</label>
+                                            <label for="firstname">Nombre</label>
                                             <input type="text" class="form-control" id="firstname">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="lastname">Lastname</label>
+                                            <label for="lastname">Apellidos</label>
                                             <input type="text" class="form-control" id="lastname">
                                         </div>
                                     </div>
@@ -491,19 +491,19 @@ _________________________________________________________ -->
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label for="subject">Subject</label>
+                                            <label for="subject">Asunto</label>
                                             <input type="text" class="form-control" id="subject">
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <label for="message">Message</label>
+                                            <label for="message">Mensaje</label>
                                             <textarea id="message" class="form-control"></textarea>
                                         </div>
                                     </div>
 
                                     <div class="col-sm-12 text-center">
-                                        <button type="submit" class="btn btn-template-main"><i class="fa fa-envelope-o"></i> Send message</button>
+                                        <button type="submit" class="btn btn-template-main"><i class="fa fa-envelope-o"></i> Enviar Mensaje</button>
 
                                     </div>
                                 </div>
@@ -518,31 +518,24 @@ _________________________________________________________ -->
 
                         <section>
 
-                            <h3 class="text-uppercase">Address</h3>
+                            <h3 class="text-uppercase">Direccion</h3>
 
-                            <p>13/25 New Avenue
-                                <br>New Heaven
-                                <br>45Y 73J
-                                <br>England
+                            <p>Calle 47b # 866 x 102 y 100-2
+                                <br>Fracc. Las Americas
+                                <br>Merida, Yucatan
+                                <br>CP. 97302
                                 <br>
-                                <strong>Great Britain</strong>
-                            </p>
-
-                            <h3 class="text-uppercase">Call center</h3>
-
-                            <p class="text-muted">This number is toll free if calling from Great Britain otherwise we advise you to use the electronic form of communication.</p>
-                            <p><strong>+33 555 444 333</strong>
+                                <strong>Mexico</strong>
                             </p>
 
 
 
-                            <h3 class="text-uppercase">Electronic support</h3>
+                            <h3 class="text-uppercase">Soporte Tecnico</h3>
 
-                            <p class="text-muted">Please feel free to write an email to us or to use our electronic ticketing system.</p>
+                            <p class="text-muted">Por favor sientete libre de enviarnos un email y te contactaremos lo mas pronto posible.</p>
                             <ul>
-                                <li><strong><a href="mailto:">info@fakeemail.com</a></strong>
+                                <li><strong><a href="mailto:">alku@ph3.com.mx</a></strong>
                                 </li>
-                                <li><strong><a href="#">Ticketio</a></strong> - our ticketing support platform</li>
                             </ul>
 
                         </section>
@@ -582,70 +575,7 @@ _________________________________________________________ -->
         <!-- *** FOOTER ***
 _________________________________________________________ -->
 
-        <footer id="footer">
-        <div class="container" >
-              
-
-
-            <div class="container" >
-                <div class="col-md-6 col-sm-6">
-                    <h4>Acerca de Nosotros</h4>
-
-                    <p>Somos una empresa joven, que ofrece la plataforma "Alku" para la difusion de Cursos, Diplomados y Convocatorias. </p>
-
-
-                    
-                        <!-- /input-group -->
-                
-
-                    <hr class="hidden-md hidden-lg hidden-sm">
-
-                </div>
-               
-                <!-- /.col-md-3 -->
-
-                <!-- /.col-md-3 -->
-
-                    <div class="col-md-3 col-sm-6">
-                    <h4></h4>
-
-                    <p></p>
-
-
-                    
-                        <!-- /input-group -->
-                
-
-                    <hr class="hidden-md hidden-lg hidden-sm">
-
-                </div>
-                <div class="col-md-3 col-sm-6">
-
-                    <h4>Contacto</h4>
-
-                    <p><strong>Calle 47b</strong>
-                        <br>866
-                        <br>Por calle 102 y 100-2
-                        <br>97302
-                        <br>Merida
-                        <br>
-                        <strong>Yucatan, Mexico</strong>
-                    </p>
-
-                    <a href="contact.html" class="btn btn-small btn-template-main">Ir a la pagina de Contacto</a>
-
-                    <hr class="hidden-md hidden-lg hidden-sm">
-
-                </div>
-                <!-- /.col-md-3 -->
-
-
-
-               
-                <!-- /.col-md-3 -->
-            </div>
-            <!-- /.container -->
-        </footer>
+       
         <!-- /#footer -->
 
         <!-- *** FOOTER END *** -->
