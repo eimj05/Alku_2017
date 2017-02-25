@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
     <!-- Css animations  -->
-    <link href="fcss/css/animate.css" rel="stylesheet">
+    <link href="/fcss/css/animate.css" rel="stylesheet">
 
     <!-- Theme stylesheet, if possible do not edit this stylesheet -->
-    <link href="fcss/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="/fcss/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- Custom stylesheet - for your changes -->
-    <link href="fcss/css/custom.css" rel="stylesheet">
+    <link href="/fcss/css/custom.css" rel="stylesheet">
 
     <!-- Responsivity for older IE -->
     <!--[if lt IE 9]>
@@ -33,19 +33,19 @@
 <![endif]-->
 
     <!-- Favicon and apple touch icons-->
-    <link rel="shortcut icon" href="fcss/img/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="fcss/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="fcss/img/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="fcss/img/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="fcss/img/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="fcss/img/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="fcss/img/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="fcss/img/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="fcss/img/apple-touch-icon-152x152.png" />
+    <link rel="shortcut icon" href="/fcss/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/fcss/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/fcss/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/fcss/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/fcss/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/fcss/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/fcss/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/fcss/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/fcss/img/apple-touch-icon-152x152.png" />
     <!-- owl carousel css -->
 
-    <link href="fcss/css/owl.carousel.css" rel="stylesheet">
-    <link href="fcss/css/owl.theme.css" rel="stylesheet">
+    <link href="/fcss/css/owl.carousel.css" rel="stylesheet">
+    <link href="/fcss/css/owl.theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -94,9 +94,9 @@ _________________________________________________________ -->
                     <div class="container">
                         <div class="navbar-header">
 
-                            <a class="navbar-brand home" href="index.html">
-                                <img src="fcss/img/logo.png" alt="Universal logo" class="hidden-xs hidden-sm">
-                                <img src="fcss/img/logo-small.png" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
+                            <a class="navbar-brand home" href="/">
+                                <img src="/fcss/img/logo.png" alt="Universal logo" class="hidden-xs hidden-sm">
+                                <img src="/fcss/img/logo-small.png" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
                             </a>
                             <div class="navbar-buttons">
                                 <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -166,7 +166,7 @@ _________________________________________________________ -->
                                             <div class="yamm-content">
                                                 <div class="row">
                                                     <div class="col-sm-6">
-                                                        <img src="fcss/img/template-homepage.png" class="img-responsive hidden-xs" alt="">
+                                                        <img src="/fcss/img/template-homepage.png" class="img-responsive hidden-xs" alt="">
                                                     </div>
                                                     <div class="col-sm-3">
                                                         <h5>Portafolio</h5>
@@ -423,15 +423,15 @@ _________________________________________________________ -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <h1>Informacion Cursos</h1>
+                        <h1>Detalle de la Convocatoria</h1>
                     </div>
                     <div class="col-md-5">
                         <ul class="breadcrumb">
-                            <li><a href="{{ url('/') }}">Inicio</a>
+                            <li><a href="/">Inicio</a>
                             </li>
-                            <li><a href="blog.html">Cursos</a>
+                            <li><a href="{{ url('Fconvocatoriaslist') }}">Convocatorias</a>
                             </li>
-                            <li>Informacion</li>
+                            <li>Detalle de la Convocatoria</li>
                         </ul>
 
                     </div>
@@ -442,131 +442,64 @@ _________________________________________________________ -->
         <div id="content">
             <div class="container">
 
-                <div class="row">
-
-                    <!-- *** LEFT COLUMN ***
-            _________________________________________________________ -->
-
-                    <div class="col-md-9" id="blog-post">
-
-
-                        <p class="lead">This is the lead paragraph of the article. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
-
-                        <div id="post-content">
-                            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                                semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
-                                fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-                            <p>
-                                <img src="fcss/img/blog2.jpg" class="img-responsive" alt="Example blog post alt">
-                            </p>
-
-                            <h2>Header Level 2</h2>
-
-                            <ol>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ol>
-
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada
-                                    tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                            </blockquote>
-
-                            <h3>Header Level 3</h3>
-
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
-                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ul>
-
-                            <p>
-                                <img src="fcss/img/blog.jpg" class="img-responsive" alt="Example blog post alt">
-                            </p>
-
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
-                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-
+                <section class="no-mb">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>{{ $convocatoria1->nombreConvocatoria }}</h1>
                         </div>
-                        
-                        <!-- /#comments -->
-
-
-                        
-                        <!-- /#comment-form -->
-
-
                     </div>
-                    <!-- /#blog-post -->
+                </section>
 
-                    <!-- *** LEFT COLUMN END *** -->
-
-                    <!-- *** RIGHT COLUMN ***
-                _________________________________________________________ -->
-
-                    <div class="col-md-3">
-
-                        <!-- *** MENUS AND WIDGETS ***
- _________________________________________________________ -->
-                        <div class="panel panel-default sidebar-menu">
-
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Text widget</h3>
-                            </div>
-
-                            <div class="panel-body text-widget">
-                                <p>Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage mr be. Hold do at tore in park feet near my case.
-                                </p>
-
-                            </div>
+                <section>
+                    <div class="project owl-carousel">
+                        <div class="item">
+                            <img src="/fcss/img/main-slider1.jpg" alt="" class="img-responsive">
                         </div>
-
-                        <div class="panel panel-default sidebar-menu">
-
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Search</h3>
-                            </div>
-
-                            <div class="panel-body">
-                                <form role="search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search">
-                                        <span class="input-group-btn">
-
-            <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
-
-        </span>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-
-                        
-
-                        <!-- *** MENUS AND FILTERS END *** -->
-
+                    
                     </div>
-                    <!-- /.col-md-3 -->
+                    <!-- /.project owl-slider -->
+                </section>
 
-                    <!-- *** RIGHT COLUMN END *** -->
+                <section>
+                    <div class="row portfolio-project">
+                        <div class="col-md-8">
+                            <div class="heading">
+                                <h3>Descripcion de la Convocatoria</h3>
+                            </div>
+
+                            <p>Bringing unlocked me an striking ye perceive. Mr by wound hours oh happy. Me in resolution pianoforte continuing we. Most my no spot felt by no. He he in forfeited furniture sweetness he arranging. Me tedious so to behaved
+                                written account ferrars moments. Too objection for elsewhere her preferred allowance her. Marianne shutters mr steepest to me. Up mr ignorant produced distance although is sociable blessing. Ham whom call all lain like.</p>
+
+                            <p>To sorry world an at do spoil along. Incommode he depending do frankness remainder to. Edward day almost active him friend thirty piqued. People as period twenty my extent as. Set was better abroad ham plenty secure had horses.
+                                Admiration has sir decisively excellence say everything inhabiting acceptance. Sooner settle add put you sudden him.</p>
+
+                        </div>
+                        <div class="col-md-4 project-more">
+                            <div class="heading">
+                                <h3>Mas</h3>
+                            </div>
+                            <h4>Dependencia</h4>
+                            <p>INADEM</p>
+                            <h4>Tipo de Convocatoria</h4>
+                            <p>Libre</p>
+                            <h4>Contacto</h4>
+                            <p>Juan Espinosa</p>
+                            <h4>Fecha de Cierre</h4>
+                            <p> 30 Abril 2017</p>
 
 
-                </div>
-                <!-- /.row -->
+                        </div>
+                    </div>
+                </section>
+
+                
 
             </div>
             <!-- /.container -->
+
+
         </div>
         <!-- /#content -->
-
 
         <!-- *** GET IT ***
 _________________________________________________________ -->
@@ -574,13 +507,14 @@ _________________________________________________________ -->
         <div id="get-it">
             <div class="container">
                 <div class="col-md-8 col-sm-12">
-                    <h3>¿Te gustaria unirte a nuestro equipo y publicar tus Cursos?</h3>
+                    <h3>¿Te gustaria unirte a nuestro equipo y publicar tus Cursos o Diplomados?</h3>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <a href="#" class="btn btn-template-transparent-primary">Envianos un email</a>
                 </div>
             </div>
         </div>
+
 
         <!-- *** GET IT END *** -->
 
@@ -659,7 +593,7 @@ _________________________________________________________ -->
         <!-- *** COPYRIGHT ***
 _________________________________________________________ -->
 
-       <div id="copyright">
+        <div id="copyright">
             <div class="container">
                 <div class="col-md-12">
                     <p class="pull-left">&copy; 2017. PH3 Development Corporation</p>
@@ -678,7 +612,6 @@ _________________________________________________________ -->
     </div>
     <!-- /#all -->
 
-
     <!-- #### JAVASCRIPT FILES ### -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -687,13 +620,17 @@ _________________________________________________________ -->
     </script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <script src="fcss/js/jquery.cookie.js"></script>
-    <script src="fcss/js/waypoints.min.js"></script>
-    <script src="fcss/js/jquery.counterup.min.js"></script>
-    <script src="fcss/js/jquery.parallax-1.1.3.js"></script>
-    <script src="fcss/js/front.js"></script>
+    <script src="/fcss/js/jquery.cookie.js"></script>
+    <script src="/fcss/js/waypoints.min.js"></script>
+    <script src="/fcss/js/jquery.counterup.min.js"></script>
+    <script src="/fcss/js/jquery.parallax-1.1.3.js"></script>
+    <script src="/fcss/js/front.js"></script>
+ 
 
-    
+
+
+    <!-- owl carousel -->
+    <script src="/fcss/js/owl.carousel.min.js"></script>
 
 
 

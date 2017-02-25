@@ -111,19 +111,7 @@ _________________________________________________________ -->
 
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown active">
-                                    <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="index.html">Option 1: Default Page</a>
-                                        </li>
-                                        <li><a href="index2.html">Option 2: Application</a>
-                                        </li>
-                                        <li><a href="index3.html">Option 3: Startup</a>
-                                        </li>
-                                        <li><a href="index4.html">Option 4: Agency</a>
-                                        </li>
-                                        <li><a href="index5.html">Option 5: Portfolio</a>
-                                        </li>
-                                    </ul>
+                                    <a href="/" class="btn btn-link" >Inicio </a>
                                 </li>
                                <!-- <li class="dropdown use-yamm yamm-fw">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Caracteristicas<b class="caret"></b></a>
@@ -439,7 +427,7 @@ _________________________________________________________ -->
                     </div>
                     <div class="col-md-5">
                         <ul class="breadcrumb">
-                            <li><a href="/">Home</a>
+                            <li><a href="/">Inicio</a>
                             </li>
                             <li>Contacto</li>
                         </ul>

@@ -41,13 +41,14 @@
                        <li><a href="{{ url('Usuarios') }}"><i class='fa  fa-users'></i> <span>{{ trans('Usuarios') }}</span></a></li>
                         <li><a href="{{ url('Intereses') }}"><i class='glyphicon glyphicon-road'></i> <span>{{ trans('adminlte_lang::message.anotherlink5') }}</span></a></li>
                         <li><a href="{{ url('Roles') }}"><i class='glyphicon glyphicon-briefcase'></i> <span>{{ trans('Roles') }}</span></a></li>
-                        <li><a href="{{ url('Ubicaciones') }}"><i class='fa fa-map-marker'></i> <span>{{ trans('Ubicaciones') }}</span></a></li>
+                        
                 </ul>
 
             <li><a href="{{ url('Cursos') }}"><i class='glyphicon glyphicon-pencil'></i> <span>{{ trans('adminlte_lang::message.anotherlink4') }}</span></a></li>
             <li><a href="{{ url('Diplomados') }}"><i class='glyphicon glyphicon-book'></i> <span>{{ trans('adminlte_lang::message.anotherlink1') }}</span></a></li>
             <li><a href="{{ url('Convocatorias') }}"><i class='glyphicon glyphicon-bullhorn'></i> <span>{{ trans('adminlte_lang::message.anotherlink3') }}</span></a></li>
-            <li><a href="{{ url('Notificaciones') }}"><i class="fa fa-fw fa-envelope"></i> <span>Notificaciones</span></a></li>
+            <li><a href="{{ url('Ubicaciones') }}"><i class='fa fa-map-marker'></i> <span>{{ trans('Ubicaciones') }}</span></a></li>
+            <li><a href="{{ url('Enviaremail') }}"><i class="fa fa-fw fa-envelope"></i> <span>Enviar Email</span></a></li>
 
             
 

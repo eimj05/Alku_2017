@@ -7,7 +7,7 @@
 
 <div class="container">
 
-    <h1>Enviar Notificacion </h1>
+    <h1>Enviar Email </h1>
 
     <hr/>
 		{!!Form::open(['route'=>'mail.store','method'=>'POST','class' => 'form-horizontal'])!!}

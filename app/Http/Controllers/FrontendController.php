@@ -23,6 +23,31 @@ class FrontendController extends Controller
         return view('frontend.fcursos', compact('cursos1'));  
     }
 
+    public function cursosshow($id)
+    {
+        $cursos1 = Cursos1::findOrFail($id);
+        $ubicaciones = Cursos1::find($cursos1->id)->ubicacion()->get();
+
+        return view('frontend.fdetallecurso', compact('cursos1','ubicaciones'));  
+    }
+
+    public function diplomadosshow($id)
+    {
+        $diplomados1 = Diplomados1::findOrFail($id);
+        $ubicaciones = Diplomados1::find($diplomados1->id)->ubicacion()->get();
+
+
+        return view('frontend.fdetallediplomado', compact('diplomados1','ubicaciones'));
+    }
+
+    public function convocatoriasshow($id)
+    {
+        $convocatoria1 = Convocatoria1::findOrFail($id);
+        $ubicaciones = Convocatoria1::find($convocatoria1->id)->ubicacion()->get();
+
+
+        return view('frontend.fdetalleconvocatoria', compact('convocatoria1','ubicaciones'));
+    }
     /**
      * Show the form for creating a new resource.
      *

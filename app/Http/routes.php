@@ -42,8 +42,17 @@ Route::get('/', function () {
 
 
    Route::get('Fcursoslist', 'FrontendController@cursosindex');
+   Route::get('Fcursosdetalle/{cursos1}', 'FrontendController@cursosshow');
+
+
+
    Route::get('Fdiplomadoslist', 'FrontendController@diplomadosindex');
+   Route::get('Fdiplomadosdetalle/{diplomados1}', 'FrontendController@diplomadosshow');
+
+
+
    Route::get('Fconvocatoriaslist', 'FrontendController@convocatoriasindex');
+   Route::get('Fconvocatoriasdetalle/{convocatorias1}', 'FrontendController@convocatoriasshow');
 
 
 
@@ -457,7 +466,7 @@ Route::group(['middleware' => 'web'], function(){
     //Mail
     Route::resource('mail', 'MailController');
 
-    Route::get('Notificaciones', [
+    Route::get('Enviaremail', [
         'uses' => 'HomeController@contacto',
         'as' => 'contacto',
         'middleware' => 'roles',

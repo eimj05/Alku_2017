@@ -5,5 +5,5 @@
         <a href=""></a><b>Emprender</b></a>. {{ trans('adminlte_lang::message.descriptionpackage') }}
     </div>-->
     <!-- Default to the left -->
-    <strong>Copyright &copy; 2017 <a></a>.</strong> PHE Development Corporation 
+    <strong>Copyright &copy; 2017 <a></a>.</strong> PH3 Development Corporation 
 </footer>
