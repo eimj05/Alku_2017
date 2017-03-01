@@ -185,10 +185,9 @@ _________________________________________________________ -->
                                                         <ul>
                                                             <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
-                                                            <li><a href="team.html">Nuestro Equipo</a>
-                                                            </li>
+                                            
                                         
-                                                            <li><a href="services.html">Nuestros Servicios</a>
+                                                            <li><a href="{{ url('Fservicios') }}">Nuestros Servicios</a>
                                                             </li>
                                                         </ul>
                                                         
@@ -481,7 +480,7 @@ _________________________________________________________ -->
                     <td>{{ $x }}</td>
                     <td>{{ $item->nombreCurso }}</td><td>{{ $item->fechaInicio }}</td><td>{{ $item->fechaFin }}</td><td>{{ $item->interes }}</td>
                     <td>
-                        <a href="{{ url('/Fcursosdetalle/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                        <a href="{{ url('/Cursos1/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         
                     </td>
                 </tr>

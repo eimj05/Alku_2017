@@ -185,10 +185,9 @@ _________________________________________________________ -->
                                                         <ul>
                                                             <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
-                                                            <li><a href="team.html">Nuestro Equipo</a>
-                                                            </li>
+                                                    
                                         
-                                                            <li><a href="services.html">Nuestros Servicios</a>
+                                                            <li><a href="{{ url('Fservicios') }}">Nuestros Servicios</a>
                                                             </li>
                                                         </ul>
                                                         
@@ -459,41 +458,59 @@ _________________________________________________________ -->
 
                             <form>
                                 <div class="row">
+                                {!!Form::open(['route'=>'formcontacto','method'=>'POST','class' => 'form-horizontal'])!!}
+
+                                
+
                                     <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="firstname">Nombre</label>
-                                            <input type="text" class="form-control" id="firstname">
+                                        <div class="form-group {{ $errors->has('firstname') ? 'has-error' : ''}}">
+                                        {!! Form::label('firstname', 'Nombre', ['class' => 'col-sm-6 control-label']) !!}
+                                        {!!Form::text('firstname', null, ['class' => 'form-control'])!!}
+                                        {!! $errors->first('firstname', '<p class="help-block">:message</p>') !!}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="lastname">Apellidos</label>
-                                            <input type="text" class="form-control" id="lastname">
+                                        <div class="form-group {{ $errors->has('lastname') ? 'has-error' : ''}}">
+                                        {!! Form::label('lastname', 'Apellidos', ['class' => 'col-sm-6 control-label']) !!}
+                                        {!!Form::text('lastname', null, ['class' => 'form-control'])!!}
+                                        {!! $errors->first('lastname', '<p class="help-block">:message</p>') !!}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="email">Email</label>
-                                            <input type="text" class="form-control" id="email">
+                                         <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
+                                        {!! Form::label('email', 'Email', ['class' => 'col-sm-6 control-label']) !!}
+                                        {!!Form::text('email', null, ['class' => 'form-control'])!!}
+                                        {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label for="subject">Asunto</label>
-                                            <input type="text" class="form-control" id="subject">
+                                        <div class="form-group {{ $errors->has('purpose') ? 'has-error' : ''}}">
+                                        {!! Form::label('purpose', 'Asunto', ['class' => 'col-sm-6 control-label']) !!}
+                                        {!!Form::text('purpose', null, ['class' => 'form-control'])!!}
+                                        {!! $errors->first('purpose', '<p class="help-block">:message</p>') !!}
                                         </div>
                                     </div>
                                     <div class="col-sm-12">
-                                        <div class="form-group">
-                                            <label for="message">Mensaje</label>
-                                            <textarea id="message" class="form-control"></textarea>
+                                        <div class="form-group {{ $errors->has('message') ? 'has-error' : ''}}">
+                                        {!! Form::label('mensaje', 'Mensaje', ['class' => 'col-sm-6 control-label']) !!}
+                                        {!!Form::textarea('mensaje', null, ['class' => 'form-control'])!!}
+                                        {!! $errors->first('mensaje', '<p class="help-block">:message</p>') !!}
                                         </div>
                                     </div>
 
                                     <div class="col-sm-12 text-center">
-                                        <button type="submit" class="btn btn-template-main"><i class="fa fa-envelope-o"></i> Enviar Mensaje</button>
-
+                                        {!! Form::submit('Enviar Mensaje', ['class' => 'btn btn-primary form-control']) !!}
                                     </div>
+                                     {!! Form::close() !!}   
+
+                                    @if ($errors->any())
+                                            <ul class="alert alert-danger">
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        @endif
+
                                 </div>
                                 <!-- /.row -->
                             </form>

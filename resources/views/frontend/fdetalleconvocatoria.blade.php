@@ -185,10 +185,9 @@ _________________________________________________________ -->
                                                         <ul>
                                                             <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
-                                                            <li><a href="team.html">Nuestro Equipo</a>
-                                                            </li>
+                                         
                                         
-                                                            <li><a href="services.html">Nuestros Servicios</a>
+                                                            <li><a href="{{ url('Fservicios') }}">Nuestros Servicios</a>
                                                             </li>
                                                         </ul>
                                                         
@@ -467,25 +466,22 @@ _________________________________________________________ -->
                                 <h3>Descripcion de la Convocatoria</h3>
                             </div>
 
-                            <p>Bringing unlocked me an striking ye perceive. Mr by wound hours oh happy. Me in resolution pianoforte continuing we. Most my no spot felt by no. He he in forfeited furniture sweetness he arranging. Me tedious so to behaved
-                                written account ferrars moments. Too objection for elsewhere her preferred allowance her. Marianne shutters mr steepest to me. Up mr ignorant produced distance although is sociable blessing. Ham whom call all lain like.</p>
+                            <p>{{ $convocatoria1->descripcion }}</p>
 
-                            <p>To sorry world an at do spoil along. Incommode he depending do frankness remainder to. Edward day almost active him friend thirty piqued. People as period twenty my extent as. Set was better abroad ham plenty secure had horses.
-                                Admiration has sir decisively excellence say everything inhabiting acceptance. Sooner settle add put you sudden him.</p>
-
+                            
                         </div>
                         <div class="col-md-4 project-more">
                             <div class="heading">
                                 <h3>Mas</h3>
                             </div>
                             <h4>Dependencia</h4>
-                            <p>INADEM</p>
+                            <p>{{ $convocatoria1->dependencia }}</p>
                             <h4>Tipo de Convocatoria</h4>
-                            <p>Libre</p>
+                            <p>{{ $convocatoria1->tipoConvocatoria }}</p>
                             <h4>Contacto</h4>
-                            <p>Juan Espinosa</p>
+                            <p>{{ $convocatoria1->contacto }}</p>
                             <h4>Fecha de Cierre</h4>
-                            <p> 30 Abril 2017</p>
+                            <p> {{ $convocatoria1->fechaCierre }}</p>
 
 
                         </div>

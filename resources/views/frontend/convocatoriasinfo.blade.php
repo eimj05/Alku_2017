@@ -185,10 +185,9 @@ _________________________________________________________ -->
                                                         <ul>
                                                             <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
-                                                            <li><a href="team.html">Nuestro Equipo</a>
-                                                            </li>
+                                                          
                                         
-                                                            <li><a href="services.html">Nuestros Servicios</a>
+                                                            <li><a href="{{ url('Fservicios') }}">Nuestros Servicios</a>
                                                             </li>
                                                         </ul>
                                                         

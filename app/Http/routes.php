@@ -36,8 +36,12 @@ Route::get('/', function () {
         return view('frontend.contacto'); 
     });
 
-       Route::get('Facerca', function (){
+    Route::get('Facerca', function (){
         return view('frontend.acerca'); 
+    });
+
+    Route::get('Fservicios', function (){
+        return view('frontend.fservicios'); 
     });
 
 
@@ -466,6 +470,7 @@ Route::group(['middleware' => 'web'], function(){
     //Mail
     Route::resource('mail', 'MailController');
 
+
     Route::get('Enviaremail', [
         'uses' => 'HomeController@contacto',
         'as' => 'contacto',
@@ -473,6 +478,12 @@ Route::group(['middleware' => 'web'], function(){
         'roles' => ['Admin','Empresa']
         ]);
 
+   
+
+   Route::post('Formcontacto', [
+        'uses' => 'HomeController@formcontacto',
+        'as' => 'formcontacto',
+        ]);
 
 
 	//PDF

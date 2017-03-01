@@ -185,10 +185,8 @@ _________________________________________________________ -->
                                                         <ul>
                                                             <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
-                                                            <li><a href="team.html">Nuestro Equipo</a>
-                                                            </li>
-                                        
-                                                            <li><a href="services.html">Nuestros Servicios</a>
+                                               
+                                                            <li><a href="{{ url('Fservicios') }}">Nuestros Servicios</a>
                                                             </li>
                                                         </ul>
                                                         
@@ -467,27 +465,24 @@ _________________________________________________________ -->
                                 <h3>Descripcion del Curso</h3>
                             </div>
 
-                            <p>Bringing unlocked me an striking ye perceive. Mr by wound hours oh happy. Me in resolution pianoforte continuing we. Most my no spot felt by no. He he in forfeited furniture sweetness he arranging. Me tedious so to behaved
-                                written account ferrars moments. Too objection for elsewhere her preferred allowance her. Marianne shutters mr steepest to me. Up mr ignorant produced distance although is sociable blessing. Ham whom call all lain like.</p>
+                            <p>{{ $cursos1->descripcion }} </p>
 
-                            <p>To sorry world an at do spoil along. Incommode he depending do frankness remainder to. Edward day almost active him friend thirty piqued. People as period twenty my extent as. Set was better abroad ham plenty secure had horses.
-                                Admiration has sir decisively excellence say everything inhabiting acceptance. Sooner settle add put you sudden him.</p>
-
+                            
                         </div>
                         <div class="col-md-4 project-more">
                             <div class="heading">
                                 <h3>Mas</h3>
                             </div>
                             <h4>Impartido por</h4>
-                            <p>Pietro Filippi</p>
+                            <p>{{ $cursos1->capacitador }}</p>
                             <h4>Categoria</h4>
-                            <p>Consulting, Webdesign, Print</p>
+                            <p>{{ $cursos1->interes }}</p>
                             <h4>Fecha del Curso</h4>
-                            <p>10/2013 - 06/2014</p>
+                            <p>{{ $cursos1->fechaInicio }} - {{ $cursos1->fechaFin }}</p>
                             <h4>Horario</h4>
-                            <p>10/2013 - 06/2014</p>
+                            <p>{{ $cursos1->horaInicio }} - {{ $cursos1->horaFin }}</p>
                             <h4>Costo</h4>
-                            <p>$ 1200.00</p>
+                            <p>$ {{ $cursos1->costo }}</p>
 
 
                         </div>

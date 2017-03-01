@@ -25,4 +25,6 @@ class MailController extends Controller
         Session::flash('message','Mensaje enviado correctamente');
         return Redirect::to('/home');
     }
+
+   
 }

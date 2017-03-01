@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
     <!-- Css animations  -->
-    <link href="/fcss/css/animate.css" rel="stylesheet">
+    <link href="fcss/css/animate.css" rel="stylesheet">
 
     <!-- Theme stylesheet, if possible do not edit this stylesheet -->
-    <link href="/fcss/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="fcss/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- Custom stylesheet - for your changes -->
-    <link href="/fcss/css/custom.css" rel="stylesheet">
+    <link href="fcss/css/custom.css" rel="stylesheet">
 
     <!-- Responsivity for older IE -->
     <!--[if lt IE 9]>
@@ -33,19 +33,19 @@
 <![endif]-->
 
     <!-- Favicon and apple touch icons-->
-    <link rel="shortcut icon" href="/fcss/img/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="/fcss/img/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="/fcss/img/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="/fcss/img/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="/fcss/img/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="/fcss/img/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="/fcss/img/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="/fcss/img/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="/fcss/img/apple-touch-icon-152x152.png" />
+    <link rel="shortcut icon" href="fcss/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="fcss/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="fcss/img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="fcss/img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="fcss/img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="fcss/img/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="fcss/img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="fcss/img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="fcss/img/apple-touch-icon-152x152.png" />
     <!-- owl carousel css -->
 
-    <link href="/fcss/css/owl.carousel.css" rel="stylesheet">
-    <link href="/fcss/css/owl.theme.css" rel="stylesheet">
+    <link href="fcss/css/owl.carousel.css" rel="stylesheet">
+    <link href="fcss/css/owl.theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -95,8 +95,8 @@ _________________________________________________________ -->
                         <div class="navbar-header">
 
                             <a class="navbar-brand home" href="/">
-                                <img src="/fcss/img/logo.png" alt="Universal logo" class="hidden-xs hidden-sm">
-                                <img src="/fcss/img/logo-small.png" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
+                                <img src="fcss/img/logo.png" alt="Universal logo" class="hidden-xs hidden-sm">
+                                <img src="fcss/img/logo-small.png" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
                             </a>
                             <div class="navbar-buttons">
                                 <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -111,7 +111,7 @@ _________________________________________________________ -->
 
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown active">
-                                   <a href="/" class="btn btn-link" >Inicio </a>
+                                    <a href="/" class="btn btn-link" >Inicio </a>
                                 </li>
                                <!-- <li class="dropdown use-yamm yamm-fw">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Caracteristicas<b class="caret"></b></a>
@@ -166,7 +166,7 @@ _________________________________________________________ -->
                                             <div class="yamm-content">
                                                 <div class="row">
                                                     <div class="col-sm-6">
-                                                        <img src="/fcss/img/template-homepage.png" class="img-responsive hidden-xs" alt="">
+                                                        <img src="fcss/img/template-homepage.png" class="img-responsive hidden-xs" alt="">
                                                     </div>
                                                     <div class="col-sm-3">
                                                         <h5>Portafolio</h5>
@@ -185,8 +185,8 @@ _________________________________________________________ -->
                                                         <ul>
                                                             <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
-                                                            
-                        
+                                 
+                                        
                                                             <li><a href="{{ url('Fservicios') }}">Nuestros Servicios</a>
                                                             </li>
                                                         </ul>
@@ -422,15 +422,13 @@ _________________________________________________________ -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <h1>Detalle del Diplomado</h1>
+                        <h1>Servicios</h1>
                     </div>
                     <div class="col-md-5">
                         <ul class="breadcrumb">
-                            <li><a href="/">Inicio</a>
+                            <li><a href="index.html">Inicio</a>
                             </li>
-                            <li><a href="{{ url('Fdiplomadoslist') }}">Diplomados</a>
-                            </li>
-                            <li>Detalle del Diplomado</li>
+                            <li>Nuestros Servicios</li>
                         </ul>
 
                     </div>
@@ -441,60 +439,237 @@ _________________________________________________________ -->
         <div id="content">
             <div class="container">
 
-                <section class="no-mb">
+                <section>
+
                     <div class="row">
                         <div class="col-md-12">
-                            <h1>{{ $diplomados1->nombreDiplomado }}</h1>
+                            <div class="heading">
+                                <h2>Nuestros principales servicios</h2>
+                            </div>
+
+                            <p class="lead">Yielding, they're air. Land replenish spirit given gathered subdue, day Blessed you'll great created, lights a one light, blessed deep morning, appear our. Fruit multiply, creeping first image. Upon saw isn't male winged to
+                                replenish tree and.</p>
                         </div>
                     </div>
+
+                    <div class="row services">
+                        <div class="col-md-4">
+                            <div class="box-simple">
+                                <div class="icon">
+                                    <i class="fa fa-desktop"></i>
+                                </div>
+                                <h3>Cursos</h3>
+                                <p>Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box-simple">
+                                <div class="icon">
+                                    <i class="fa fa-print"></i>
+                                </div>
+                                <h3>Diplomados</h3>
+                                <p>Advantage old had otherwise sincerity dependent additions. It in adapted natural hastily is justice. Six draw you him full not mean evil. Prepare garrets it expense windows shewing do an.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box-simple">
+                                <div class="icon">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                                <h3>Convocatorias</h3>
+                                <p>Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people so basket ladies window expect.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row services">
+                        <div class="col-md-4">
+                            <div class="box-simple">
+                                <div >
+                               
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box-simple">
+                                <div class="icon">
+                                    <i class="fa fa-briefcase"></i>
+                                </div>
+                                <h3>Bolsa de Trabajo</h3>
+                                <p>Proximamente!!!</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="box-simple">
+                                <div >
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+
                 </section>
 
                 <section>
-                    <div class="project owl-carousel">
-                        <div class="item">
-                            <img src="/fcss/img/main-slider1.jpg" alt="" class="img-responsive">
-                        </div>
-                    
-                    </div>
-                    <!-- /.project owl-slider -->
-                </section>
 
-                <section>
-                    <div class="row portfolio-project">
-                        <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
                             <div class="heading">
-                                <h3>Descripcion del Diplomado</h3>
+                                <h2>¿Por que escogernos?</h2>
                             </div>
 
-                            <p>{{ $diplomados1->descripcion }}</p>
-
-                           
+                            <p class="lead">
+                                Yielding, they're air. Land replenish spirit given gathered subdue, day Blessed you'll great created, lights a one light, blessed deep morning, appear our. Fruit multiply, creeping first image. Upon saw isn't male winged to replenish tree and.</p>
 
                         </div>
-                        <div class="col-md-4 project-more">
-                            <div class="heading">
-                                <h3>Mas</h3>
-                            </div>
-                            <h4>Impartido por</h4>
-                            <p>{{ $diplomados1->capacitador }}</p>
-                            <h4>Categoria</h4>
-                            <p>{{ $diplomados1->interes }}</p>
-                            <h4>Fecha del Curso</h4>
-                            <p>{{ $diplomados1->fechaInicio }} - {{ $diplomados1->fechaFin }}</p>
-                            <h4>Horario</h4>
-                            <p>{{ $diplomados1->horaInicio }} - {{ $diplomados1->horaFin }}</p>
-                            <h4>Costo</h4>
-                            <p>$ {{ $diplomados1->costo }}</p>
+                        <div class="col-md-6">
+                            <p>His having within saw become ask passed misery giving. Recommend questions get too fulfilled. He fact in we case miss sake. Entrance be throwing he do blessing up. Hearts warmth in genius do garden advice mr it garret. Collected
+                                preserved are middleton dependent residence but him how. Handsome weddings yet mrs you has carriage packages. Preferred joy agreement put continual elsewhere delivered now. Mrs exercise felicity had men speaking met. Rich
+                                deal mrs part led pure will but.</p>
 
+                            <ul>
+                                <li>Now for manners use has company believe parlors.</li>
+                                <li>Least nor party who wrote while did.</li>
+                                <li>Excuse formed as is agreed admire so on result parish.</li>
+                                <li>Put use set uncommonly announcing and travelling.</li>
+                            </ul>
 
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                Certain but she but shyness why cottage. Gay the put instrument sir entreaties affronting. Pretended exquisite see cordially the you. Weeks quiet do vexed or whose. Motionless if no to affronting imprudence no precaution. My indulged as disposal strongly
+                                attended. Parlors men express had private village man. Discovery moonlight recommend all one not. Indulged to answered prospect it bachelor is he bringing shutters. Pronounce forfeited mr direction oh he dashwoods ye unwilling.
+
+                            </p>
                         </div>
                     </div>
+                    <!-- /.row -->
+
                 </section>
 
-                
 
             </div>
             <!-- /.container -->
+
+            
+            <!-- /.bar -->
+
+            <section class="bar background-pentagon no-mb">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading text-center">
+                                <h2>Testimonials</h2>
+                            </div>
+
+                            <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.</p>
+
+
+                            <!-- *** TESTIMONIALS CAROUSEL ***
+ _________________________________________________________ -->
+
+                            <ul class="owl-carousel testimonials same-height-row">
+                                <li class="item">
+                                    <div class="testimonial same-height-always">
+                                        <div class="text">
+                                            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown
+                                                belly, slightly domed and divided by arches into stiff sections.</p>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="icon"><i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="name-picture">
+                                                <img class="" alt="" src="img/person-1.jpg">
+                                                <h5>John McIntyre</h5>
+                                                <p>CEO, TransTech</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="testimonial same-height-always">
+                                        <div class="text">
+                                            <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened
+                                                to me? " he thought. It wasn't a dream.</p>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="icon"><i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="name-picture">
+                                                <img class="" alt="" src="img/person-2.jpg">
+                                                <h5>John McIntyre</h5>
+                                                <p>CEO, TransTech</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="testimonial same-height-always">
+                                        <div class="text">
+                                            <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
+
+                                            <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice,
+                                                gilded frame.</p>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="icon"><i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="name-picture">
+                                                <img class="" alt="" src="img/person-3.png">
+                                                <h5>John McIntyre</h5>
+                                                <p>CEO, TransTech</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="testimonial same-height-always">
+                                        <div class="text">
+                                            <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
+                                                weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+                                        </div>
+
+                                        <div class="bottom">
+                                            <div class="icon"><i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="name-picture">
+                                                <img class="" alt="" src="img/person-4.jpg">
+                                                <h5>John McIntyre</h5>
+                                                <p>CEO, TransTech</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="item">
+                                    <div class="testimonial same-height-always">
+                                        <div class="text">
+                                            <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
+                                                weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which
+                                                made him feel quite sad.</p>
+                                        </div>
+
+                                        <div class="bottom">
+                                            <div class="icon"><i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="name-picture">
+                                                <img class="" alt="" src="img/person-4.jpg">
+                                                <h5>John McIntyre</h5>
+                                                <p>CEO, TransTech</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- /.owl-carousel -->
+
+                            <!-- *** TESTIMONIALS CAROUSEL END *** -->
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- /.bar -->
 
 
         </div>
@@ -619,17 +794,16 @@ _________________________________________________________ -->
     </script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <script src="/fcss/js/jquery.cookie.js"></script>
-    <script src="/fcss/js/waypoints.min.js"></script>
-    <script src="/fcss/js/jquery.counterup.min.js"></script>
-    <script src="/fcss/js/jquery.parallax-1.1.3.js"></script>
-    <script src="/fcss/js/front.js"></script>
- 
+    <script src="fcss/js/jquery.cookie.js"></script>
+    <script src="fcss/js/waypoints.min.js"></script>
+    <script src="fcss/js/jquery.counterup.min.js"></script>
+    <script src="fcss/js/jquery.parallax-1.1.3.js"></script>
+    <script src="fcss/js/front.js"></script>
 
-
+    
 
     <!-- owl carousel -->
-    <script src="/fcss/js/owl.carousel.min.js"></script>
+    <script src="fcss/js/owl.carousel.min.js"></script>
 
 
 
