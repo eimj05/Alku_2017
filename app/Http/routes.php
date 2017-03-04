@@ -58,7 +58,13 @@ Route::get('/', function () {
    Route::get('Fconvocatoriaslist', 'FrontendController@convocatoriasindex');
    Route::get('Fconvocatoriasdetalle/{convocatorias1}', 'FrontendController@convocatoriasshow');
 
+  
+  // Formulario de Contato
+    Route::get('contact', 
+        ['as' => 'contact', 'uses' => 'AboutController@create']);
 
+    Route::post('contact', 
+        ['as' => 'contact_store', 'uses' => 'AboutController@store']);
 
 
 Route::group(['middleware' => 'web'], function(){
@@ -85,8 +91,40 @@ Route::group(['middleware' => 'web'], function(){
 
      Route::post('imagen_convocatoria', 'Convocatoria1\Convocatoria1Controller@update_imagen');
 
+     
+     ////-----  INSCRIPCIONES  ------//////
+
+     // CURSOS
+
+     Route::get('ICursos/{cursos1}', [
+        'uses' => 'InscripcionesController@showcursos',
+        'as' => 'curso1.cursos1.inscritos',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+
+     Route::delete('ICursos/{cursos1}', [
+        'uses' => 'InscripcionesController@destroycursos',
+        'as' => 'curso1.cursos1.destroy',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
 
 
+     // DIPLOMADOS
+      Route::get('IDiplomados/{diplomados1}', [
+        'uses' => 'InscripcionesController@showdiplomados',
+        'as' => 'diplomado1.diplomados1.inscritos',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+
+     Route::delete('IDiplomados/{diplomados1}', [
+        'uses' => 'InscripcionesController@destroydiplomados',
+        'as' => 'diplomado1.diplomados1.destroy',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
     
 
      ////-----  USUARIOS  ------//////
@@ -310,6 +348,7 @@ Route::group(['middleware' => 'web'], function(){
         'roles' => ['Admin','Empresa']
         ]);
 
+    
 
 ////-----  DIPLOMADOS  ------//////
 
@@ -480,10 +519,8 @@ Route::group(['middleware' => 'web'], function(){
 
    
 
-   Route::post('Formcontacto', [
-        'uses' => 'HomeController@formcontacto',
-        'as' => 'formcontacto',
-        ]);
+
+   
 
 
 	//PDF

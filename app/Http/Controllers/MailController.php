@@ -26,5 +26,6 @@ class MailController extends Controller
         return Redirect::to('/home');
     }
 
+
    
 }

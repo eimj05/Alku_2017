@@ -15,6 +15,7 @@ use PDF;
 use Auth;
 use Crypt;
 use Image;
+use App\Rolesuser;
 
 class ClienteController extends Controller
 {
@@ -32,8 +33,10 @@ class ClienteController extends Controller
     public function index()
     {
         $cliente = Cliente::paginate(15);
+        $roles = Rolesuser::paginate(15);
 
-        return view('cliente.cliente.index', compact('cliente'));
+
+        return view('cliente.cliente.index', compact('cliente','roles'));
     }
 
     public function pdf()
@@ -200,13 +203,12 @@ class ClienteController extends Controller
     public function destroy($id)
     {
 
-        $cliente = Cliente::findOrFail($id);
+        $id_cliente = $cliente = Cliente::findOrFail($id);
 
 
-        $cliente->intereses()->detach([]);
+        $cliente->intereses()->detach();
 
-        $cliente->roles()->detach([]);
-
+        $cliente->roles()->detach();
 
 
         $cliente = Cliente::destroy($id);

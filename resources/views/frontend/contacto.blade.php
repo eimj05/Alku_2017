@@ -457,59 +457,49 @@ _________________________________________________________ -->
                             </div>
 
                             <form>
-                                <div class="row">
-                                {!!Form::open(['route'=>'formcontacto','method'=>'POST','class' => 'form-horizontal'])!!}
+                             {!!Form::open(['route'=>'contact_store','method'=>'POST','class' => 'form-horizontal'])!!}
+                                
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
 
+                                <div class="row">
+                               
+
+                               
                                 
 
                                     <div class="col-sm-6">
-                                        <div class="form-group {{ $errors->has('firstname') ? 'has-error' : ''}}">
-                                        {!! Form::label('firstname', 'Nombre', ['class' => 'col-sm-6 control-label']) !!}
-                                        {!!Form::text('firstname', null, ['class' => 'form-control'])!!}
-                                        {!! $errors->first('firstname', '<p class="help-block">:message</p>') !!}
+                                        {!! Form::label('Nombre') !!}
+                                        {!! Form::text('firstname', null, array('required', 'class'=>'form-control')) !!}
                                         </div>
+                                       
+                                    
+                                    <div class="col-sm-6">
+                                        {!! Form::label('Apellidos') !!}
+                                        {!! Form::text('lastname', null, array('required', 'class'=>'form-control')) !!}
+                                        </div>
+                                     <p></p>
+                                    <div class="col-sm-6">
+                                        {!! Form::label('Email') !!}
+                                        {!! Form::text('email', null, array('required', 'class'=>'form-control')) !!}
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group {{ $errors->has('lastname') ? 'has-error' : ''}}">
-                                        {!! Form::label('lastname', 'Apellidos', ['class' => 'col-sm-6 control-label']) !!}
-                                        {!!Form::text('lastname', null, ['class' => 'form-control'])!!}
-                                        {!! $errors->first('lastname', '<p class="help-block">:message</p>') !!}
-                                        </div>
+                                        {!! Form::label('Asunto') !!}
+                                        {!! Form::text('purpose', null, array('required', 'class'=>'form-control')) !!}
                                     </div>
-                                    <div class="col-sm-6">
-                                         <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
-                                        {!! Form::label('email', 'Email', ['class' => 'col-sm-6 control-label']) !!}
-                                        {!!Form::text('email', null, ['class' => 'form-control'])!!}
-                                        {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group {{ $errors->has('purpose') ? 'has-error' : ''}}">
-                                        {!! Form::label('purpose', 'Asunto', ['class' => 'col-sm-6 control-label']) !!}
-                                        {!!Form::text('purpose', null, ['class' => 'form-control'])!!}
-                                        {!! $errors->first('purpose', '<p class="help-block">:message</p>') !!}
-                                        </div>
-                                    </div>
+                                    <p></p>
                                     <div class="col-sm-12">
-                                        <div class="form-group {{ $errors->has('message') ? 'has-error' : ''}}">
-                                        {!! Form::label('mensaje', 'Mensaje', ['class' => 'col-sm-6 control-label']) !!}
-                                        {!!Form::textarea('mensaje', null, ['class' => 'form-control'])!!}
-                                        {!! $errors->first('mensaje', '<p class="help-block">:message</p>') !!}
-                                        </div>
+                                        {!! Form::label('Mensaje') !!}
+                                        {!! Form::textarea('msg', null, array('required', 'class'=>'form-control')) !!}
                                     </div>
-
+                                    <p></p>
                                     <div class="col-sm-12 text-center">
-                                        {!! Form::submit('Enviar Mensaje', ['class' => 'btn btn-primary form-control']) !!}
+                                        {!! Form::submit('Enviar Mensaje', array('class'=>'btn btn-primary')) !!}
                                     </div>
                                      {!! Form::close() !!}   
-
-                                    @if ($errors->any())
-                                            <ul class="alert alert-danger">
-                                                @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
-                                                @endforeach
-                                            </ul>
-                                        @endif
 
                                 </div>
                                 <!-- /.row -->

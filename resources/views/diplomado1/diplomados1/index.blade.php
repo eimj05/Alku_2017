@@ -22,6 +22,7 @@
                         <a href="{{ url('/Diplomados/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Diplomado"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <a href="{{ url('/Diplomados/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Diplomado"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
                         <a href="{{ url('/Diplomados/' . $item->id . '/imagen') }}" class="btn btn-primary btn-xs" title="Imagen Curso"><span class="glyphicon glyphicon-picture" aria-hidden="true"/></a>
+                        <a href="{{ url('/IDiplomados/' . $item->id) }}" class="btn btn-primary btn-xs" title="Inscritos"><span class="glyphicon glyphicon-saved" aria-hidden="true"/></a>
 
                         {!! Form::open([
                             'method'=>'DELETE',

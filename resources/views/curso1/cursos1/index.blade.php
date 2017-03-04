@@ -22,6 +22,8 @@
                         <a href="{{ url('/Cursos/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Curso"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <a href="{{ url('/Cursos/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Curso"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
                         <a href="{{ url('/Cursos/' . $item->id . '/imagen') }}" class="btn btn-primary btn-xs" title="Imagen Curso"><span class="glyphicon glyphicon-picture" aria-hidden="true"/></a>
+                        <a href="{{ url('/ICursos/' . $item->id) }}" class="btn btn-primary btn-xs" title="Inscritos"><span class="glyphicon glyphicon-saved" aria-hidden="true"/></a>
+
                         {!! Form::open([
                             'method'=>'DELETE',
                             'url' => ['/Cursos', $item->id],
@@ -39,8 +41,7 @@
             @endforeach
             </tbody>
         </table>
-        <div class="pagination-wrapper"> {!! $cursos1->render() !!} </div>
-    </div>
+        </div>
 
 </div>
 @endsection
