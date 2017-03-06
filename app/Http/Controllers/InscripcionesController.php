@@ -21,6 +21,7 @@ class InscripcionesController extends Controller
     public function showcursos($id)
     {
         $cursos1 = Cursos1::findOrFail($id);   
+        $idc= $id;
 
         $uins = CursosInsc::where('cursos1_id', '=', $id)
             ->select('cliente_id')
@@ -29,7 +30,7 @@ class InscripcionesController extends Controller
       
         $cliente = Cliente::whereIn('id', $uins)->get();
 
-        return view('curso1.cursos1.inscritos', compact('cursos1','uins','cliente'));
+        return view('curso1.cursos1.inscritos', compact('cursos1','uins','cliente','idc'));
 
      }
 
@@ -113,7 +114,9 @@ class InscripcionesController extends Controller
     {
       //  CursosInsc::destroy($id);
 
-        CursosInsc::where('cliente_id', '=', $id)->delete();
+        CursosInsc::where('cliente_id', '=', $id)
+                    
+                    ->delete();
 
        // Session::flash('flash_message', 'Cursos1 deleted!');
 

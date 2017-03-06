@@ -2,14 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Alku Contaco Form</title>
+	<title>Alku - Contacto</title>
 </head>
 <body>
-	<p><stron>Nombre: </stron>{{$firstname}}</p>
-    <p><stron>Apellidos: </stron>{{$lastname}}</p>
-    <p><stron>Email: </stron>{{$email}}</p>
-	<p><stron>Asunto: </stron>{{$purpose}}</p>
-    <p><stron>Mensaje: </stron>{{$msg}}</p>
-
+	<p><stron>Nombre: </stron>{!!$name!!}</p>
+	<p><stron>Correo: </stron>{!!$email!!}</p>
+	<p><stron>Mensaje: </stron>{!!$mensaje!!}</p>
 </body>
 </html>

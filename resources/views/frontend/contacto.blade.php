@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -73,8 +74,12 @@ _________________________________________________________ -->
                             </div>
 -->
                             <div class="login">
-                                <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
-                                <a href="customer-register.html"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
+                                @if (Auth::guest())
+                                <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
+                                <a href="{{ url('/register') }}"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
+                                @else
+                                <a href="/">{{ Auth::user()->name }}</a> <a href="/logout"> Salir   </a>
+                                @endif
                             </div>
 
                         </div>  
@@ -455,55 +460,63 @@ _________________________________________________________ -->
                             <div class="heading">
                                 <h3>Formulario de Contacto</h3>
                             </div>
+                            
 
-                            <form>
-                             {!!Form::open(['route'=>'contact_store','method'=>'POST','class' => 'form-horizontal'])!!}
-                                
-                                <ul>
-                                    @foreach($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
+                            <div class="main-contact">
+         
+                             <div class="contact-form">
+                             {!!Form::open(['route'=>'fmail.store','method'=>'POST'])!!}
+<ul>
+  @foreach($errors->all() as $error)
+    <li>{{ $error }}</li>
+  @endforeach
+</ul>
+                             
+                             <div class="col-sm-6">
+                           <div class="form-group">
+                            {!! Form::label('Nombre') !!}
+                                               
+                            {!!Form::text('name', null,['class' => 'form-control'])!!}
 
-                                <div class="row">
-                               
+                            </div>
+                            </div>
+                            <div class="col-sm-6">
+                            <div class="form-group">
+                            {!! Form::label('Email') !!}
 
-                               
-                                
+                            {!!Form::text('email',null,['class' => 'form-control'])!!}
+                            </div>
+                            </div>
+                            <div class="col-sm-12">
+                            <div class="form-group">
+                            {!! Form::label('Mensaje') !!}
 
-                                    <div class="col-sm-6">
-                                        {!! Form::label('Nombre') !!}
-                                        {!! Form::text('firstname', null, array('required', 'class'=>'form-control')) !!}
-                                        </div>
-                                       
-                                    
-                                    <div class="col-sm-6">
-                                        {!! Form::label('Apellidos') !!}
-                                        {!! Form::text('lastname', null, array('required', 'class'=>'form-control')) !!}
-                                        </div>
-                                     <p></p>
-                                    <div class="col-sm-6">
-                                        {!! Form::label('Email') !!}
-                                        {!! Form::text('email', null, array('required', 'class'=>'form-control')) !!}
-                                    </div>
-                                    <div class="col-sm-6">
-                                        {!! Form::label('Asunto') !!}
-                                        {!! Form::text('purpose', null, array('required', 'class'=>'form-control')) !!}
-                                    </div>
-                                    <p></p>
-                                    <div class="col-sm-12">
-                                        {!! Form::label('Mensaje') !!}
-                                        {!! Form::textarea('msg', null, array('required', 'class'=>'form-control')) !!}
-                                    </div>
-                                    <p></p>
-                                    <div class="col-sm-12 text-center">
-                                        {!! Form::submit('Enviar Mensaje', array('class'=>'btn btn-primary')) !!}
-                                    </div>
-                                     {!! Form::close() !!}   
+                            {!!Form::textarea('mensaje',null,['class' => 'form-control'])!!}
+                            </div>
+                            </div>
+                            <div class="col-sm-12 text-center">
+                            {!! Form::submit('Enviar Mensaje', ['class' => 'btn btn-primary ']) !!}
+                        </div>
+                        @if(Session::has('message'))
+    <div class="alert alert-info">
+      {{Session::get('message')}}
+    </div>
+@endif
+                     {!!Form::close()!!}
+         </div>
+</div>
+</section>
+                                            
+                                        
 
-                                </div>
+
+
+                              
                                 <!-- /.row -->
-                            </form>
+                          
+
+
+
 
                         </section>
 

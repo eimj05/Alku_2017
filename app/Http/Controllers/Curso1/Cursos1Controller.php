@@ -189,7 +189,7 @@ class Cursos1Controller extends Controller
         if($request->hasFile('imagen_curso')){
             $imagen_curso = $request->file('imagen_curso');
             $filename = time() . '.' . $imagen_curso->getClientOriginalExtension();
-            Image::make($imagen_curso)->resize(300,300)->save( public_path('/uploads/cursos/' .$filename ));
+            Image::make($imagen_curso)->resize(1200,563)->save( public_path('/uploads/cursos/' .$filename ));
 
             $cursos1 = $request->input('id');
 

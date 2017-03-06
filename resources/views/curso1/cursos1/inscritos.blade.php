@@ -13,15 +13,17 @@
                 </tr>
             </thead>
             <tbody>
+
             {{-- */$x=0;/* --}}
             @foreach($cliente as $item)
                 {{-- */$x++;/* --}}
-                <tr>
+                <tr>       
                     <td>{{ $x }}</td>
                     <td>{{ $item->name }}</td>
                     <td>{{ $item->email }}</td>
                     <td>{{ $item->telefono }}</td>
                     <td>
+                           
                             {!! Form::open([
                             'method'=>'DELETE',
                             'url' => ['/ICursos', $item->id],

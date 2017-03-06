@@ -73,8 +73,12 @@ _________________________________________________________ -->
                             </div>
 -->
                             <div class="login">
-                                <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
-                                <a href="customer-register.html"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
+                                @if (Auth::guest())
+                                <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
+                                <a href="{{ url('/register') }}"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
+                                @else
+                                <a href="/">{{ Auth::user()->name }}</a> <a href="/logout"> Salir   </a>
+                                @endif
                             </div>
 
                         </div>  
@@ -478,9 +482,15 @@ _________________________________________________________ -->
                 {{-- */$x++;/* --}}
                 <tr>
                     <td>{{ $x }}</td>
-                    <td>{{ $item->nombreCurso }}</td><td>{{ $item->fechaInicio }}</td><td>{{ $item->fechaFin }}</td><td>{{ $item->interes }}</td>
+                    <td>{{ $item->nombreCurso }}</td><td>{{ $item->fechaInicio }}</td><td>{{ $item->fechaFin }}</td>
+                    <td>@foreach($cats as $cat )
+                         @if($item->interes == $cat->id)
+                           {{ $cat->tipoInteres  }}
+                        @endif
+                        @endforeach
+                    </td>
                     <td>
-                        <a href="{{ url('/Cursos1/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                        <a href="{{ url('/Fcursosdetalle/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         
                     </td>
                 </tr>

@@ -60,16 +60,14 @@ Route::get('/', function () {
 
   
   // Formulario de Contato
-    Route::get('contact', 
-        ['as' => 'contact', 'uses' => 'AboutController@create']);
+    
 
-    Route::post('contact', 
-        ['as' => 'contact_store', 'uses' => 'AboutController@store']);
+    Route::resource('fmail', 'FmailController');
 
 
-Route::group(['middleware' => 'web'], function(){
+
+    Route::group(['middleware' => 'web'], function(){
     Route::auth();
-    // Route::get('/welcome', 'HomeController@welcome');
      Route::get('/home', 'HomeController@index');
      Route::get('/nogrants', 'HomeController@nogrant');
 
@@ -90,7 +88,7 @@ Route::group(['middleware' => 'web'], function(){
      Route::post('imagen_diplomado', 'Diplomado1\Diplomados1Controller@update_imagen');
 
      Route::post('imagen_convocatoria', 'Convocatoria1\Convocatoria1Controller@update_imagen');
-
+     
      
      ////-----  INSCRIPCIONES  ------//////
 
@@ -517,14 +515,8 @@ Route::group(['middleware' => 'web'], function(){
         'roles' => ['Admin','Empresa']
         ]);
 
-   
-
-
-   
-
 
 	//PDF
-
 
     Route::get('/pdfusuarios', [
         'uses' => 'Cliente\ClienteController@pdf',

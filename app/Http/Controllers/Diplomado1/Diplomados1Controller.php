@@ -174,7 +174,7 @@ class Diplomados1Controller extends Controller
         if($request->hasFile('imagen_diplomado')){
             $imagen_diplomado = $request->file('imagen_diplomado');
             $filename = time() . '.' . $imagen_diplomado->getClientOriginalExtension();
-            Image::make($imagen_diplomado)->resize(300,300)->save( public_path('/uploads/diplomados/' .$filename ));
+            Image::make($imagen_diplomado)->resize(1200,563)->save( public_path('/uploads/diplomados/' .$filename ));
 
             $diplomados1 = $request->input('id');
 

@@ -46,12 +46,15 @@
 
     <link href="/fcss/css/owl.carousel.css" rel="stylesheet">
     <link href="/fcss/css/owl.theme.css" rel="stylesheet">
+
+
 </head>
 
 <body>
 
     <div id="all">
 
+    
         <header>
 
             <!-- *** TOP ***
@@ -73,8 +76,12 @@ _________________________________________________________ -->
                             </div>
 -->
                             <div class="login">
-                                <a href="#" data-toggle="modal" data-target="#login-modal"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
-                                <a href="customer-register.html"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
+                                @if (Auth::guest())
+                                <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
+                                <a href="{{ url('/register') }}"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
+                                @else
+                                <a href="/">{{ Auth::user()->name }}</a> <a href="/logout"> Salir   </a>
+                                @endif
                             </div>
 
                         </div>  
@@ -451,7 +458,7 @@ _________________________________________________________ -->
                 <section>
                     <div class="project owl-carousel">
                         <div class="item">
-                            <img src="/fcss/img/main-slider1.jpg" alt="" class="img-responsive">
+                            <img src="/uploads/cursos/{{ $cursos1->imagen_curso }}" alt="" class="img-responsive">
                         </div>
                     
                     </div>
@@ -467,8 +474,32 @@ _________________________________________________________ -->
 
                             <p>{{ $cursos1->descripcion }} </p>
 
-                            
+
+
+                             <p>
+                                 
+                             </p>
+
+                             <style>
+                            #map-canvas{
+                                width: 750px;
+                                height: 300px;
+                            }
+                            </style>
+
+
+                          <div id="map-canvas"></div>
+
+
+
+
                         </div>
+
+                                                  
+
+
+
+
                         <div class="col-md-4 project-more">
                             <div class="heading">
                                 <h3>Mas</h3>
@@ -476,7 +507,7 @@ _________________________________________________________ -->
                             <h4>Impartido por</h4>
                             <p>{{ $cursos1->capacitador }}</p>
                             <h4>Categoria</h4>
-                            <p>{{ $cursos1->interes }}</p>
+                            <p></p>
                             <h4>Fecha del Curso</h4>
                             <p>{{ $cursos1->fechaInicio }} - {{ $cursos1->fechaFin }}</p>
                             <h4>Horario</h4>
@@ -622,7 +653,28 @@ _________________________________________________________ -->
     <script src="/fcss/js/jquery.counterup.min.js"></script>
     <script src="/fcss/js/jquery.parallax-1.1.3.js"></script>
     <script src="/fcss/js/front.js"></script>
- 
+ <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q"></script> 
+
+    <script>
+          var lat = 21.084788;
+          var lng = -89.658097;
+          var map = new google.maps.Map(document.getElementById('map-canvas'),{
+            center:{
+              lat: lat,
+              lng: lng
+            },
+            zoom: 15
+          });
+          var marker = new google.maps.Marker({
+            position:{
+              lat:lat,
+              lng: lng
+            },
+            map:map
+          });
+
+    </script>
+
 
 
 

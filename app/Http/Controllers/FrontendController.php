@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Cursos1;
 use App\Diplomados1;
 use App\Convocatoria1;
+use App\Intereses1;
 
 
 class FrontendController extends Controller
@@ -20,15 +21,30 @@ class FrontendController extends Controller
     public function cursosindex()
     {
         $cursos1 = Cursos1::paginate(15);
-        return view('frontend.fcursos', compact('cursos1'));  
+ 
+        $dipid = Cursos1::select('interes')->get();
+
+        $cats = Intereses1::whereIn('id', $dipid)->get();
+
+        return view('frontend.fcursos', compact('cursos1','cats'));  
     }
 
     public function cursosshow($id)
     {
         $cursos1 = Cursos1::findOrFail($id);
-        $ubicaciones = Cursos1::find($cursos1->id)->ubicacion()->get();
 
-        return view('frontend.fdetallecurso', compact('cursos1','ubicaciones'));  
+        //$dipid = Cursos1::where('id','=', $id)
+          //                  ->select('interes')
+            //                ->get();
+
+
+        //$intereses1 = Intereses1::where('id','=', $dipid)->get();
+
+        //$cats = Intereses1::select('tipoInteres')->where('id', $dipid)->get();
+
+        //$ubicaciones = Cursos1::find($id)->ubicacion()->get();
+
+        return view('frontend.fdetallecurso', compact('cursos1','ubicaciones','intereses1'));  
     }
 
     public function diplomadosshow($id)
@@ -57,7 +73,12 @@ class FrontendController extends Controller
     public function diplomadosindex()
     {
         $diplomados1 = Diplomados1::paginate(15);
-        return view('frontend.fdiplomados', compact('diplomados1'));
+
+        $dipid = Diplomados1::select('interes')->get();
+
+        $cats = Intereses1::whereIn('id', $dipid)->get();
+
+        return view('frontend.fdiplomados', compact('diplomados1','cats'));
 
    }
 
@@ -70,6 +91,9 @@ class FrontendController extends Controller
     public function convocatoriasindex()
     {
         $convocatoria1 = Convocatoria1::paginate(15);
+
+
+
         return view('frontend.fconvocatorias', compact('convocatoria1'));
     }
 

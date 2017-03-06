@@ -142,7 +142,7 @@ class Convocatoria1Controller extends Controller
         if($request->hasFile('imagen_convocatoria')){
             $imagen_convocatoria = $request->file('imagen_convocatoria');
             $filename = time() . '.' . $imagen_convocatoria->getClientOriginalExtension();
-            Image::make($imagen_convocatoria)->resize(300,300)->save( public_path('/uploads/convocatorias/' .$filename ));
+            Image::make($imagen_convocatoria)->resize(1200,563)->save( public_path('/uploads/convocatorias/' .$filename ));
 
             $convocatoria1 = $request->input('id');
 
