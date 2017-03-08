@@ -9,6 +9,7 @@ use App\Cursos1;
 use App\Diplomados1;
 use App\Convocatoria1;
 use App\Intereses1;
+use App\CursoUbicacion;
 
 
 class FrontendController extends Controller
@@ -33,33 +34,31 @@ class FrontendController extends Controller
     {
         $cursos1 = Cursos1::findOrFail($id);
 
-        //$dipid = Cursos1::where('id','=', $id)
-          //                  ->select('interes')
-            //                ->get();
+        $ubicaciones = Cursos1::find($id)->ubicacion()->get();
 
+        $interes = Cursos1::where('id', '=', $id)->lists('interes');
+        $cats = Intereses1::whereIn('id', $interes)->get();
 
-        //$intereses1 = Intereses1::where('id','=', $dipid)->get();
-
-        //$cats = Intereses1::select('tipoInteres')->where('id', $dipid)->get();
-
-        //$ubicaciones = Cursos1::find($id)->ubicacion()->get();
-
-        return view('frontend.fdetallecurso', compact('cursos1','ubicaciones','intereses1'));  
+        return view('frontend.fdetallecurso', compact('cursos1','ubicaciones','cats'));  
     }
 
     public function diplomadosshow($id)
     {
         $diplomados1 = Diplomados1::findOrFail($id);
-        $ubicaciones = Diplomados1::find($diplomados1->id)->ubicacion()->get();
 
+        $ubicaciones = Diplomados1::find($id)->ubicacion()->get();
 
-        return view('frontend.fdetallediplomado', compact('diplomados1','ubicaciones'));
+        $interes = Diplomados1::where('id', '=', $id)->lists('interes');
+        $cats = Intereses1::whereIn('id', $interes)->get();
+
+        return view('frontend.fdetallediplomado', compact('diplomados1','ubicaciones','cats'));
     }
 
     public function convocatoriasshow($id)
     {
         $convocatoria1 = Convocatoria1::findOrFail($id);
-        $ubicaciones = Convocatoria1::find($convocatoria1->id)->ubicacion()->get();
+
+        $ubicaciones = Convocatoria1::find($id)->ubicacion()->get();
 
 
         return view('frontend.fdetalleconvocatoria', compact('convocatoria1','ubicaciones'));

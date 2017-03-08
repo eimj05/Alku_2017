@@ -49,6 +49,7 @@ class UbicacionController extends Controller
     
         Ubicacion::create([
             'title' => $request['title'],
+            'udireccion' => $request['udireccion'],
             'lat' => $request['lat'],
             'lng' => $request['lng'],
             'created_by' => $idu,]);

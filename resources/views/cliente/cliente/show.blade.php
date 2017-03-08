@@ -29,27 +29,18 @@
                 <tr><th> Telefono </th><td> {{ $cliente->telefono }} </td></tr>
                 <tr><th> Email </th><td> {{ $cliente->email }} </td></tr>
 
-                <tr><th> Rol </th><td> <ul>
+                <tr><th> Rol </th><td> 
                             @foreach($roles as $rol )
 
-                           <li>{{$rol->tipoRol  }}</li> 
+                           {{$rol->tipoRol  }}
 
                             @endforeach
                                 
-                            </ul>
+                           
 
                             </td></tr>
 
-                <tr><th> Intereses </th><td> <ul>
-                            @foreach($intereses as $interes )
-
-                           <li>{{$interes->tipoInteres  }}</li> 
-
-                            @endforeach
-                                
-                            </ul>
-
-                            </td></tr>
+                
 
                 
 

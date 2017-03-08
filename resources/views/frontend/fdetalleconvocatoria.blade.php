@@ -469,8 +469,29 @@ _________________________________________________________ -->
                             <div class="heading">
                                 <h3>Descripcion de la Convocatoria</h3>
                             </div>
+                                <p>{{ $convocatoria1->descripcion }}</p>
+                            <div class="heading">
+                                <h3>Direccion y Ubicacion</h3>
+                            </div>
+                                <p>
+                                @foreach ($ubicaciones as $ubi)
+                                    {!! $ubi->udireccion !!}
+                                @endforeach
+                                </p>
 
-                            <p>{{ $convocatoria1->descripcion }}</p>
+                            <p>
+                                 
+                             </p>
+
+                             <style>
+                            #map-canvas{
+                                width: 750px;
+                                height: 300px;
+                            }
+                            </style>
+
+
+                          <div id="map-canvas"></div>
 
                             
                         </div>
@@ -626,6 +647,29 @@ _________________________________________________________ -->
     <script src="/fcss/js/jquery.parallax-1.1.3.js"></script>
     <script src="/fcss/js/front.js"></script>
  
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q"></script> 
+
+    <script>
+         @foreach ($ubicaciones as $ubi)
+          var lat = {!! $ubi->lat !!};
+          var lng = {!! $ubi->lng !!};
+         @endforeach
+          var map = new google.maps.Map(document.getElementById('map-canvas'),{
+            center:{
+              lat: lat,
+              lng: lng
+            },
+            zoom: 15
+          });
+          var marker = new google.maps.Marker({
+            position:{
+              lat:lat,
+              lng: lng
+            },
+            map:map
+          });
+
+    </script>
 
 
 

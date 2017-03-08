@@ -25,22 +25,29 @@
 			</div>
 
 			<div class="form-group">
+				<label for="">Direcccion</label>	
+				<input type="text" class="form-control input-sm" name="udireccion" >
+			</div>
+
+			<div class="form-group">
 				<label for="">Buscar ubicación</label>
 				<input type="text" id="searchmap" size="93">
 				<div id="map-canvas"></div>
 			</div>
 
+
 			<div class="form-group">
-				<label for="">Latitud</label>
-				<input type="text" class="form-control input-sm" name="lat" id="lat">
+				<input type="hidden" class="form-control input-sm" name="lat" id="lat">
 			</div>
 
 			<div class="form-group">
-				<label for="">Longuitud</label>
-				<input type="text" class="form-control input-sm" name="lng" id="lng">
+				<input type="hidden" class="form-control input-sm" name="lng" id="lng">
 			</div>
 
-			<button class="btn btn-sm btn-danger">Guardar</button>
+			<div class="form-group">
+        <div class="col-sm-offset-3 col-sm-3">
+            {!! Form::submit('Crear', ['class' => 'btn btn-primary form-control']) !!}
+        </div>
 		{{Form::close()}}
 	</div>
 

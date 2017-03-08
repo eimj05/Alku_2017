@@ -469,8 +469,30 @@ _________________________________________________________ -->
                             <div class="heading">
                                 <h3>Descripcion del Diplomado</h3>
                             </div>
+                                <p>{{ $diplomados1->descripcion }}</p>
+                            <div class="heading">
+                                <h3>Direccion y Ubicacion</h3>
+                            </div>
+                                <p>
+                                @foreach ($ubicaciones as $ubi)
+                                    {!! $ubi->udireccion !!}
+                                @endforeach
+                                </p>
 
-                            <p>{{ $diplomados1->descripcion }}</p>
+
+                             <p>
+                                 
+                             </p>
+
+                             <style>
+                            #map-canvas{
+                                width: 750px;
+                                height: 300px;
+                            }
+                            </style>
+
+
+                          <div id="map-canvas"></div>
 
                            
 
@@ -482,7 +504,11 @@ _________________________________________________________ -->
                             <h4>Impartido por</h4>
                             <p>{{ $diplomados1->capacitador }}</p>
                             <h4>Categoria</h4>
-                            <p>{{ $diplomados1->interes }}</p>
+                            <p>@foreach($cats as $item )
+
+                           {{ $item->tipoInteres  }}
+
+                            @endforeach</p>
                             <h4>Fecha del Curso</h4>
                             <p>{{ $diplomados1->fechaInicio }} - {{ $diplomados1->fechaFin }}</p>
                             <h4>Horario</h4>
@@ -629,6 +655,31 @@ _________________________________________________________ -->
     <script src="/fcss/js/jquery.parallax-1.1.3.js"></script>
     <script src="/fcss/js/front.js"></script>
  
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q"></script> 
+
+    <script>
+         @foreach ($ubicaciones as $ubi)
+          var lat = {!! $ubi->lat !!};
+          var lng = {!! $ubi->lng !!};
+         @endforeach
+          var map = new google.maps.Map(document.getElementById('map-canvas'),{
+            center:{
+              lat: lat,
+              lng: lng
+            },
+            zoom: 15
+          });
+          var marker = new google.maps.Marker({
+            position:{
+              lat:lat,
+              lng: lng
+            },
+            map:map
+          });
+
+    </script>
+
 
 
 

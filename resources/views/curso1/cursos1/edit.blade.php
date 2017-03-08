@@ -75,6 +75,15 @@
                 </div>
             </div>
             
+            <div class="form-group {{ $errors->has('intereses') ? 'has-error' : ''}}">
+                     {!! Form::label('intereses','Intereses',['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-6">
+              
+                    {{ Form::select('intereses', $intereses) }}
+
+                    {!! $errors->first('intereses', '<p class="help-block">:message</p>') !!}
+                   </div>  
+            </div>
             <div class="form-group {{ $errors->has('ubicacion') ? 'has-error' : ''}}">
                      {!! Form::label('ubicacion','Ubicacion',['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-6">

@@ -468,14 +468,20 @@ _________________________________________________________ -->
                 <section>
                     <div class="row portfolio-project">
                         <div class="col-md-8">
+
                             <div class="heading">
                                 <h3>Descripcion del Curso</h3>
                             </div>
+                                <p>{{ $cursos1->descripcion }} </p>
 
-                            <p>{{ $cursos1->descripcion }} </p>
-
-
-
+                            <div class="heading">
+                                <h3>Direccion y Ubicacion</h3>
+                            </div>
+                                <p>
+                                @foreach ($ubicaciones as $ubi)
+                                    {!! $ubi->udireccion !!}
+                                @endforeach
+                                </p>
                              <p>
                                  
                              </p>
@@ -495,19 +501,19 @@ _________________________________________________________ -->
 
                         </div>
 
-                                                  
-
-
-
 
                         <div class="col-md-4 project-more">
                             <div class="heading">
                                 <h3>Mas</h3>
                             </div>
-                            <h4>Impartido por</h4>
+                            <h4>Impartido por  </h4>
                             <p>{{ $cursos1->capacitador }}</p>
                             <h4>Categoria</h4>
-                            <p></p>
+                            <p> @foreach($cats as $item )
+
+                           {{$item->tipoInteres  }}
+
+                            @endforeach</p>
                             <h4>Fecha del Curso</h4>
                             <p>{{ $cursos1->fechaInicio }} - {{ $cursos1->fechaFin }}</p>
                             <h4>Horario</h4>
@@ -653,11 +659,15 @@ _________________________________________________________ -->
     <script src="/fcss/js/jquery.counterup.min.js"></script>
     <script src="/fcss/js/jquery.parallax-1.1.3.js"></script>
     <script src="/fcss/js/front.js"></script>
- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q"></script> 
+    
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyB6K1CFUQ1RwVJ-nyXxd6W0rfiIBe12Q"></script> 
 
     <script>
-          var lat = 21.084788;
-          var lng = -89.658097;
+         @foreach ($ubicaciones as $ubi)
+          var lat = {!! $ubi->lat !!};
+          var lng = {!! $ubi->lng !!};
+         @endforeach
           var map = new google.maps.Map(document.getElementById('map-canvas'),{
             center:{
               lat: lat,

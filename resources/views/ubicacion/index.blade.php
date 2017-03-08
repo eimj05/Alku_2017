@@ -8,7 +8,7 @@
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th><th> Titulo </th><th> Latitud </th><th> Longuitud </th>
+                    <th>S.No</th><th> Titulo </th><th> Direccion </th>
                 </tr>
             </thead>
             <tbody>
@@ -18,8 +18,8 @@
                 <tr>
                     <td>{{ $x }}</td>
                     <td>{{ $item->title }}</td>
-                    <td>{{ $item->lat }}</td>
-                    <td>{{ $item->lng }}</td>
+                    <td>{{ $item->udireccion }}</td>
+                    
                    
                     <td>
                         <a href="{{ url('/Ubicaciones/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Ubicacion"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>

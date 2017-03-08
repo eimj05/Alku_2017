@@ -81,11 +81,10 @@ class ClienteController extends Controller
      */
     public function create()
     {
-        $intereses= Intereses1::lists('tipoInteres','id');
         $roles= Roles1::lists('tipoRol', 'id');
 
 
-        return view('cliente.cliente.create')->with('intereses', $intereses)->with('roles', $roles);
+        return view('cliente.cliente.create')->with('roles', $roles);
 
     }
 
@@ -112,11 +111,7 @@ class ClienteController extends Controller
     $cliente->roles()->attach($request->roles);
 
     
-   foreach ($request->intereses as $interes){
-
-    $cliente->intereses()->attach($interes);
-
-    }
+   
 
         Session::flash('flash_message', 'Cliente added!');
 
@@ -135,11 +130,10 @@ class ClienteController extends Controller
     {
         $id = Crypt::decrypt($id);
         $cliente = Cliente::findOrFail($id);
-        $intereses = Cliente::find($cliente->id)->intereses()->get();
         $roles = Cliente::find($cliente->id)->roles()->get();
 
     
-        return view('cliente.cliente.show', compact('cliente','intereses','roles'));
+        return view('cliente.cliente.show', compact('cliente','roles'));
     }
 
     /**
@@ -154,11 +148,10 @@ class ClienteController extends Controller
         
         $id = Crypt::decrypt($id);
         $cliente = Cliente::findOrFail($id);
-        $intereses= Intereses1::lists('tipoInteres','id');
         $roles= Roles1::lists('tipoRol', 'id');
 
 
-        return view('cliente.cliente.edit', compact('cliente','intereses','roles'));
+        return view('cliente.cliente.edit', compact('cliente','roles'));
     }
 
     /**

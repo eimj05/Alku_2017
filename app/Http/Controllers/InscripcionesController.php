@@ -10,6 +10,7 @@ use App\CursosInsc;
 use App\Cliente;
 use App\Diplomados1;
 use App\DiplomadosInsc;
+use DB;
 
 class InscripcionesController extends Controller
 {
@@ -123,13 +124,15 @@ class InscripcionesController extends Controller
         return redirect('Cursos');
     }
 
-    public function destroydiplomados($id)
+    public function destroydiplomados($id, Request $request)
     {
-      //  CursosInsc::destroy($id);
 
-        DiplomadosInsc::where('cliente_id', '=', $id)->delete();
+        $idip = $request->input('id_curso');
 
-       // Session::flash('flash_message', 'Cursos1 deleted!');
+       DiplomadosInsc::where('cliente_id', '=', $id)
+                    ->where('diplomados1_id', '=', $idip)
+                    ->delete();
+
 
         return redirect('Diplomados');
     }

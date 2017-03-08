@@ -22,9 +22,9 @@ class Ubicacion extends Eloquent{
         return $this->belongsToMany('App\Convocatoria1','convocatoria_ubicacion1','ubicacion_id', 'convocatoria_id');
     }
 
-		protected $fillable = ['title','lat','lng','created_by'];
+		protected $fillable = ['title', 'udireccion','lat','lng','created_by'];
 
-		
+	
 
 	}
 

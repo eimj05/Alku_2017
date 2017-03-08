@@ -122,8 +122,12 @@ class Cursos1Controller extends Controller
         $cursos1 = Cursos1::findOrFail($id);
         $ubicaciones = Cursos1::find($cursos1->id)->ubicacion()->get();
 
+        $interes = Cursos1::where('id', '=', $id)->lists('interes');
+        $cats = Intereses1::whereIn('id', $interes)->get();
 
-        return view('curso1.cursos1.show', compact('cursos1','ubicaciones'));
+
+
+        return view('curso1.cursos1.show', compact('cursos1','ubicaciones', 'cats'));
     }
 
     /**
@@ -141,7 +145,10 @@ class Cursos1Controller extends Controller
 
         $cursos1 = Cursos1::findOrFail($id);
 
-        return view('curso1.cursos1.edit', compact('cursos1','ubicacion'));
+        $intereses= Intereses1::lists('tipoInteres','id');
+
+
+        return view('curso1.cursos1.edit', compact('cursos1','ubicacion','intereses'));
     }
 
     public function ubicacion($id)
@@ -170,11 +177,17 @@ class Cursos1Controller extends Controller
     {
         
         $cursos1 = Cursos1::findOrFail($id);
+        
         $cursos1->update($request->all());
 
         $cursos1->ubicacion()->sync([]);
 
         $cursos1->ubicacion()->attach($request->ubicacion);
+
+        DB::table('cursos1s')
+            ->where('id', $id)
+            ->update(['interes' => $request->intereses]);
+        
 
         
 

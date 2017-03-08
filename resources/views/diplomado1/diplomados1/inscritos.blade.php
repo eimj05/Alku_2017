@@ -4,6 +4,8 @@
 <div class="container">
 
     <h1>Personas Pre-Inscritas al Diplomado {{ $diplomados1->nombreDiplomado}} </h1>
+    
+    <input id="id_curso" name="invisible" type="hidden" value="{{ $diplomados1->id}}">
 
     <div class="table">
         <table class="table table-bordered table-striped table-hover">
@@ -13,6 +15,7 @@
                 </tr>
             </thead>
             <tbody>
+
             {{-- */$x=0;/* --}}
             @foreach($cliente as $item)
                 {{-- */$x++;/* --}}
@@ -24,7 +27,7 @@
                     <td>
                             {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['/IDiplomados', $item->id],
+                            'url' => ['/IDiplomados', $item->id, $diplomados1->id ],
                             'style' => 'display:inline'
                         ]) !!}
                             {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true" title="Delete Cursos1" />', array(
