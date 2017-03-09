@@ -521,6 +521,26 @@ _________________________________________________________ -->
                             <h4>Costo</h4>
                             <p>$ {{ $cursos1->costo }}</p>
 
+                            {!! Form::open(['url' => '/cinscripcion', 'class' => 'form-horizontal']) !!}
+    
+                            <div class="heading">
+                                <h3>Pre - Inscripcion</h3>
+                            </div>
+                            <h5>Tienes que ser usuario registrado para poder realizar una Pre-Inscripcion al curso</h5>
+                            <input name="id" class="form-control" type="hidden" type="text" readonly="" value="{{$cursos1->id}}">
+                            <div class="col-sm-6 text-center">
+                            {!! Form::submit('Pre-Inscribirme', ['class' => 'btn btn-primary ']) !!}
+                            </div>
+                            @if(Session::has('message'))
+                            <div class="alert alert-info">
+                              {{Session::get('message')}}
+                            </div>
+                        @endif
+                     {!!Form::close()!!}
+                           
+
+                            
+                            
 
                         </div>
                     </div>

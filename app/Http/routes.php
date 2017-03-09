@@ -109,6 +109,9 @@ Route::get('/', function () {
         ]);
 
 
+     Route::post('cinscripcion', 'FinscripcionController@store');
+
+
      // DIPLOMADOS
       Route::get('IDiplomados/{diplomados1}', [
         'uses' => 'InscripcionesController@showdiplomados',

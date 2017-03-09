@@ -69,6 +69,7 @@ class InscripcionesController extends Controller
     public function store(Request $request)
     {
         //
+    
     }
 
     /**
@@ -130,7 +131,7 @@ class InscripcionesController extends Controller
         $idip = $request->input('id_curso');
 
        DiplomadosInsc::where('cliente_id', '=', $id)
-                    ->where('diplomados1_id', '=', $idip)
+                        
                     ->delete();
 
 
