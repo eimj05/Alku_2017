@@ -448,6 +448,14 @@ _________________________________________________________ -->
 
                     <div class="row">
                         <div class="col-md-12">
+
+                            @if(Session::has('message'))
+                              <div class="alert alert-info">
+                              {{Session::get('message')}}
+                              </div>
+                              @endif
+                              
+
                             <div class="heading">
                                 <h2>Diplomados</h2>
                             </div>

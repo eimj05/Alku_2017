@@ -11,10 +11,11 @@ use Redirect;
 use App\CursoInscripcion;
 use Illuminate\Support\Facades\Input;
 use Carbon\Carbon;
+use Illuminate\Database\QueryException;
 
 
 
-class FinscripcionController extends Controller
+class FinscripcioncursoController extends Controller
 {
     //
     public function __construct()
@@ -24,6 +25,7 @@ class FinscripcionController extends Controller
 
      public function store(Request $request)
     {
+    	try{
         	$idu = Auth::id();
 
         	$icurso = new CursoInscripcion;
@@ -32,10 +34,16 @@ class FinscripcionController extends Controller
 		    
 		    $icurso->save();
 
-       
-   
+    Session::flash('message','Pre - Inscrito al curso correctamente');
+    return Redirect::to('Fcursoslist');
 
-    Session::flash('message','Mensaje enviado correctamente');
-    return Redirect::back();
-    }
+	} catch(\Illuminate\Database\QueryException $e) {
+	 Session::flash('message','El usuario ya se encuentra Pre - Inscrito al Curso');
+	 return Redirect::to('Fcursoslist');
+	} 
+		
+	}
+
+
 }
+

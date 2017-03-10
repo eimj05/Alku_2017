@@ -3,6 +3,12 @@
 @section('main-content')
 <div class="container">
 
+     @if(Session::has('message'))
+    <div class="alert alert-info">
+    {{Session::get('message')}}
+    </div>
+    @endif
+
     <h1>Crear Usuario</h1>
     <hr/>
 

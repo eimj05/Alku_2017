@@ -11,7 +11,6 @@ use App\Convocatoria1;
 use App\Intereses1;
 use App\CursoUbicacion;
 
-
 class FrontendController extends Controller
 {
     /**

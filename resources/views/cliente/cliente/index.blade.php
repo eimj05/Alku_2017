@@ -23,7 +23,7 @@
                     <td>{{ $item->email }}</td>
                     <td>
                         @foreach($roles as $rol)
-                        {{-- */$x++;/* --}}
+                        
                         @if($rol->cliente_id === $item->id)
                             {{ $rol->roles1_id }}
                         @endif

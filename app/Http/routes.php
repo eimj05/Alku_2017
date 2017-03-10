@@ -59,14 +59,16 @@ Route::get('/', function () {
    Route::get('Fconvocatoriasdetalle/{convocatorias1}', 'FrontendController@convocatoriasshow');
 
   
+
+
   // Formulario de Contato
     
 
     Route::resource('fmail', 'FmailController');
 
+    
 
-
-    Route::group(['middleware' => 'web'], function(){
+    Route::group(['middleware' => 'auth'], function(){
     Route::auth();
      Route::get('/home', 'HomeController@index');
      Route::get('/nogrants', 'HomeController@nogrant');
@@ -109,8 +111,12 @@ Route::get('/', function () {
         ]);
 
 
-     Route::post('cinscripcion', 'FinscripcionController@store');
-
+      Route::get('Cinscripcion', [
+        'uses' => 'FinscripcioncursoController@store',
+        'as' => 'cinscripcion',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa','RegUser']
+        ]);
 
      // DIPLOMADOS
       Route::get('IDiplomados/{diplomados1}', [
@@ -125,6 +131,13 @@ Route::get('/', function () {
         'as' => 'diplomado1.diplomados1.destroy',
         'middleware' => 'roles',
         'roles' => ['Admin','Empresa']
+        ]);
+
+     Route::get('Dinscripcion', [
+        'uses' => 'FinscripciondiplomadoController@store',
+        'as' => 'dinscripcion',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa','RegUser']
         ]);
     
 

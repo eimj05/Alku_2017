@@ -16,6 +16,8 @@ use Auth;
 use Crypt;
 use Image;
 use App\Rolesuser;
+use Illuminate\Database\QueryException;
+use Redirect;
 
 class ClienteController extends Controller
 {
@@ -97,7 +99,7 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        
+        try{
         $cliente = Cliente::create([
             'name' => $request['name'],
             'direccion' => $request['direccion'],
@@ -113,10 +115,15 @@ class ClienteController extends Controller
     
    
 
-        Session::flash('flash_message', 'Cliente added!');
+        Session::flash('message', 'Usuario creado correctamente');
 
 
-        return redirect('Usuarios');
+        return Redirect::to('Usuarios');
+        } catch(\Illuminate\Database\QueryException $e) {
+        Session::flash('message','El correo ya se encuentra asignado a otro usuario');
+        return Redirect::to('Usuarios/create');
+    } 
+
     }
 
     /**
@@ -175,11 +182,7 @@ class ClienteController extends Controller
 
         $cliente->roles()->attach($request->roles);
 
-        foreach ($request->intereses as $interes){
-
-             $cliente->intereses()->attach($interes);
-
-         }
+        
 
         Session::flash('flash_message', 'Cliente updated!');
 

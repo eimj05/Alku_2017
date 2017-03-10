@@ -521,7 +521,9 @@ _________________________________________________________ -->
                             <h4>Costo</h4>
                             <p>$ {{ $cursos1->costo }}</p>
 
-                            {!! Form::open(['url' => '/cinscripcion', 'class' => 'form-horizontal']) !!}
+                            
+                            {!!Form::open(['route'=>'cinscripcion','method'=>'GET','class' => 'form-horizontal'])!!}
+
     
                             <div class="heading">
                                 <h3>Pre - Inscripcion</h3>

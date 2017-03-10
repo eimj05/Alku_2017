@@ -164,6 +164,7 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         'GoogleMaps\ServiceProvider\GoogleMapsServiceProvider',
         Intervention\Image\ImageServiceProvider::class,
+        'Cartalyst\Alerts\Laravel\AlertsServiceProvider',
 
 
 
@@ -218,6 +219,7 @@ return [
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'GoogleMaps' => 'GoogleMaps\Facade\GoogleMapsFacade',
         'Image' => Intervention\Image\Facades\Image::class,
+        'Alert' => 'Cartalyst\Alerts\Laravel\Facades\Alert',
 
     ],
 

@@ -433,6 +433,8 @@ _________________________________________________________ -->
                         <ul class="breadcrumb">
                             <li><a href="/">Inicio</a>
                             </li>
+
+
                             <li>Cursos</li>
                         </ul>
 
@@ -448,6 +450,14 @@ _________________________________________________________ -->
 
                     <div class="row">
                         <div class="col-md-12">
+
+                              @if(Session::has('message'))
+                              <div class="alert alert-info">
+                              {{Session::get('message')}}
+                              </div>
+                              @endif
+
+
                             <div class="heading">
                                 <h2>Cursos</h2>
                             </div>
@@ -455,11 +465,16 @@ _________________________________________________________ -->
                             <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
                                 ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                         </div>
+
                     </div>
 
        <!-- *** Listar Cursos *** -->
 
         <div class="container">
+
+
+
+
       <div class="input-group"> <span class="input-group-addon">Buscar</span>
         <input id="filtrar" type="text" class="form-control" placeholder="Filtra por tus preferencias y dale clic en Ver Detalles para mas informacion">
       </div>
@@ -471,7 +486,7 @@ _________________________________________________________ -->
             <th>Nombre del Curso</th>
             <th>Fecha Inicio</th>
             <th>Fecha Fin</th>            
-            <th>Interes</th>
+            <th>Categoria</th>
             <th>Detalles</th>
           </tr>
         </thead>
