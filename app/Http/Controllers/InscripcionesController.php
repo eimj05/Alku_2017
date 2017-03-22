@@ -112,12 +112,11 @@ class InscripcionesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroycursos($id)
+    public function destroycursos($id, $id2)
     {
-      //  CursosInsc::destroy($id);
 
         CursosInsc::where('cliente_id', '=', $id)
-                    
+                    ->where('cursos1_id', '=', $id2)
                     ->delete();
 
        // Session::flash('flash_message', 'Cursos1 deleted!');
@@ -125,13 +124,11 @@ class InscripcionesController extends Controller
         return redirect('Cursos');
     }
 
-    public function destroydiplomados($id, Request $request)
+    public function destroydiplomados($id, $id2)
     {
 
-        $idip = $request->input('id_curso');
-
        DiplomadosInsc::where('cliente_id', '=', $id)
-                        
+                    ->where('diplomados1_id', '=', $id2)  
                     ->delete();
 
 

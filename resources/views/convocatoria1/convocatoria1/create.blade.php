@@ -11,42 +11,42 @@
                 <div class="form-group {{ $errors->has('nombreConvocatoria') ? 'has-error' : ''}}">
                 {!! Form::label('nombreConvocatoria', 'Nombre Convocatoria', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('nombreConvocatoria', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('nombreConvocatoria', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('nombreConvocatoria', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('descripcion') ? 'has-error' : ''}}">
                 {!! Form::label('descripcion', 'Descripcion', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::textarea('descripcion', null, ['class' => 'form-control']) !!}
+                    {!! Form::textarea('descripcion', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('descripcion', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('tipoConvocatoria') ? 'has-error' : ''}}">
                 {!! Form::label('tipoConvocatoria', 'Tipo Convocatoria', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('tipoConvocatoria', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('tipoConvocatoria', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('tipoConvocatoria', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('dependencia') ? 'has-error' : ''}}">
                 {!! Form::label('dependencia', 'Dependencia', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('dependencia', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('dependencia', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('dependencia', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('fechaCierre') ? 'has-error' : ''}}">
                 {!! Form::label('fechaCierre', 'Fecha Cierre', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::date('fechaCierre', null, ['class' => 'form-control']) !!}
+                    {!! Form::date('fechaCierre', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('fechaCierre', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('contacto') ? 'has-error' : ''}}">
                 {!! Form::label('contacto', 'Contacto', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('contacto', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('contacto', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('contacto', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>

@@ -5,8 +5,6 @@
 
     <h1>Personas Pre-Inscritas al Diplomado {{ $diplomados1->nombreDiplomado}} </h1>
     
-    <input id="id_curso" name="invisible" type="hidden" value="{{ $diplomados1->id}}">
-
     <div class="table">
         <table class="table table-bordered table-striped table-hover">
             <thead>

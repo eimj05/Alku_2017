@@ -44,6 +44,10 @@ Route::get('/', function () {
         return view('frontend.fservicios'); 
     });
 
+    Route::get('Fperfil', function (){
+        return view('frontend.perfil'); 
+    });
+
 
    Route::get('Fcursoslist', 'FrontendController@cursosindex');
    Route::get('Fcursosdetalle/{cursos1}', 'FrontendController@cursosshow');
@@ -103,7 +107,7 @@ Route::get('/', function () {
         'roles' => ['Admin','Empresa']
         ]);
 
-     Route::delete('ICursos/{cursos1}', [
+     Route::delete('ICursos/{cursos1}/{cursos2}', [
         'uses' => 'InscripcionesController@destroycursos',
         'as' => 'curso1.cursos1.destroy',
         'middleware' => 'roles',
@@ -126,7 +130,7 @@ Route::get('/', function () {
         'roles' => ['Admin','Empresa']
         ]);
 
-     Route::delete('IDiplomados/{diplomados1}', [
+     Route::delete('IDiplomados/{diplomados1}/{diplomados2}', [
         'uses' => 'InscripcionesController@destroydiplomados',
         'as' => 'diplomado1.diplomados1.destroy',
         'middleware' => 'roles',
@@ -193,6 +197,22 @@ Route::get('/', function () {
         'roles' => ['Admin']
         ]);
 
+    // Perfil de Usuario
+
+    Route::get('Usuarios/{cliente}/editperfil', [
+        'uses' => 'Cliente\ClienteController@editperfil',
+        'as' => 'cliente.cliente.perfil',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+
+
+    Route::patch('Perfil/{cliente}', [
+        'uses' => 'Cliente\ClienteController@updateperfil',
+        'as' => 'cliente.cliente.update',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
 
 ////-----  INTERESES  ------//////
 
@@ -251,7 +271,7 @@ Route::get('/', function () {
         'uses' => 'Roles1\Roles1Controller@index',
         'as' => 'roles1.roles1.index',
         'middleware' => 'roles',
-        'roles' => ['Admin','Empresa']
+        'roles' => ['Admin']
         ]);
 
     Route::post('Roles', [
@@ -286,7 +306,7 @@ Route::get('/', function () {
         'uses' => 'Roles1\Roles1Controller@show',
         'as' => 'roles1.roles1.show',
         'middleware' => 'roles',
-        'roles' => ['Admin','Empresa']
+        'roles' => ['Admin']
         ]);
 
     Route::get('Roles/{roles1}/edit', [

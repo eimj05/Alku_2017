@@ -4,7 +4,7 @@
 <div class="container">
 
     <h1>Detalle Usuario
-        <a href="{{ url('Usuarios/' . Crypt::encrypt($cliente->id) . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Usuario"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+        <a href="{{ url('Usuarios/' . ($cliente->id) . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Usuario"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
         {!! Form::open([
             'method'=>'DELETE',
             'url' => ['Usuarios', $cliente->id],

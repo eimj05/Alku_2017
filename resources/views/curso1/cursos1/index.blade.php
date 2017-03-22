@@ -3,7 +3,7 @@
 @section('main-content')
 <div class="container">
 
-    <h1>Cursos <a href="{{ url('/Cursos/create') }}" class="btn btn-primary btn-xs" title="Agregar Curso"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a> <a href="{{ url('/pdfcursos') }}" class="btn btn-primary btn-xs" title="PDF"><span class="fa fa-file-pdf-o" aria-hidden="true"/></a></h1>
+    <h1>Cursos <a href="{{ url('/Cursos/create') }}" class="btn btn-primary btn-xs" title="Agregar Curso"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a> </h1>
     <div class="table">
         <table class="table table-bordered table-striped table-hover">
             <thead>

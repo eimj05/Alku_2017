@@ -26,7 +26,7 @@ class CheckRole
 
             return $next($request);
         }
-            return redirect('nogrants');
+            return back();
             //return response("Privilegios Insuficientes", 401);
 
     }

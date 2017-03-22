@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="robots" content="all,follow">
@@ -77,7 +80,10 @@ _________________________________________________________ -->
                                 <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
                                 <a href="{{ url('/register') }}"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
                                 @else
-                                <a href="/"><i class="fa fa-user"></i>{{ Auth::user()->name }}</a> 
+                                <a href="/">
+                                <img src="/uploads/avatars/{{ Auth::user()->avatar }}" class="img-circle" alt="User Image" width="25" height="25" border="0" />
+                                </a>
+                                <a href="/">{{ Auth::user()->name }}</a> 
                                 <a href="/logout"><i class="fa fa-sign-out"></i> Salir   </a>
                                 @endif
                             </div>
@@ -99,7 +105,7 @@ _________________________________________________________ -->
                     <div class="container">
                         <div class="navbar-header">
 
-                            <a class="navbar-brand home" href="index.html">
+                            <a class="navbar-brand home" href="/">
                                 <img src="fcss/img/logo.png" alt="Universal logo" class="hidden-xs hidden-sm">
                                 <img src="fcss/img/logo-small.png" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
                             </a>
@@ -116,7 +122,7 @@ _________________________________________________________ -->
 
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="dropdown active">
-                                   <a href="/" class="btn btn-link" >Inicio </a>
+                                    <a href="/" class="btn btn-link" >Inicio </a>
                                 </li>
                                <!-- <li class="dropdown use-yamm yamm-fw">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Caracteristicas<b class="caret"></b></a>
@@ -176,7 +182,7 @@ _________________________________________________________ -->
                                                     <div class="col-sm-3">
                                                         <h5>Portafolio</h5>
                                                         <ul>
-                                                           <li><a href="{{ url('Fcursoslist') }}">Cursos</a>
+                                                            <li><a href="{{ url('Fcursoslist') }}">Cursos</a>
                                                             </li>
                                                             <li><a href="{{ url('Fdiplomadoslist') }}">Diplomados</a>
                                                             </li>
@@ -190,7 +196,7 @@ _________________________________________________________ -->
                                                         <ul>
                                                             <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
-                                                          
+                                 
                                         
                                                             <li><a href="{{ url('Fservicios') }}">Nuestros Servicios</a>
                                                             </li>
@@ -423,19 +429,18 @@ _________________________________________________________ -->
 
         <!-- *** LOGIN MODAL END *** -->
 
+
         <div id="heading-breadcrumbs">
             <div class="container">
                 <div class="row">
                     <div class="col-md-7">
-                        <h1>Informacion Convocatorias</h1>
+                        <h1>Perfil del Usuario</h1>
                     </div>
                     <div class="col-md-5">
                         <ul class="breadcrumb">
-                            <li><a href="{{ url('/') }}">Inicio</a>
+                            <li><a href="/">Inicio</a>
                             </li>
-                            <li><a href="blog.html">Convocatorias</a>
-                            </li>
-                            <li>Informacion</li>
+                            <li>Perfil del Usuario</li>
                         </ul>
 
                     </div>
@@ -445,127 +450,82 @@ _________________________________________________________ -->
 
         <div id="content">
             <div class="container">
+                <section>
+                    <div class="row">
 
-                <div class="row">
+                        <div class="col-md-12 clearfix">
 
-                    <!-- *** LEFT COLUMN ***
-            _________________________________________________________ -->
-
-                    <div class="col-md-9" id="blog-post">
-
-
-                        <p class="lead">This is the lead paragraph of the article. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget.</p>
-
-                        <div id="post-content">
-                            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                                semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean
-                                fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-
-                            <p>
-                                <img src="fcss/img/blog2.jpg" class="img-responsive" alt="Example blog post alt">
-                            </p>
-
-                            <h2>Header Level 2</h2>
-
-                            <ol>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ol>
-
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est malesuada
-                                    tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                            </blockquote>
-
-                            <h3>Header Level 3</h3>
-
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
-                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-
-                            <ul>
-                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li>Aliquam tincidunt mauris eu risus.</li>
-                            </ul>
-
-                            <p>
-                                <img src="fcss/img/blog.jpg" class="img-responsive" alt="Example blog post alt">
-                            </p>
-
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt
-                                condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros
-                                eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
-
-                        </div>
-                        
-                        <!-- /#comments -->
+                            <div id="text-page">
 
 
-                        
-                        <!-- /#comment-form -->
-
-
-                    </div>
-                    <!-- /#blog-post -->
-
-                    <!-- *** LEFT COLUMN END *** -->
-
-                    <!-- *** RIGHT COLUMN ***
-                _________________________________________________________ -->
-
-                    <div class="col-md-3">
-
-                        <!-- *** MENUS AND WIDGETS ***
- _________________________________________________________ -->
-                        <div class="panel panel-default sidebar-menu">
-
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Text widget</h3>
-                            </div>
-
-                            <div class="panel-body text-widget">
-                                <p>Improved own provided blessing may peculiar domestic. Sight house has sex never. No visited raising gravity outward subject my cottage mr be. Hold do at tore in park feet near my case.
-                                </p>
-
-                            </div>
-                        </div>
-
-                        <div class="panel panel-default sidebar-menu">
-
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Search</h3>
-                            </div>
-
-                            <div class="panel-body">
-                                <form role="search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="Search">
-                                        <span class="input-group-btn">
-
-            <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
-
-        </span>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <p class="text-center">
+                                            <img src="" class="img-circle img-responsive" alt="">
+                                        </p>
                                     </div>
-                                </form>
+                                    <div class="col-md-4">
+                                        <p class="text-center">
+                                            <img src="/uploads/avatars/{{ Auth::user()->avatar }}" class="img-circle img-responsive" alt="">
+                                        </p>
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <p class="text-center">
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <form enctype="multipart/form-data" action="/profile" method="POST">
+                                        <input type="file" name="avatar">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <br>
+                                        <input type="submit" value="Actualizar Imagen" class="pull-center btn btn-sm btn-primary">
+                                         </form>
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                                <br>
+                                <h1>Text formatting - Header level 1</h1>
+
+                                <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                                    semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.
+                                    Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
+
+                                <h2>Header Level 2</h2>
+
+                                <ol>
+                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                    <li>Aliquam tincidunt mauris eu risus.</li>
+                                </ol>
+
+                                <blockquote>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est
+                                        malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
+                                </blockquote>
+
+                                <h3>Header Level 3</h3>
+
+                                <ul>
+                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+                                    <li>Aliquam tincidunt mauris eu risus.</li>
+                                </ul>
+
+                                <hr>
+
+                               
+
                             </div>
+
+
                         </div>
-
-
-                        
-
-                        <!-- *** MENUS AND FILTERS END *** -->
-
+                        <!-- /.col-md-12 -->
                     </div>
-                    <!-- /.col-md-3 -->
-
-                    <!-- *** RIGHT COLUMN END *** -->
-
-
-                </div>
-                <!-- /.row -->
-
+                    <!-- /.row -->
+                </section>
             </div>
             <!-- /.container -->
         </div>
@@ -575,16 +535,17 @@ _________________________________________________________ -->
         <!-- *** GET IT ***
 _________________________________________________________ -->
 
-        <div id="get-it">
+       <div id="get-it">
             <div class="container">
                 <div class="col-md-8 col-sm-12">
-                    <h3>¿Te gustaria unirte a nuestro equipo y publicar tus Cursos?</h3>
+                    <h3>¿Te gustaria unirte a nuestro equipo y publicar tus Cursos o Diplomados?</h3>
                 </div>
                 <div class="col-md-4 col-sm-12">
                     <a href="#" class="btn btn-template-transparent-primary">Envianos un email</a>
                 </div>
             </div>
         </div>
+
 
         <!-- *** GET IT END *** -->
 
@@ -663,7 +624,7 @@ _________________________________________________________ -->
         <!-- *** COPYRIGHT ***
 _________________________________________________________ -->
 
-       <div id="copyright">
+        <div id="copyright">
             <div class="container">
                 <div class="col-md-12">
                     <p class="pull-left">&copy; 2017. PH3 Development Corporation</p>
@@ -682,7 +643,6 @@ _________________________________________________________ -->
     </div>
     <!-- /#all -->
 
-
     <!-- #### JAVASCRIPT FILES ### -->
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -698,6 +658,9 @@ _________________________________________________________ -->
     <script src="fcss/js/front.js"></script>
 
     
+
+    <!-- owl carousel -->
+    <script src="fcss/js/owl.carousel.min.js"></script>
 
 
 

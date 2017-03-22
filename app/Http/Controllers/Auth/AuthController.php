@@ -53,6 +53,12 @@ class AuthController extends Controller
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
+            'direccion' => 'required|max:500',
+            'telefono' => 'required|max:12',
+            'rfc' => 'required|max:13',
+
+
+
             'password' => 'required|regex:/^.*(?=.{3,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%@]).*$/|confirmed|min:8|max:16',
             'terms' => 'required',
           //  'g-recaptcha-response' => 'required|captcha',
@@ -72,8 +78,16 @@ class AuthController extends Controller
             $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-            //'password' => md5($data['password']),
+            'direccion' => $data['direccion'],
+            'telefono' => $data['telefono'],
+            'rfc' => $data['rfc'],
+
+
+
+            //'password' => bcrypt($data['password']),
+            'password' => $data['password'],
+
+
 
             'password_updated_at' => date('Y-m-d H:i:s')
             ]);

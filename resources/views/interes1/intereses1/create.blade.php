@@ -11,14 +11,14 @@
                 <div class="form-group {{ $errors->has('tipoInteres') ? 'has-error' : ''}}">
                 {!! Form::label('tipoInteres', 'Tipointeres', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('tipoInteres', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('tipoInteres', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('tipoInteres', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('descripcion') ? 'has-error' : ''}}">
                 {!! Form::label('descripcion', 'Descripcion', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('descripcion', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('descripcion', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('descripcion', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>

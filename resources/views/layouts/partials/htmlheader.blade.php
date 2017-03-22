@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title>Alku - Admin Panel </title>
+    <title>Alku</title>
 
     <link rel="shortcut icon" href="fcss/img/favicon.ico" type="image/x-icon" />
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>

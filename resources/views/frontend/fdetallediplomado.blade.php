@@ -77,7 +77,8 @@ _________________________________________________________ -->
                                 <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
                                 <a href="{{ url('/register') }}"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
                                 @else
-                                <a href="/">{{ Auth::user()->name }}</a> <a href="/logout"> Salir   </a>
+                                <a href="/"><i class="fa fa-user"></i>{{ Auth::user()->name }}</a> 
+                                <a href="/logout"><i class="fa fa-sign-out"></i> Salir   </a>
                                 @endif
                             </div>
 
@@ -486,7 +487,7 @@ _________________________________________________________ -->
 
                              <style>
                             #map-canvas{
-                                width: 750px;
+                                width: 500px;
                                 height: 300px;
                             }
                             </style>

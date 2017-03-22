@@ -5,6 +5,7 @@
 
     <h1>Personas Pre-Inscritas al Curso {{ $cursos1->nombreCurso}} </h1>
 
+
     <div class="table">
         <table class="table table-bordered table-striped table-hover">
             <thead>
@@ -26,15 +27,17 @@
                            
                             {!! Form::open([
                             'method'=>'DELETE',
-                            'url' => ['/ICursos', $item->id],
+                            'url' => ['/ICursos', $item->id, $cursos1->id ],
                             'style' => 'display:inline'
                         ]) !!}
-                            {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true" title="Delete Cursos1" />', array(
+
+                            {!! Form::button('<span class="glyphicon glyphicon-trash" aria-hidden="true" title="Borrar Curso" />', array(
                                     'type' => 'submit',
                                     'class' => 'btn btn-danger btn-xs',
                                     'title' => 'Borrar Registrado',
                                     'onclick'=>'return confirm("Confirma borrar el usuario registrado al curso?")'
                             ));!!}
+
                         {!! Form::close() !!}
                     </td>
                 </tr>

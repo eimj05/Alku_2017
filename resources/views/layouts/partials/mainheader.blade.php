@@ -152,7 +152,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="{{ url('/Usuarios/' . Crypt::encrypt(Auth::user()->id)) }}" class="btn btn-default btn-flat">
+                                    <a href="{{ url('/Usuarios/' .(Auth::user()->id) . '/editperfil') }}" class="btn btn-default btn-flat">
                                     {{ trans('adminlte_lang::message.profile') }}</a>
                                 </div>
                                 <div class="pull-right">

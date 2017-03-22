@@ -72,7 +72,8 @@ class ClienteController extends Controller
 
         }
 
-        return view ('cliente.cliente.fotoperfil', array('user' =>Auth::user()));
+        //return view ('cliente.cliente.fotoperfil', array('user' =>Auth::user()));
+        return back();
 
     }
 
@@ -110,7 +111,7 @@ class ClienteController extends Controller
 
 
 
-    $cliente->roles()->attach($request->roles);
+          $cliente->roles()->attach($request->roles);
 
     
    
@@ -135,7 +136,6 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
-        $id = Crypt::decrypt($id);
         $cliente = Cliente::findOrFail($id);
         $roles = Cliente::find($cliente->id)->roles()->get();
 
@@ -153,12 +153,20 @@ class ClienteController extends Controller
     public function edit($id)
     {
         
-        $id = Crypt::decrypt($id);
         $cliente = Cliente::findOrFail($id);
         $roles= Roles1::lists('tipoRol', 'id');
 
 
         return view('cliente.cliente.edit', compact('cliente','roles'));
+    }
+
+    public function editperfil($id)
+    {
+        
+        $cliente = Cliente::findOrFail($id);
+
+
+        return view('cliente.cliente.perfil', compact('cliente'));
     }
 
     /**
@@ -189,6 +197,19 @@ class ClienteController extends Controller
         return redirect('Usuarios');
     }
 
+    public function updateperfil($id, Request $request)
+    {
+        
+        $cliente = Cliente::findOrFail($id);
+
+        $cliente->update($request->all());
+
+
+        Session::flash('flash_message', 'Cliente updated!');
+
+        return redirect('/home');
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -201,8 +222,6 @@ class ClienteController extends Controller
 
         $id_cliente = $cliente = Cliente::findOrFail($id);
 
-
-        $cliente->intereses()->detach();
 
         $cliente->roles()->detach();
 

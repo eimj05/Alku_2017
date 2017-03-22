@@ -18,28 +18,28 @@
                 <div class="form-group {{ $errors->has('nombre') ? 'has-error' : ''}}">
                 {!! Form::label('name', 'Nombre', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('name', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('direccion') ? 'has-error' : ''}}">
                 {!! Form::label('direccion', 'Direccion', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('direccion', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('direccion', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('direccion', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('telefono') ? 'has-error' : ''}}">
                 {!! Form::label('telefono', 'Telefono', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('telefono', null, ['class' => 'form-control']) !!}
+                    {!! Form::number('telefono', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('telefono', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
             <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
                 {!! Form::label('email', 'Email', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('email', null, ['class' => 'form-control']) !!}
+                    {!! Form::email('email', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
@@ -47,7 +47,7 @@
             <div class="form-group {{ $errors->has('rfc') ? 'has-error' : ''}}">
                 {!! Form::label('rfc', 'RFC', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('rfc', null, ['class' => 'form-control']) !!}
+                    {!! Form::text('rfc', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('rfc', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
@@ -56,7 +56,7 @@
                 <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
                 {!! Form::label('password', 'Contraseña', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    <input type="password" class="form-control" name="password"/>
+                    <input required="true" type="password" class="form-control" name="password"/>
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
             </div>
