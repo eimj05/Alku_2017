@@ -160,6 +160,8 @@ class ClienteController extends Controller
         return view('cliente.cliente.edit', compact('cliente','roles'));
     }
 
+     
+
     public function editperfil($id)
     {
         
@@ -183,7 +185,6 @@ class ClienteController extends Controller
 
         $cliente->update($request->all());
 
-        $cliente->intereses()->sync([]);
 
         $cliente->roles()->sync([]);
 

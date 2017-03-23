@@ -28,6 +28,8 @@
                 <tr><th> Direccion </th><td> {{ $cliente->direccion }} </td></tr>
                 <tr><th> Telefono </th><td> {{ $cliente->telefono }} </td></tr>
                 <tr><th> Email </th><td> {{ $cliente->email }} </td></tr>
+                <tr><th> Rfc </th><td> {{ $cliente->rfc }} </td></tr>
+
 
                 <tr><th> Rol </th><td> 
                             @foreach($roles as $rol )

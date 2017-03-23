@@ -10,6 +10,9 @@ use App\Diplomados1;
 use App\Convocatoria1;
 use App\Intereses1;
 use App\CursoUbicacion;
+use Auth;
+use App\Cliente;
+
 
 class FrontendController extends Controller
 {
@@ -18,6 +21,30 @@ class FrontendController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+    public function editperf($id)
+    {   
+        //$id = Auth::user();
+        
+        $cliente = Cliente::findOrFail($id);
+
+        return view('frontend.perfil', compact('cliente'));
+    }
+
+    public function updateperf($id, Request $request)
+    {
+        
+        $cliente = Cliente::findOrFail($id);
+
+        $cliente->update($request->all());
+
+
+       // Session::flash('flash_message', 'Cliente updated!');
+
+        return back();
+    }
+
+
     public function cursosindex()
     {
         $cursos1 = Cursos1::paginate(15);

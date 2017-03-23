@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="robots" content="all,follow">
@@ -80,10 +77,10 @@ _________________________________________________________ -->
                                 <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
                                 <a href="{{ url('/register') }}"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
                                 @else
-                                <a href="/">
+                                <a href="{{ url('Fperfil', Auth::user()) }}">
                                 <img src="/uploads/avatars/{{ Auth::user()->avatar }}" class="img-circle" alt="User Image" width="25" height="25" border="0" />
                                 </a>
-                                <a href="/">{{ Auth::user()->name }}</a> 
+                                <a href="{{ url('Fperfil', Auth::user()) }}">{{ Auth::user()->name }}</a> 
                                 <a href="/logout"><i class="fa fa-sign-out"></i> Salir   </a>
                                 @endif
                             </div>
@@ -429,7 +426,6 @@ _________________________________________________________ -->
 
         <!-- *** LOGIN MODAL END *** -->
 
-
         <div id="heading-breadcrumbs">
             <div class="container">
                 <div class="row">
@@ -489,30 +485,69 @@ _________________________________________________________ -->
                                 </div>
 
                                 <br>
-                                <h1>Text formatting - Header level 1</h1>
+                                <h1>Actualiza tus datos</h1>
+                                <br>
 
-                                <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                                    semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi.
-                                    Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
-                                <h2>Header Level 2</h2>
+                             {!! Form::model($cliente, [
+                                    'method' => 'PATCH',
+                                    'url' => ['/Fperfil', Auth::user()],
+                                    'class' => 'form-horizontal'
+                                ]) !!}
 
-                                <ol>
-                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                    <li>Aliquam tincidunt mauris eu risus.</li>
-                                </ol>
+                                            <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
+                                            {!! Form::label('name', 'Nombre', ['class' => 'col-sm-3 control-label']) !!}
+                                            <div class="col-sm-6">
+                                                {!! Form::text('name', null, ['class' => 'form-control','required' => 'required']) !!}
+                                                {!! $errors->first('name', '<p class="help-block">:message</p>') !!}
+                                            </div>
+                                        </div>
+                                        <div class="form-group {{ $errors->has('direccion') ? 'has-error' : ''}}">
+                                            {!! Form::label('direccion', 'Direccion', ['class' => 'col-sm-3 control-label']) !!}
+                                            <div class="col-sm-6">
+                                                {!! Form::text('direccion', null, ['class' => 'form-control','required' => 'required']) !!}
+                                                {!! $errors->first('direccion', '<p class="help-block">:message</p>') !!}
+                                            </div>
+                                        </div>
+                                        <div class="form-group {{ $errors->has('telefono') ? 'has-error' : ''}}">
+                                            {!! Form::label('telefono', 'Telefono', ['class' => 'col-sm-3 control-label']) !!}
+                                            <div class="col-sm-6">
+                                                {!! Form::number('telefono', null, ['class' => 'form-control','required' => 'required']) !!}
+                                                {!! $errors->first('telefono', '<p class="help-block">:message</p>') !!}
+                                            </div>
+                                        </div>
+                                        <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
+                                            {!! Form::label('email', 'Email', ['class' => 'col-sm-3 control-label']) !!}
+                                            <div class="col-sm-6">
+                                                {!! Form::email('email', null, ['class' => 'form-control','required' => 'required']) !!}
+                                                {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
+                                            </div>
+                                        </div>
+                                        <div class="form-group {{ $errors->has('direccion') ? 'has-error' : ''}}">
+                                            {!! Form::label('rfc', 'RFC', ['class' => 'col-sm-3 control-label']) !!}
+                                            <div class="col-sm-6">
+                                                {!! Form::text('rfc', null, ['class' => 'form-control','required' => 'required']) !!}
+                                                {!! $errors->first('rfc', '<p class="help-block">:message</p>') !!}
+                                            </div>
+                                        </div>
 
-                                <blockquote>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est
-                                        malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                                </blockquote>
 
-                                <h3>Header Level 3</h3>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-3 col-sm-6">
+                                                {!! Form::submit('Actualizar', ['class' => 'btn btn-primary form-control']) !!}
+                                            </div>
+                                        </div>
+                                        {!! Form::close() !!}
 
-                                <ul>
-                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                    <li>Aliquam tincidunt mauris eu risus.</li>
-                                </ul>
+                                        @if ($errors->any())
+                                            <ul class="alert alert-danger">
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        @endif
+
+
 
                                 <hr>
 
@@ -535,7 +570,7 @@ _________________________________________________________ -->
         <!-- *** GET IT ***
 _________________________________________________________ -->
 
-       <div id="get-it">
+        <div id="get-it">
             <div class="container">
                 <div class="col-md-8 col-sm-12">
                     <h3>¿Te gustaria unirte a nuestro equipo y publicar tus Cursos o Diplomados?</h3>

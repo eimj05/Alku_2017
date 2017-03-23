@@ -44,9 +44,9 @@ Route::get('/', function () {
         return view('frontend.fservicios'); 
     });
 
-    Route::get('Fperfil', function (){
-        return view('frontend.perfil'); 
-    });
+  //  Route::get('Fperfil', function (){
+    //    return view('frontend.perfil'); 
+    //});
 
 
    Route::get('Fcursoslist', 'FrontendController@cursosindex');
@@ -63,6 +63,17 @@ Route::get('/', function () {
    Route::get('Fconvocatoriasdetalle/{convocatorias1}', 'FrontendController@convocatoriasshow');
 
   
+   // Frontend Perfil - Avatar y Info
+
+   Route::get('Fperfil/{id}', 'FrontendController@editperf');
+
+   Route::patch('Fperfil/{id}', [
+        'uses' => 'FrontendController@updateperf',
+       // 'as' => 'cliente.cliente.update',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa','RegUser']
+        ]);
+
 
 
   // Formulario de Contato
@@ -94,6 +105,8 @@ Route::get('/', function () {
      Route::post('imagen_diplomado', 'Diplomado1\Diplomados1Controller@update_imagen');
 
      Route::post('imagen_convocatoria', 'Convocatoria1\Convocatoria1Controller@update_imagen');
+
+
      
      
      ////-----  INSCRIPCIONES  ------//////
@@ -154,6 +167,9 @@ Route::get('/', function () {
         'middleware' => 'roles',
         'roles' => ['Admin']
         ]);
+
+
+   
 
     Route::post('Usuarios', [
         'uses' => 'Cliente\ClienteController@store',

@@ -39,7 +39,13 @@
                     {!! $errors->first('email', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
-
+            <div class="form-group {{ $errors->has('direccion') ? 'has-error' : ''}}">
+                {!! Form::label('rfc', 'Rfc', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-6">
+                    {!! Form::text('rfc', null, ['class' => 'form-control','required' => 'required']) !!}
+                    {!! $errors->first('rfc', '<p class="help-block">:message</p>') !!}
+                </div>
+            </div>
          <div class="form-group {{ $errors->has('roles') ? 'has-error' : ''}}">
                      {!! Form::label('roles','Rol',['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-6">
