@@ -73,13 +73,17 @@ _________________________________________________________ -->
                                 <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                             </div>
 -->
-                            <div class="login">
+                           <div class="login">
                                 @if (Auth::guest())
                                 <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
                                 <a href="{{ url('/register') }}"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
                                 @else
-                                <a href="/"><i class="fa fa-user"></i>{{ Auth::user()->name }}</a> 
+                                <a href="{{ url('Fperfil', Auth::user()) }}">
+                                <img src="/uploads/avatars/{{ Auth::user()->avatar }}" class="img-circle" alt="User Image" width="25" height="25" border="0" />
+                                </a>
+                                <a href="{{ url('Fperfil', Auth::user()) }}">{{ Auth::user()->name }}</a> 
                                 <a href="/logout"><i class="fa fa-sign-out"></i> Salir   </a>
+                             
                                 @endif
                             </div>
 

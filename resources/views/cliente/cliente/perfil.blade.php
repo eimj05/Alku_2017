@@ -7,7 +7,7 @@
 
     {!! Form::model($cliente, [
         'method' => 'PATCH',
-        'url' => ['/Perfil', $cliente->id],
+        'url' => ['/Perfil', Auth::user()->id],
         'class' => 'form-horizontal'
     ]) !!}
 

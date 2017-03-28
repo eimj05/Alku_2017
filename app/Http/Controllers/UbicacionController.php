@@ -9,6 +9,7 @@ use App\Ubicacion;
 use Session;
 use Auth;
 use DB;
+use Crypt;
 
 
 
@@ -63,6 +64,8 @@ class UbicacionController extends Controller
 
     public function show($id)
     {
+        $id = Crypt::decrypt($id);
+
         $ubicacion = Ubicacion::findOrFail($id);
 
 

@@ -12,6 +12,7 @@ use App\Intereses1;
 use App\CursoUbicacion;
 use Auth;
 use App\Cliente;
+use Session;
 
 
 class FrontendController extends Controller
@@ -22,27 +23,39 @@ class FrontendController extends Controller
      * @return \Illuminate\Http\Response
      */
     
-    public function editperf($id)
+    public function showperf($id)
     {   
-        //$id = Auth::user();
+        $id = Auth::user()->id;
         
         $cliente = Cliente::findOrFail($id);
 
         return view('frontend.perfil', compact('cliente'));
     }
 
+    
+
     public function updateperf($id, Request $request)
     {
         
+       // $id = Auth::user();
+
+        try {
+
         $cliente = Cliente::findOrFail($id);
 
         $cliente->update($request->all());
 
 
-       // Session::flash('flash_message', 'Cliente updated!');
+        Session::flash('message', 'Datos actualizados correctamente');
 
         return back();
     }
+        catch(\Illuminate\Database\QueryException $e) {
+         Session::flash('message','Datos incorrectos');
+         return back();
+
+    }
+}
 
 
     public function cursosindex()
@@ -58,6 +71,7 @@ class FrontendController extends Controller
 
     public function cursosshow($id)
     {
+        
         $cursos1 = Cursos1::findOrFail($id);
 
         $ubicaciones = Cursos1::find($id)->ubicacion()->get();

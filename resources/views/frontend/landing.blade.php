@@ -77,11 +77,13 @@ _________________________________________________________ -->
                                 <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
                                 <a href="{{ url('/register') }}"><i class="fa fa-user"></i> <span class="hidden-xs text-uppercase">Registro</span></a>
                                 @else
-                                <a href="{{ url('Fperfil', Auth::user()) }}">
+                                <a href="{{ url('/Fperfil/' . Auth::user()->id) }}">
                                 <img src="/uploads/avatars/{{ Auth::user()->avatar }}" class="img-circle" alt="User Image" width="25" height="25" border="0" />
                                 </a>
-                                <a href="{{ url('Fperfil', Auth::user()) }}">{{ Auth::user()->name }}</a> 
+                                <a href="{{ url('/Fperfil/' . Auth::user()->id) }}">{{ Auth::user()->name }}</a> 
+
                                 <a href="/logout"><i class="fa fa-sign-out"></i> Salir   </a>
+                             
                                 @endif
                             </div>
 

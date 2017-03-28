@@ -16,6 +16,7 @@ use DB;
 use Image;
 use inputs;
 use App\Ubicacion;
+use Crypt;
 
 class Cursos1Controller extends Controller
 {
@@ -104,7 +105,7 @@ class Cursos1Controller extends Controller
         $cursos1->ubicacion()->attach($request->ubicacion);
 
         
-        Session::flash('flash_message', 'Cursos1 added!');
+        Session::flash('message','El curso ha sido creado correctamente');
 
         return redirect('Cursos');
     }
@@ -119,6 +120,8 @@ class Cursos1Controller extends Controller
     public function show($id)
     {
 
+     
+        $id = Crypt::decrypt($id);
         $cursos1 = Cursos1::findOrFail($id);
         $ubicaciones = Cursos1::find($cursos1->id)->ubicacion()->get();
 
@@ -128,7 +131,8 @@ class Cursos1Controller extends Controller
 
 
         return view('curso1.cursos1.show', compact('cursos1','ubicaciones', 'cats'));
-    }
+
+        } 
 
     /**
      * Show the form for editing the specified resource.
@@ -139,6 +143,7 @@ class Cursos1Controller extends Controller
      */
     public function edit($id)
     {
+        $id = Crypt::decrypt($id);
         $idu = Auth::id();
 
         $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
@@ -161,6 +166,8 @@ class Cursos1Controller extends Controller
 
     public function imagen($id)
     {
+        $id = Crypt::decrypt($id);
+
         $cursos1 = Cursos1::findOrFail($id);
 
         return view('curso1.cursos1.imagen ', compact('cursos1'));
@@ -191,7 +198,7 @@ class Cursos1Controller extends Controller
 
         
 
-        Session::flash('flash_message', 'Cursos1 updated!');
+        Session::flash('message', 'El curso ha sido actualizado correctamente');
 
         return redirect('Cursos');
     }
@@ -228,7 +235,7 @@ class Cursos1Controller extends Controller
     {
         Cursos1::destroy($id);
 
-        Session::flash('flash_message', 'Cursos1 deleted!');
+        Session::flash('message', 'El Curso ha sido eliminado correctamente');
 
         return redirect('Cursos');
     }

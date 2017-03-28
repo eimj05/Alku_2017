@@ -11,6 +11,7 @@ use App\Cliente;
 use App\Diplomados1;
 use App\DiplomadosInsc;
 use DB;
+use Crypt;
 
 class InscripcionesController extends Controller
 {
@@ -21,6 +22,7 @@ class InscripcionesController extends Controller
      */
     public function showcursos($id)
     {
+        $id = Crypt::decrypt($id);
         $cursos1 = Cursos1::findOrFail($id);   
         $idc= $id;
 
@@ -37,6 +39,7 @@ class InscripcionesController extends Controller
 
     public function showdiplomados($id)
     {
+        $id = Crypt::decrypt($id);
         $diplomados1 = Diplomados1::findOrFail($id);   
 
         $uins = DiplomadosInsc::where('diplomados1_id', '=', $id)

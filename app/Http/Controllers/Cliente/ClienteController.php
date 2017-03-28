@@ -165,6 +165,8 @@ class ClienteController extends Controller
     public function editperfil($id)
     {
         
+        $id = Auth::user()->id;
+
         $cliente = Cliente::findOrFail($id);
 
 
@@ -193,7 +195,7 @@ class ClienteController extends Controller
 
         
 
-        Session::flash('flash_message', 'Cliente updated!');
+        Session::flash('message', 'Usuario actualizado correctamente');
 
         return redirect('Usuarios');
     }
@@ -206,7 +208,7 @@ class ClienteController extends Controller
         $cliente->update($request->all());
 
 
-        Session::flash('flash_message', 'Cliente updated!');
+        Session::flash('message', 'Perfil actualizado correctamente');
 
         return redirect('/home');
     }

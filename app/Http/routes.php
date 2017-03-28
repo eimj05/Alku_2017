@@ -44,10 +44,6 @@ Route::get('/', function () {
         return view('frontend.fservicios'); 
     });
 
-  //  Route::get('Fperfil', function (){
-    //    return view('frontend.perfil'); 
-    //});
-
 
    Route::get('Fcursoslist', 'FrontendController@cursosindex');
    Route::get('Fcursosdetalle/{cursos1}', 'FrontendController@cursosshow');
@@ -65,9 +61,7 @@ Route::get('/', function () {
   
    // Frontend Perfil - Avatar y Info
 
-   Route::get('Fperfil/{id}', 'FrontendController@editperf');
-
-   Route::patch('Fperfil/{id}', [
+   Route::patch('Fperfil/{cliente}', [
         'uses' => 'FrontendController@updateperf',
        // 'as' => 'cliente.cliente.update',
         'middleware' => 'roles',
@@ -75,6 +69,13 @@ Route::get('/', function () {
         ]);
 
 
+
+Route::get('Fperfil/{cliente}', [
+        'uses' => 'FrontendController@showperf',
+        'as' => 'frontend.perfil',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa','RegUser']
+        ]);
 
   // Formulario de Contato
     
@@ -168,8 +169,6 @@ Route::get('/', function () {
         'roles' => ['Admin']
         ]);
 
-
-   
 
     Route::post('Usuarios', [
         'uses' => 'Cliente\ClienteController@store',

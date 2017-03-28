@@ -18,13 +18,13 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
     <!-- Css animations  -->
-    <link href="fcss/css/animate.css" rel="stylesheet">
+    <link href="/fcss/css/animate.css" rel="stylesheet">
 
     <!-- Theme stylesheet, if possible do not edit this stylesheet -->
-    <link href="fcss/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
+    <link href="/fcss/css/style.default.css" rel="stylesheet" id="theme-stylesheet">
 
     <!-- Custom stylesheet - for your changes -->
-    <link href="fcss/css/custom.css" rel="stylesheet">
+    <link href="/fcss/css/custom.css" rel="stylesheet">
 
     <!-- Responsivity for older IE -->
     <!--[if lt IE 9]>
@@ -33,8 +33,8 @@
 <![endif]-->
 
     <!-- Favicon and apple touch icons-->
-    <link rel="shortcut icon" href="fcss/img/favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="fcss/img/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/fcss/img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/fcss/img/apple-touch-icon.png" />
     <link rel="apple-touch-icon" sizes="57x57" href="fcss/img/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="fcss/img/apple-touch-icon-72x72.png" />
     <link rel="apple-touch-icon" sizes="76x76" href="fcss/img/apple-touch-icon-76x76.png" />
@@ -44,8 +44,8 @@
     <link rel="apple-touch-icon" sizes="152x152" href="fcss/img/apple-touch-icon-152x152.png" />
     <!-- owl carousel css -->
 
-    <link href="fcss/css/owl.carousel.css" rel="stylesheet">
-    <link href="fcss/css/owl.theme.css" rel="stylesheet">
+    <link href="/fcss/css/owl.carousel.css" rel="stylesheet">
+    <link href="/fcss/css/owl.theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -82,6 +82,7 @@ _________________________________________________________ -->
                                 </a>
                                 <a href="{{ url('Fperfil', Auth::user()) }}">{{ Auth::user()->name }}</a> 
                                 <a href="/logout"><i class="fa fa-sign-out"></i> Salir   </a>
+                             
                                 @endif
                             </div>
 
@@ -103,8 +104,8 @@ _________________________________________________________ -->
                         <div class="navbar-header">
 
                             <a class="navbar-brand home" href="/">
-                                <img src="fcss/img/logo.png" alt="Universal logo" class="hidden-xs hidden-sm">
-                                <img src="fcss/img/logo-small.png" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
+                                <img src="/fcss/img/logo.png" alt="Universal logo" class="hidden-xs hidden-sm">
+                                <img src="/fcss/img/logo-small.png" alt="Universal logo" class="visible-xs visible-sm"><span class="sr-only">Universal - go to homepage</span>
                             </a>
                             <div class="navbar-buttons">
                                 <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -174,7 +175,7 @@ _________________________________________________________ -->
                                             <div class="yamm-content">
                                                 <div class="row">
                                                     <div class="col-sm-6">
-                                                        <img src="fcss/img/template-homepage.png" class="img-responsive hidden-xs" alt="">
+                                                        <img src="/fcss/img/template-homepage.png" class="img-responsive hidden-xs" alt="">
                                                     </div>
                                                     <div class="col-sm-3">
                                                         <h5>Portafolio</h5>
@@ -486,12 +487,19 @@ _________________________________________________________ -->
 
                                 <br>
                                 <h1>Actualiza tus datos</h1>
+
+                                @if(Session::has('message'))
+                                <div class="alert alert-info">
+                                {{Session::get('message')}}
+                                </div>
+                                @endif
+
                                 <br>
 
 
                              {!! Form::model($cliente, [
                                     'method' => 'PATCH',
-                                    'url' => ['/Fperfil', Auth::user()],
+                                    'url' => ['Fperfil', Auth::user()->id],
                                     'class' => 'form-horizontal'
                                 ]) !!}
 
@@ -686,11 +694,11 @@ _________________________________________________________ -->
     </script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <script src="fcss/js/jquery.cookie.js"></script>
-    <script src="fcss/js/waypoints.min.js"></script>
-    <script src="fcss/js/jquery.counterup.min.js"></script>
-    <script src="fcss/js/jquery.parallax-1.1.3.js"></script>
-    <script src="fcss/js/front.js"></script>
+    <script src="/fcss/js/jquery.cookie.js"></script>
+    <script src="/fcss/js/waypoints.min.js"></script>
+    <script src="/fcss/js/jquery.counterup.min.js"></script>
+    <script src="/fcss/js/jquery.parallax-1.1.3.js"></script>
+    <script src="/fcss/js/front.js"></script>
 
     
 

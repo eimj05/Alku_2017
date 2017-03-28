@@ -17,6 +17,7 @@
 
 <div class="container">
   <h1>{{$ubicacion->title}}</h1>
+  <h2>{{$ubicacion->udireccion}}</h2>
   
 
   <div id="map-canvas"></div>

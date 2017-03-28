@@ -22,7 +22,7 @@
                     
                    
                     <td>
-                        <a href="{{ url('/Ubicaciones/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Ubicacion"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                        <a href="{{ url('/Ubicaciones/' . Crypt::encrypt($item->id)) }}" class="btn btn-success btn-xs" title="Ver Ubicacion"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <!--<a href="{{ url('/cliente/cliente/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Usuario"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>-->
                         {!! Form::open([
                             'method'=>'DELETE',

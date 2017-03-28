@@ -8,7 +8,7 @@
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th><th> Nombre Convocatoria </th><th> Descripcion </th><th> Tipo Convocatoria </th><th> Dependencia </th><th> Fecha Cierre </th><th> Imagen </th><th> Contacto </th><th>Acciones</th>
+                    <th>S.No</th><th> Nombre Convocatoria </th><th> Descripcion </th><th> Tipo Convocatoria </th><th> Dependencia </th><th> Fecha Cierre </th><th> Contacto </th><th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -17,7 +17,7 @@
                 {{-- */$x++;/* --}}
                 <tr>
                     <td>{{ $x }}</td>
-                    <td>{{ $item->nombreConvocatoria }}</td><td>{{ $item->descripcion }}</td><td>{{ $item->tipoConvocatoria }}</td><td>{{ $item->dependencia }}</td><td>{{ $item->fechaCierre }}</td><td>{{ $item->imagen }}</td><td>{{ $item->contacto }}</td>
+                    <td>{{ $item->nombreConvocatoria }}</td><td>{{ $item->descripcion }}</td><td>{{ $item->tipoConvocatoria }}</td><td>{{ $item->dependencia }}</td><td>{{ $item->fechaCierre }}</td><td>{{ $item->contacto }}</td>
                     <td>
                         <a href="{{ url('/Convocatorias/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Convocatoria"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <a href="{{ url('/Convocatorias/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Convocatoria"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>

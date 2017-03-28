@@ -19,10 +19,10 @@
                     <td>{{ $x }}</td>
                     <td>{{ $item->nombreDiplomado }}</td><td>{{ $item->descripcion }}</td><td>{{ $item->fechaInicio }}</td><td>{{ $item->fechaFin }}</td><td>{{ $item->costo }}</td><td>{{ $item->capacitador }}</td><td>{{ $item->cupoLimite }}</td>
                     <td>
-                        <a href="{{ url('/Diplomados/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Diplomado"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
-                        <a href="{{ url('/Diplomados/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Diplomado"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
-                        <a href="{{ url('/Diplomados/' . $item->id . '/imagen') }}" class="btn btn-primary btn-xs" title="Imagen Curso"><span class="glyphicon glyphicon-picture" aria-hidden="true"/></a>
-                        <a href="{{ url('/IDiplomados/' . $item->id) }}" class="btn btn-primary btn-xs" title="Inscritos"><span class="glyphicon glyphicon-saved" aria-hidden="true"/></a>
+                        <a href="{{ url('/Diplomados/' . Crypt::encrypt($item->id)) }}" class="btn btn-success btn-xs" title="Ver Diplomado"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                        <a href="{{ url('/Diplomados/' . Crypt::encrypt($item->id) . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Diplomado"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+                        <a href="{{ url('/Diplomados/' . Crypt::encrypt($item->id) . '/imagen') }}" class="btn btn-primary btn-xs" title="Imagen Curso"><span class="glyphicon glyphicon-picture" aria-hidden="true"/></a>
+                        <a href="{{ url('/IDiplomados/' . Crypt::encrypt($item->id)) }}" class="btn btn-primary btn-xs" title="Inscritos"><span class="glyphicon glyphicon-saved" aria-hidden="true"/></a>
 
                         {!! Form::open([
                             'method'=>'DELETE',
