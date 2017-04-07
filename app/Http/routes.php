@@ -78,7 +78,7 @@ Route::get('Fperfil/{cliente}', [
         ]);
 
   // Formulario de Contato
-    
+        
 
     Route::resource('fmail', 'FmailController');
 
@@ -86,7 +86,16 @@ Route::get('Fperfil/{cliente}', [
 
     Route::group(['middleware' => 'auth'], function(){
     Route::auth();
-     Route::get('/home', 'HomeController@index');
+    Route::get('/home', 'HomeController@index');
+
+    Route::get('goFrontend', [
+        'uses' => 'HomeController@indexFE',
+        'as' => 'gofe',
+        'middleware' => 'roles',
+        'roles' => ['Admin','Empresa']
+        ]);
+
+
      Route::get('/nogrants', 'HomeController@nogrant');
 
 
@@ -106,6 +115,9 @@ Route::get('Fperfil/{cliente}', [
      Route::post('imagen_diplomado', 'Diplomado1\Diplomados1Controller@update_imagen');
 
      Route::post('imagen_convocatoria', 'Convocatoria1\Convocatoria1Controller@update_imagen');
+
+    Route::post('imagen_tip', 'TipsController@update_imagen');
+
 
 
      
@@ -517,6 +529,71 @@ Route::get('Fperfil/{cliente}', [
         ]);
 
     
+
+
+// Tips
+
+
+    Route::get('Tips', [
+        'uses' => 'TipsController@index',
+        'as' => 'tips.index',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+        ]);
+
+    Route::post('Tips', [
+        'uses' => 'TipsController@store',
+        'as' => 'tips.store',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+        ]);
+
+    Route::get('Tips/create', [
+        'uses' => 'TipsController@create',
+        'as' => 'tips.create',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+        ]);
+
+     Route::patch('Tips/{tips1}', [
+        'uses' => 'TipsController@update',
+        'as' => 'curso1.cursos1.update',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+        ]);
+
+     Route::delete('Tips/{tips1}', [
+        'uses' => 'TipsController@destroy',
+        'as' => 'tips.destroy',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+        ]);
+
+    Route::get('Tips/{tips1}', [
+        'uses' => 'TipsController@show',
+        'as' => 'tips.show',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+        ]);
+
+    Route::get('Tips/{tips1}/edit', [
+        'uses' => 'TipsController@edit',
+        'as' => 'tips.edit',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+        ]);
+
+    Route::get('Tips/{tips1}/imagen', [
+        'uses' => 'TipsController@imagen',
+        'as' => 'tips.imagen',
+        'middleware' => 'roles',
+        'roles' => ['Admin']
+        ]);
+
+
+    
+
+
 
 
     // UBICACION

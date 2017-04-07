@@ -3,6 +3,12 @@
 @section('main-content')
 <div class="container">
 
+@if(Session::has('message'))
+<div class="alert alert-info">
+{{Session::get('message')}}
+</div>
+@endif
+
     <h1>Diplomados <a href="{{ url('/Diplomados/create') }}" class="btn btn-primary btn-xs" title="Agregar Diplomado"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a> </h1>
     <div class="table">
         <table class="table table-bordered table-striped table-hover">

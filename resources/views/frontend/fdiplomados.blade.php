@@ -483,11 +483,12 @@ _________________________________________________________ -->
         <thead>
           <tr>
             <th>Nº</th>
+            <th>Detalles</th>
             <th>Nombre del Diplomado</th>
             <th>Fecha Inicio</th>
             <th>Fecha Fin</th>            
             <th>Categoria</th>
-            <th>Detalles</th>
+            
           </tr>
 
         </thead>
@@ -498,6 +499,10 @@ _________________________________________________________ -->
                 {{-- */$x++;/* --}}
                 <tr>
                     <td>{{ $x }}</td>
+                     <td>
+                        <a href="{{ url('/Fdiplomadosdetalle/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                        
+                    </td>
                     <td>{{ $item->nombreDiplomado }}</td><td>{{ $item->fechaInicio }}</td><td>{{ $item->fechaFin }}</td>
 
                     <td>@foreach($cats as $cat )
@@ -506,10 +511,7 @@ _________________________________________________________ -->
                         @endif
                         @endforeach
                     </td>
-                    <td>
-                        <a href="{{ url('/Fdiplomadosdetalle/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
-                        
-                    </td>
+                   
                 </tr>
             @endforeach
         </tbody>

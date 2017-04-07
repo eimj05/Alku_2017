@@ -506,6 +506,12 @@ _________________________________________________________ -->
                             </div>
                             <h4>Dependencia</h4>
                             <p>{{ $convocatoria1->dependencia }}</p>
+                            <h4>Categoria</h4>
+                            <p> @foreach($cats as $item )
+
+                           {{$item->tipoInteres  }}
+
+                            @endforeach</p>
                             <h4>Tipo de Convocatoria</h4>
                             <p>{{ $convocatoria1->tipoConvocatoria }}</p>
                             <h4>Contacto</h4>

@@ -473,11 +473,14 @@ _________________________________________________________ -->
         <thead>
           <tr>
             <th>Nº</th>
+            <th>Detalles</th>
             <th>Nombre de la Convocatoria</th>
             <th>Tipo de Convocatoria</th>
             <th>Dependencia</th>            
             <th>Fecha Cierre</th>
-            <th>Detalles</th>
+            <th>Categoria</th>
+
+            
           </tr>
         </thead>
         <tbody class="buscar">
@@ -487,11 +490,18 @@ _________________________________________________________ -->
                 {{-- */$x++;/* --}}
                 <tr>
                     <td>{{ $x }}</td>
-                    <td>{{ $item->nombreConvocatoria }}</td><td>{{ $item->tipoConvocatoria }}</td><td>{{ $item->dependencia }}</td><td>{{ $item->fechaCierre }}</td>
-                    <td>
+                     <td>
                         <a href="{{ url('/Fconvocatoriasdetalle/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         
                     </td>
+                    <td>{{ $item->nombreConvocatoria }}</td><td>{{ $item->tipoConvocatoria }}</td><td>{{ $item->dependencia }}</td><td>{{ $item->fechaCierre }}</td>
+                    <td>@foreach($cats as $cat )
+                         @if($item->interes == $cat->id)
+                           {{ $cat->tipoInteres  }}
+                        @endif
+                        @endforeach
+                    </td>
+
                 </tr>
             @endforeach
         </tbody>

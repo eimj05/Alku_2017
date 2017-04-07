@@ -488,11 +488,12 @@ _________________________________________________________ -->
         <thead>
           <tr>
             <th>Nº</th>
+            <th>Detalles</th>
             <th>Nombre del Curso</th>
             <th>Fecha Inicio</th>
             <th>Fecha Fin</th>            
             <th>Categoria</th>
-            <th>Detalles</th>
+            
           </tr>
         </thead>
         <tbody class="buscar">
@@ -502,6 +503,10 @@ _________________________________________________________ -->
                 {{-- */$x++;/* --}}
                 <tr>
                     <td>{{ $x }}</td>
+                    <td>
+                        <a href="{{ url('/Fcursosdetalle/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
+                        
+                    </td>
                     <td>{{ $item->nombreCurso }}</td><td>{{ $item->fechaInicio }}</td><td>{{ $item->fechaFin }}</td>
                     <td>@foreach($cats as $cat )
                          @if($item->interes == $cat->id)
@@ -509,10 +514,7 @@ _________________________________________________________ -->
                         @endif
                         @endforeach
                     </td>
-                    <td>
-                        <a href="{{ url('/Fcursosdetalle/' . $item->id) }}" class="text-center" title="Ver Detalles"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
-                        
-                    </td>
+                    
                 </tr>
             @endforeach
         </tbody>

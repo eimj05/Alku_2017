@@ -36,11 +36,12 @@
             <li class="active"><a href="{{ url('home') }}"><i class='glyphicon glyphicon-home'></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
 
             <li class="treeview">
-                <a href="#"><i class='glyphicon glyphicon-globe'></i> <span>Administracion</span> <i class="fa fa-angle-left pull-right"></i></a>
+                <a href="#"><i class='fa fa-cog'></i> <span>Administracion</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                        <li><a href="{{ url('Usuarios') }}"><i class='fa  fa-users'></i> <span>{{ trans('Usuarios') }}</span></a></li>
                         <li><a href="{{ url('Intereses') }}"><i class='glyphicon glyphicon-road'></i> <span>{{ trans('adminlte_lang::message.anotherlink5') }}</span></a></li>
                         <li><a href="{{ url('Roles') }}"><i class='glyphicon glyphicon-briefcase'></i> <span>{{ trans('Roles') }}</span></a></li>
+                        <li><a href="{{ url('Tips') }}"><i class='glyphicon glyphicon-thumbs-up'></i> <span>{{ trans('Tips') }}</span></a></li>
                         
                 </ul>
 
@@ -49,6 +50,7 @@
             <li><a href="{{ url('Convocatorias') }}"><i class='glyphicon glyphicon-bullhorn'></i> <span>{{ trans('adminlte_lang::message.anotherlink3') }}</span></a></li>
             <li><a href="{{ url('Ubicaciones') }}"><i class='fa fa-map-marker'></i> <span>{{ trans('Ubicaciones') }}</span></a></li>
             <li><a href="{{ url('Enviaremail') }}"><i class="fa fa-fw fa-envelope"></i> <span>Enviar Email</span></a></li>
+            <li><a href="{{ url('goFrontend') }}"><i class="fa fa-globe "></i> <span>Ir a la vista usuario</span></a></li>
 
             
 

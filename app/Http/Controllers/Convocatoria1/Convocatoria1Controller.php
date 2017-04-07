@@ -13,6 +13,7 @@ use PDF;
 use App\Ubicacion;
 use Image;
 use DB;
+use App\Intereses1;
 
 
 class Convocatoria1Controller extends Controller
@@ -51,8 +52,10 @@ class Convocatoria1Controller extends Controller
     {
 
         $ubicacion= Ubicacion::lists('title', 'id');
+        $intereses= Intereses1::lists('tipoInteres','id');
 
-        return view('convocatoria1.convocatoria1.create' , compact('ubicacion'));
+
+        return view('convocatoria1.convocatoria1.create' , compact('ubicacion','intereses'));
     }
 
     /**
@@ -63,13 +66,22 @@ class Convocatoria1Controller extends Controller
     public function store(Request $request)
     {
         
-        $convocatoria1=Convocatoria1::create($request->all());
+        $convocatoria1= Convocatoria1::create([
+            'nombreConvocatoria' => $request['nombreConvocatoria'],
+            'descripcionCorta' => $request['descripcionCorta'],
+            'descripcion' => $request['descripcion'],
+            'tipoConvocatoria' => $request['tipoConvocatoria'],
+            'dependencia' => $request['dependencia'],
+            'fechaCierre' => $request['fechaCierre'],
+            'contacto' => $request['contacto'],
+            'interes' => $request['interes']]);
 
-        $convocatoria1->ubicacion()->sync([]);
+         $convocatoria1->ubicacion()->sync([]);
 
         $convocatoria1->ubicacion()->attach($request->ubicacion);
 
-        Session::flash('flash_message', 'Convocatoria1 added!');
+
+        Session::flash('message','La convocatoria ha sido creada correctamente');
 
         return redirect('Convocatorias');
     }
@@ -87,8 +99,10 @@ class Convocatoria1Controller extends Controller
         $convocatoria1 = Convocatoria1::findOrFail($id);
         $ubicaciones = Convocatoria1::find($convocatoria1->id)->ubicacion()->get();
 
+        $interes = Convocatoria1::where('id', '=', $id)->lists('interes');
+        $cats = Intereses1::whereIn('id', $interes)->get();
 
-        return view('convocatoria1.convocatoria1.show', compact('convocatoria1','ubicaciones'));
+        return view('convocatoria1.convocatoria1.show', compact('convocatoria1','ubicaciones','cats'));
     }
 
     /**
@@ -104,7 +118,9 @@ class Convocatoria1Controller extends Controller
 
         $convocatoria1 = Convocatoria1::findOrFail($id);
 
-        return view('convocatoria1.convocatoria1.edit', compact('convocatoria1','ubicacion'));
+        $intereses= Intereses1::lists('tipoInteres','id');
+
+        return view('convocatoria1.convocatoria1.edit', compact('convocatoria1','ubicacion','intereses'));
     }
 
 
@@ -131,7 +147,7 @@ class Convocatoria1Controller extends Controller
 
         $convocatoria1->ubicacion()->attach($request->ubicacion);
 
-        Session::flash('flash_message', 'Convocatoria1 updated!');
+        Session::flash('message', 'La convocatoria ha sido actualizada correctamente');
 
         return redirect('Convocatorias');
     }
@@ -164,7 +180,7 @@ class Convocatoria1Controller extends Controller
     {
         Convocatoria1::destroy($id);
 
-        Session::flash('flash_message', 'Convocatoria1 deleted!');
+        Session::flash('message', 'La convocatoria ha sido eliminada correctamente');
 
         return redirect('Convocatorias');
     }

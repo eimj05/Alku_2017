@@ -19,9 +19,16 @@
                 </div>
             </div>
             <div class="form-group {{ $errors->has('descripcion') ? 'has-error' : ''}}">
+                {!! Form::label('descripcionCorta', 'Descripcion Corta', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-6">
+                    {!! Form::text('descripcionCorta', null, ['class' => 'form-control','required' => 'required']) !!}
+                    {!! $errors->first('descripcionCorta', '<p class="help-block">:message</p>') !!}
+                </div>
+            </div>
+             <div class="form-group {{ $errors->has('descripcion') ? 'has-error' : ''}}">
                 {!! Form::label('descripcion', 'Descripcion', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
-                    {!! Form::text('descripcion', null, ['class' => 'form-control','required' => 'required']) !!}
+                    {!! Form::textarea('descripcion', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('descripcion', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
@@ -52,6 +59,15 @@
                     {!! Form::text('contacto', null, ['class' => 'form-control','required' => 'required']) !!}
                     {!! $errors->first('contacto', '<p class="help-block">:message</p>') !!}
                 </div>
+            </div>
+             <div class="form-group {{ $errors->has('intereses') ? 'has-error' : ''}}">
+                     {!! Form::label('intereses','Intereses',['class' => 'col-sm-3 control-label']) !!}
+                    <div class="col-sm-6">
+              
+                    {{ Form::select('intereses', $intereses) }}
+
+                    {!! $errors->first('intereses', '<p class="help-block">:message</p>') !!}
+                   </div>  
             </div>
 
             <div class="form-group {{ $errors->has('ubicacion') ? 'has-error' : ''}}">

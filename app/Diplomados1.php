@@ -35,5 +35,5 @@ class Diplomados1 extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombreDiplomado', 'descripcion', 'fechaInicio', 'fechaFin', 'horaInicio', 'horaFin', 'costo', 'capacitador', 'cupoLimite', 'imagen', 'interes','created_by'];
+    protected $fillable = ['nombreDiplomado', 'descripcionCorta','descripcion', 'fechaInicio', 'fechaFin', 'horaInicio', 'horaFin', 'costo', 'capacitador', 'cupoLimite', 'imagen', 'interes','created_by'];
 }

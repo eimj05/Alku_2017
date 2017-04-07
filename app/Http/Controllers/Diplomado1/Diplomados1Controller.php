@@ -16,6 +16,7 @@ use DB;
 use Image;
 use inputs;
 use App\Ubicacion;
+use Crypt;
 
 class Diplomados1Controller extends Controller
 {
@@ -86,6 +87,7 @@ class Diplomados1Controller extends Controller
         //Diplomados1::create($request->all());
          $diplomados1=Diplomados1::create([
             'nombreDiplomado' => $request['nombreDiplomado'],
+            'descripcionCorta' => $request['descripcionCorta'],
             'descripcion' => $request['descripcion'],
             'fechaInicio' => $request['fechaInicio'],
             'fechaFin' => $request['fechaFin'],
@@ -101,7 +103,7 @@ class Diplomados1Controller extends Controller
 
         $diplomados1->ubicacion()->attach($request->ubicacion);
 
-        Session::flash('flash_message', 'Diplomados1 added!');
+        Session::flash('message','El diplomado ha sido creado correctamente');
 
         return redirect('Diplomados');
     }
@@ -115,11 +117,16 @@ class Diplomados1Controller extends Controller
      */
     public function show($id)
     {
+        $id = Crypt::decrypt($id);
+
         $diplomados1 = Diplomados1::findOrFail($id);
         $ubicaciones = Diplomados1::find($diplomados1->id)->ubicacion()->get();
+        $interes = Diplomados1::where('id', '=', $id)->lists('interes');
+        $cats = Intereses1::whereIn('id', $interes)->get();
 
 
-        return view('diplomado1.diplomados1.show', compact('diplomados1','ubicaciones'));
+
+        return view('diplomado1.diplomados1.show', compact('diplomados1','ubicaciones','cats'));
     }
 
     /**
@@ -131,16 +138,21 @@ class Diplomados1Controller extends Controller
      */
     public function edit($id)
     {
+       $id = Crypt::decrypt($id);
+
         $idu = Auth::id();
 
         $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
         $diplomados1 = Diplomados1::findOrFail($id);
+        $intereses= Intereses1::lists('tipoInteres','id');
 
-        return view('diplomado1.diplomados1.edit', compact('diplomados1','ubicacion'));
+
+        return view('diplomado1.diplomados1.edit', compact('diplomados1','ubicacion','intereses'));
     }
 
      public function imagen($id)
     {
+        $id = Crypt::decrypt($id);
         $diplomados1 = Diplomados1::findOrFail($id);
 
         return view('diplomado1.diplomados1.imagen ', compact('diplomados1'));
@@ -163,7 +175,11 @@ class Diplomados1Controller extends Controller
 
         $diplomados1->ubicacion()->attach($request->ubicacion);
 
-        Session::flash('flash_message', 'Diplomados1 updated!');
+        DB::table('diplomados1s')
+            ->where('id', $id)
+            ->update(['interes' => $request->intereses]);
+
+         Session::flash('message', 'El diplomado ha sido actualizado correctamente');
 
         return redirect('Diplomados');
     }
@@ -196,7 +212,7 @@ class Diplomados1Controller extends Controller
     {
         Diplomados1::destroy($id);
 
-        Session::flash('flash_message', 'Diplomados1 deleted!');
+        Session::flash('message', 'El diplomado ha sido eliminado correctamente');
 
         return redirect('Diplomados');
     }

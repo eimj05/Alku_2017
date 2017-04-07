@@ -30,5 +30,5 @@ class Convocatoria1 extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombreConvocatoria', 'descripcion', 'tipoConvocatoria', 'dependencia', 'fechaCierre', 'imagen', 'contacto', 'created_by'];
+    protected $fillable = ['nombreConvocatoria', 'descripcionCorta','descripcion', 'tipoConvocatoria', 'dependencia', 'fechaCierre', 'imagen', 'interes','contacto', 'created_by'];
 }

@@ -89,6 +89,7 @@ class Cursos1Controller extends Controller
 
         $cursos1= Cursos1::create([
             'nombreCurso' => $request['nombreCurso'],
+            'descripcionCorta' => $request['descripcionCorta'],
             'descripcion' => $request['descripcion'],
             'fechaInicio' => $request['fechaInicio'],
             'fechaFin' => $request['fechaFin'],
@@ -213,10 +214,7 @@ class Cursos1Controller extends Controller
 
             $cursos1 = $request->input('id');
 
-            DB::table('cursos1s')->where('id', $cursos1)->update(array('imagen_curso' => $filename));
-
-
-            
+            DB::table('cursos1s')->where('id', $cursos1)->update(array('imagen_curso' => $filename));      
 
         }
 

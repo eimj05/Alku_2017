@@ -100,8 +100,11 @@ class FrontendController extends Controller
 
         $ubicaciones = Convocatoria1::find($id)->ubicacion()->get();
 
+        $interes = Convocatoria1::where('id', '=', $id)->lists('interes');
+        $cats = Intereses1::whereIn('id', $interes)->get();
 
-        return view('frontend.fdetalleconvocatoria', compact('convocatoria1','ubicaciones'));
+
+        return view('frontend.fdetalleconvocatoria', compact('convocatoria1','ubicaciones','cats'));
     }
     /**
      * Show the form for creating a new resource.
@@ -131,9 +134,12 @@ class FrontendController extends Controller
     {
         $convocatoria1 = Convocatoria1::paginate(15);
 
+        $dipid = Convocatoria1::select('interes')->get();
+
+        $cats = Intereses1::whereIn('id', $dipid)->get();
 
 
-        return view('frontend.fconvocatorias', compact('convocatoria1'));
+        return view('frontend.fconvocatorias', compact('convocatoria1','cats'));
     }
 
     /**

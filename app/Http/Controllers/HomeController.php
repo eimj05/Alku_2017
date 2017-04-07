@@ -39,6 +39,12 @@ class HomeController extends Controller
         return view('home');
     }
 
+
+    public function indexFE()
+    {
+        return view('frontend.landing');
+    }
+
      public function contacto(){
 
         $idu = Auth::id();

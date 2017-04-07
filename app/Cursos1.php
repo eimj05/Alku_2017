@@ -36,5 +36,5 @@ class Cursos1 extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombreCurso', 'descripcion', 'fechaInicio', 'fechaFin', 'horaInicio', 'horaFin', 'costo', 'capacitador', 'cupoLimite', 'imagen', 'interes', 'created_by'];
+    protected $fillable = ['nombreCurso', 'descripcion','descripcionCorta', 'fechaInicio', 'fechaFin', 'horaInicio', 'horaFin', 'costo', 'capacitador', 'cupoLimite', 'imagen', 'interes', 'created_by'];
 }

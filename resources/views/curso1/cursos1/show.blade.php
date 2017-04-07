@@ -25,6 +25,7 @@
                     <th>ID</th><td>{{ $cursos1->id }}</td>
                 </tr>
                 <tr><th> Nombre </th><td> {{ $cursos1->nombreCurso }} </td></tr>
+                <tr><th> Descripcion Corta </th><td> {{ $cursos1->descripcionCorta }} </td></tr>
                 <tr><th> Descripcion </th><td> {{ $cursos1->descripcion }} </td></tr>
                 <tr><th> Fecha Inicio </th><td> {{ $cursos1->fechaInicio }} </td></tr>
                 <tr><th> Fecha Fin </th><td> {{ $cursos1->fechaFin }} </td></tr>

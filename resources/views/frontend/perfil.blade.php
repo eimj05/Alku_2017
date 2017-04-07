@@ -534,7 +534,7 @@ _________________________________________________________ -->
                                         <div class="form-group {{ $errors->has('direccion') ? 'has-error' : ''}}">
                                             {!! Form::label('rfc', 'RFC', ['class' => 'col-sm-3 control-label']) !!}
                                             <div class="col-sm-6">
-                                                {!! Form::text('rfc', null, ['class' => 'form-control','required' => 'required']) !!}
+                                                {!! Form::text('rfc', null, ['class' => 'form-control']) !!}
                                                 {!! $errors->first('rfc', '<p class="help-block">:message</p>') !!}
                                             </div>
                                         </div>

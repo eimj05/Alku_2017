@@ -4,7 +4,7 @@
 <div class="container">
 
     <h1>Diplomados
-        <a href="{{ url('Diplomados/' . $diplomados1->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Diplomado"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
+        <a href="{{ url('Diplomados/' . Crypt::encrypt($diplomados1->id) . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Diplomado"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
         {!! Form::open([
             'method'=>'DELETE',
             'url' => ['Diplomados', $diplomados1->id],
@@ -25,12 +25,23 @@
                     <th>ID</th><td>{{ $diplomados1->id }}</td>
                 </tr>
                 <tr><th> Nombre </th><td> {{ $diplomados1->nombreDiplomado }} </td></tr>
+                <tr><th> Descripcion Corta</th><td> {{ $diplomados1->descripcionCorta }} </td></tr>
                 <tr><th> Descripcion </th><td> {{ $diplomados1->descripcion }} </td></tr>
                 <tr><th> Fecha Inicio </th><td> {{ $diplomados1->fechaInicio }} </td></tr>
                 <tr><th> Fecha Fin </th><td> {{ $diplomados1->fechaFin }} </td></tr>
                 <tr><th> Costo </th><td> {{ $diplomados1->costo }} </td></tr>
                 <tr><th> Capacitador </th><td> {{ $diplomados1->capacitador }} </td></tr>
                 <tr><th> Cupo </th><td> {{ $diplomados1->cupoLimite }} </td></tr>
+                <tr><th> Interes </th><td> 
+                            @foreach($cats as $item )
+
+                           {{$item->tipoInteres  }}
+
+                            @endforeach
+                                
+                            
+
+                            </td></tr>
                 <tr><th> Ubicacion </th><td> 
                             @foreach($ubicaciones as $ubicacion )
 
