@@ -18,6 +18,7 @@ use Image;
 use App\Rolesuser;
 use Illuminate\Database\QueryException;
 use Redirect;
+use DB;
 
 class ClienteController extends Controller
 {
@@ -156,8 +157,11 @@ class ClienteController extends Controller
         $cliente = Cliente::findOrFail($id);
         $roles= Roles1::lists('tipoRol', 'id');
 
+        $selectedRol = DB::table('cliente_roles1')->where('cliente_id','=', $id)->value('roles1_id');
 
-        return view('cliente.cliente.edit', compact('cliente','roles'));
+
+
+        return view('cliente.cliente.edit', compact('cliente','roles','selectedRol'));
     }
 
      

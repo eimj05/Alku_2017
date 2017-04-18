@@ -17,6 +17,7 @@ use Image;
 use inputs;
 use App\Ubicacion;
 use Crypt;
+use App\Cliente;
 
 class Cursos1Controller extends Controller
 {
@@ -153,14 +154,19 @@ class Cursos1Controller extends Controller
 
         $intereses= Intereses1::lists('tipoInteres','id');
 
+        $selectedInteres = DB::table('cursos1s')->where('id','=', $id)->value('interes');
 
-        return view('curso1.cursos1.edit', compact('cursos1','ubicacion','intereses'));
+        $selectedUbicacion = DB::table('curso_ubicacion1')->where('curso_id','=', $id)->value('ubicacion_id');
+
+
+        return view('curso1.cursos1.edit', compact('cursos1','ubicacion','intereses','selectedInteres','selectedUbicacion'));
     }
 
     public function ubicacion($id)
     {
 
         $ubicacion = Ubicacion::paginate(15);
+
 
         return view('ubicacion.index', compact('ubicacion','id_curso'));
     }
@@ -217,6 +223,9 @@ class Cursos1Controller extends Controller
             DB::table('cursos1s')->where('id', $cursos1)->update(array('imagen_curso' => $filename));      
 
         }
+
+        Session::flash('message','La imagen del curso ha sido actualizada correctamente');
+
 
         return redirect('Cursos');
 

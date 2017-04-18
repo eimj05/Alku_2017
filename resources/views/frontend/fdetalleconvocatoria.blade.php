@@ -514,6 +514,8 @@ _________________________________________________________ -->
                             @endforeach</p>
                             <h4>Tipo de Convocatoria</h4>
                             <p>{{ $convocatoria1->tipoConvocatoria }}</p>
+                            <h4>Monto</h4>
+                            <p>{{ $convocatoria1->monto }}</p>
                             <h4>Contacto</h4>
                             <p>{{ $convocatoria1->contacto }}</p>
                             <h4>Fecha de Cierre</h4>

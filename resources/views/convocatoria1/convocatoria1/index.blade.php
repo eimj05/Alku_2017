@@ -28,6 +28,8 @@
                         <a href="{{ url('/Convocatorias/' . $item->id) }}" class="btn btn-success btn-xs" title="Ver Convocatoria"><span class="glyphicon glyphicon-eye-open" aria-hidden="true"/></a>
                         <a href="{{ url('/Convocatorias/' . $item->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Convocatoria"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
                         <a href="{{ url('/Convocatorias/' . $item->id . '/imagen') }}" class="btn btn-primary btn-xs" title="Imagen Diplomado"><span class="glyphicon glyphicon-picture" aria-hidden="true"/></a>
+                        <a href="{{ url('/Fconvocatoriasdetalle/' . $item->id) }}" target="blank" class="btn btn-primary btn-xs" title="Ver frontend"><span class="glyphicon glyphicon-new-window" aria-hidden="true"/></a>
+
 
                         {!! Form::open([
                             'method'=>'DELETE',

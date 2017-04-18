@@ -59,7 +59,7 @@ class AuthController extends Controller
 
 
 
-            'password' => 'required|regex:/^.*(?=.{3,})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%@]).*$/|confirmed|min:8|max:16',
+            'password' => 'required|confirmed|min:8|max:16',
             'terms' => 'required',
           //  'g-recaptcha-response' => 'required|captcha',
         ]);

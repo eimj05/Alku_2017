@@ -21,17 +21,17 @@
 		{{Form::open(array('url'=>'/Ubicaciones/create', 'files'=>true))}}
 			<div class="form-group">
 				<label for="">Titulo</label>	
-				<input type="text" class="form-control input-sm" name="title" >
+				<input type="text" class="form-control input-sm" name="title" required="">
 			</div>
 
 			<div class="form-group">
 				<label for="">Direcccion</label>	
-				<input type="text" class="form-control input-sm" name="udireccion" >
+				<input type="text" class="form-control input-sm" name="udireccion" required="" >
 			</div>
 
 			<div class="form-group">
 				<label for="">Buscar ubicación</label>
-				<input type="text" id="searchmap" size="93">
+				<input type="text" id="searchmap" size="93" >
 				<div id="map-canvas"></div>
 			</div>
 
@@ -45,7 +45,7 @@
 			</div>
 
 			<div class="form-group">
-        <div class="col-sm-offset-3 col-sm-3">
+        <div class="col-sm-offset-3 col-sm-6">
             {!! Form::submit('Crear', ['class' => 'btn btn-primary form-control']) !!}
         </div>
 		{{Form::close()}}

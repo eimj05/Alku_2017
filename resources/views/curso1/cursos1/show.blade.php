@@ -34,7 +34,7 @@
                 <tr><th> Costo </th><td> {{ $cursos1->costo }} </td></tr>
                 <tr><th> Capacitador </th><td> {{ $cursos1->capacitador }} </td></tr>
                 <tr><th> Cupo </th><td> {{ $cursos1->cupoLimite }} </td></tr>
-                <tr><th> Interes </th><td> 
+                <tr><th> Categoria </th><td> 
                             @foreach($cats as $item )
 
                            {{$item->tipoInteres  }}

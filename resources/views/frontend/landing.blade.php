@@ -81,7 +81,6 @@ _________________________________________________________ -->
                                 <img src="/uploads/avatars/{{ Auth::user()->avatar }}" class="img-circle" alt="User Image" width="25" height="25" border="0" />
                                 </a>
                                 <a href="{{ url('/Fperfil/' . Auth::user()->id) }}">{{ Auth::user()->name }}</a> 
-
                                 <a href="/logout"><i class="fa fa-sign-out"></i> Salir   </a>
                              
                                 @endif

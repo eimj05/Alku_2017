@@ -3,7 +3,7 @@
 @section('main-content')
 <div class="container">
 
-    <h1>Interes
+    <h1>Categorias
         <a href="{{ url('Intereses/' . $intereses1->id . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Interes"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
         {!! Form::open([
             'method'=>'DELETE',
@@ -24,7 +24,7 @@
                 <tr>
                     <th>ID</th><td>{{ $intereses1->id }}</td>
                 </tr>
-                <tr><th> TipoInteres </th><td> {{ $intereses1->tipoInteres }} </td></tr><tr><th> Descripcion </th><td> {{ $intereses1->descripcion }} </td></tr>
+                <tr><th> Nombre de la Categoria </th><td> {{ $intereses1->tipoInteres }} </td></tr><tr><th> Descripcion de la Categoria </th><td> {{ $intereses1->descripcion }} </td></tr>
             </tbody>
         </table>
     </div>

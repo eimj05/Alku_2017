@@ -3,12 +3,12 @@
 @section('main-content')
 <div class="container">
 
-    <h1>Intereses <a href="{{ url('/Intereses/create') }}" class="btn btn-primary btn-xs" title="Agregar Interes"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a></h1>
+    <h1>Categorias <a href="{{ url('/Intereses/create') }}" class="btn btn-primary btn-xs" title="Agregar Interes"><span class="glyphicon glyphicon-plus" aria-hidden="true"/></a></h1>
     <div class="table">
         <table class="table table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>S.No</th><th> Tipo de Interes </th><th> Descripcion </th><th>Acciones</th>
+                    <th>S.No</th><th> Nombre de la Categoria </th><th> Descripcion de la Categoria</th><th>Acciones</th>
                 </tr>
             </thead>
             <tbody>

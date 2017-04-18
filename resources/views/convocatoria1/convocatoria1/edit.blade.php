@@ -53,6 +53,13 @@
                     {!! $errors->first('fechaCierre', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
+             <div class="form-group {{ $errors->has('monto') ? 'has-error' : ''}}">
+                {!! Form::label('monto', 'Monto', ['class' => 'col-sm-3 control-label']) !!}
+                <div class="col-sm-6">
+                    {!! Form::text('monto', null, ['class' => 'form-control','required' => 'required']) !!}
+                    {!! $errors->first('monto', '<p class="help-block">:message</p>') !!}
+                </div>
+            </div>
             <div class="form-group {{ $errors->has('contacto') ? 'has-error' : ''}}">
                 {!! Form::label('contacto', 'Contacto', ['class' => 'col-sm-3 control-label']) !!}
                 <div class="col-sm-6">
@@ -61,10 +68,10 @@
                 </div>
             </div>
              <div class="form-group {{ $errors->has('intereses') ? 'has-error' : ''}}">
-                     {!! Form::label('intereses','Intereses',['class' => 'col-sm-3 control-label']) !!}
+                     {!! Form::label('intereses','Interes',['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-6">
               
-                    {{ Form::select('intereses', $intereses) }}
+                    {!! Form::select('intereses', $intereses, $selectedInteres, ['class' => 'form-control m-bot15']) !!}
 
                     {!! $errors->first('intereses', '<p class="help-block">:message</p>') !!}
                    </div>  
@@ -73,7 +80,7 @@
             <div class="form-group {{ $errors->has('ubicacion') ? 'has-error' : ''}}">
                      {!! Form::label('ubicacion','Ubicacion',['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-6">
-                    {{ Form::select('ubicacion', $ubicacion) }}
+                    {!! Form::select('ubicacion', $ubicacion, $selectedUbicacion, ['class' => 'form-control m-bot15']) !!}
 
                     {!! $errors->first('ubicacion', '<p class="help-block">:message</p>') !!}
                    </div>  
@@ -82,7 +89,7 @@
 
 
     <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-3">
+        <div class="col-sm-offset-3 col-sm-6">
             {!! Form::submit('Actualizar', ['class' => 'btn btn-primary form-control']) !!}
         </div>
     </div>

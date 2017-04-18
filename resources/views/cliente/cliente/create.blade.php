@@ -64,7 +64,7 @@
             <div class="form-group {{ $errors->has('roles') ? 'has-error' : ''}}">
                      {!! Form::label('roles','Rol',['class' => 'col-sm-3 control-label']) !!}
                     <div class="col-sm-6">
-                    {{ Form::select('roles', $roles) }}
+                    {!! Form::select('roles', $roles, $roles, ['class' => 'form-control m-bot15']) !!}
 
                     {!! $errors->first('roles', '<p class="help-block">:message</p>') !!}
                    </div>  
@@ -73,7 +73,7 @@
                
 
     <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-3">
+        <div class="col-sm-offset-3 col-sm-6">
             {!! Form::submit('Crear', ['class' => 'btn btn-primary form-control']) !!}
         </div>
     </div>

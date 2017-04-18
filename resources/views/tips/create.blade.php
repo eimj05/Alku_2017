@@ -25,7 +25,7 @@
             
 
     <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-3">
+        <div class="col-sm-offset-3 col-sm-6">
             {!! Form::submit('Crear', ['class' => 'btn btn-primary form-control']) !!}
         </div>
     </div>
@@ -41,21 +41,5 @@
 
 </div>
 
-<script type="text/javascript">
-        var r={'special':/[\W]/g}
-        function valid(o,w){
-        o.value = o.value.replace(r[w],'');
-        }
-        function ctck()
-        {
-        var sds = document.getElementById("dum");
-        if(sds == null){
-        alert("Esta utilizando un paquete gratuito. No esta autorizado para retirar la etiqueta.");
-        }
-        var sdss = document.getElementById("dumdiv");
-        if(sdss == null){
-        alert("Esta utilizando un paquete gratuito. No esta autorizado para retirar la etiqueta.");
-        }
-        }
-    </script>
+
 @endsection

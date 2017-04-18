@@ -29,6 +29,7 @@
                         <a href="{{ url('/Cursos/' . Crypt::encrypt($item->id) . '/edit') }}" class="btn btn-primary btn-xs" title="Editar Curso"><span class="glyphicon glyphicon-pencil" aria-hidden="true"/></a>
                         <a href="{{ url('/Cursos/' . Crypt::encrypt($item->id) . '/imagen') }}" class="btn btn-primary btn-xs" title="Imagen Curso"><span class="glyphicon glyphicon-picture" aria-hidden="true"/></a>
                         <a href="{{ url('/ICursos/' . Crypt::encrypt($item->id)) }}" class="btn btn-primary btn-xs" title="Inscritos"><span class="glyphicon glyphicon-saved" aria-hidden="true"/></a>
+                        <a href="{{ url('/Fcursosdetalle/' . $item->id) }}" target="blank" class="btn btn-primary btn-xs" title="Ver frontend"><span class="glyphicon glyphicon-new-window" aria-hidden="true"/></a>
 
                         {!! Form::open([
                             'method'=>'DELETE',

@@ -29,7 +29,11 @@
                 <input type="file" name="imagen_diplomado">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <p></p>
-                <input type="submit" value="Guardar" class="pull-center btn btn-sm btn-primary">
+                <div class="form-group">
+                  <div class="col-sm-offset-3 col-sm-6">
+                   {!! Form::submit('Actualizar', ['class' => 'btn btn-primary form-control']) !!}
+                 </div>
+                </div>
             </form>
 
             </div> 

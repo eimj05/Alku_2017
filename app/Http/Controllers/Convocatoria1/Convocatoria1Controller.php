@@ -73,6 +73,7 @@ class Convocatoria1Controller extends Controller
             'tipoConvocatoria' => $request['tipoConvocatoria'],
             'dependencia' => $request['dependencia'],
             'fechaCierre' => $request['fechaCierre'],
+            'monto' => $request['monto'],
             'contacto' => $request['contacto'],
             'interes' => $request['interes']]);
 
@@ -120,7 +121,11 @@ class Convocatoria1Controller extends Controller
 
         $intereses= Intereses1::lists('tipoInteres','id');
 
-        return view('convocatoria1.convocatoria1.edit', compact('convocatoria1','ubicacion','intereses'));
+        $selectedInteres = DB::table('convocatoria1s')->where('id','=', $id)->value('interes');
+
+        $selectedUbicacion = DB::table('convocatoria_ubicacion1')->where('convocatoria_id','=', $id)->value('ubicacion_id');
+
+        return view('convocatoria1.convocatoria1.edit', compact('convocatoria1','ubicacion','intereses','selectedInteres','selectedUbicacion'));
     }
 
 
@@ -147,6 +152,10 @@ class Convocatoria1Controller extends Controller
 
         $convocatoria1->ubicacion()->attach($request->ubicacion);
 
+        DB::table('convocatoria1s')
+            ->where('id', $id)
+            ->update(['interes' => $request->intereses]);
+
         Session::flash('message', 'La convocatoria ha sido actualizada correctamente');
 
         return redirect('Convocatorias');
@@ -165,6 +174,8 @@ class Convocatoria1Controller extends Controller
             DB::table('convocatoria1s')->where('id', $convocatoria1)->update(array('imagen_convocatoria' => $filename));
 
         }
+        
+        Session::flash('message', 'La imagen de la convocatoria ha sido actualizada correctamente');
 
         return redirect('Convocatorias');
     }
