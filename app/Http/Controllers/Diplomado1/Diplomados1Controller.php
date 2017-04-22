@@ -67,12 +67,25 @@ class Diplomados1Controller extends Controller
     public function create()
     {
         $idu = Auth::id();
+        $rol = DB::table('cliente_roles1')->where('cliente_id','=', $idu)->value('roles1_id');
 
+        if($rol ==1) 
+        {
+        
+        $ubicacion= Ubicacion::all()->lists('title', 'id');
+        $intereses= Intereses1::lists('tipoInteres','id');
+
+        return view('diplomado1.diplomados1.create', compact('intereses','ubicacion'));
+
+        }
+        elseif($rol ==2)
+        {
+        
         $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
         $intereses= Intereses1::lists('tipoInteres','id');
 
-        //return view('diplomado1.diplomados1.create')->with('intereses', $intereses);
         return view('diplomado1.diplomados1.create', compact('intereses','ubicacion'));
+        }
     }
 
     /**
@@ -138,10 +151,32 @@ class Diplomados1Controller extends Controller
      */
     public function edit($id)
     {
-       $id = Crypt::decrypt($id);
-
+        $id = Crypt::decrypt($id);
         $idu = Auth::id();
+        $rol = DB::table('cliente_roles1')->where('cliente_id','=', $idu)->value('roles1_id');
 
+
+        if($rol ==1) 
+        {
+        
+
+        $ubicacion= Ubicacion::all()->lists('title', 'id');
+
+        $diplomados1 = Diplomados1::findOrFail($id);
+
+        $intereses= Intereses1::lists('tipoInteres','id');
+
+        $selectedInteres = DB::table('diplomados1s')->where('id','=', $id)->value('interes');
+
+        $selectedUbicacion = DB::table('diplomado_ubicacion1')->where('diplomado_id','=', $id)->value('ubicacion_id');
+
+
+        return view('diplomado1.diplomados1.edit', compact('diplomados1','ubicacion','intereses','selectedInteres','selectedUbicacion'));
+
+        }
+        elseif($rol ==2)
+        {
+        
         $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
         $diplomados1 = Diplomados1::findOrFail($id);
         $intereses= Intereses1::lists('tipoInteres','id');
@@ -152,6 +187,10 @@ class Diplomados1Controller extends Controller
 
 
         return view('diplomado1.diplomados1.edit', compact('diplomados1','ubicacion','intereses','selectedInteres','selectedUbicacion'));
+
+
+        }
+
     }
 
      public function imagen($id)

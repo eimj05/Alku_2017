@@ -64,14 +64,7 @@ _________________________________________________________ -->
                             <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>  <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                             </p>
                         </div>
-                      <!--  <div class="col-xs-7">
-                            <div class="social">
-                                <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                                <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                            </div>
--->
+                     
                             <div class="login">
                                 @if (Auth::guest())
                                 <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
@@ -122,52 +115,7 @@ _________________________________________________________ -->
                                 <li class="dropdown active">
                                     <a href="/" class="btn btn-link" >Inicio </a>
                                 </li>
-                               <!-- <li class="dropdown use-yamm yamm-fw">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Caracteristicas<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <img src="fcss/img/template-easy-customize.png" class="img-responsive hidden-xs" alt="">
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Shortcodes</h5>
-                                                        <ul>
-                                                            <li><a href="template-accordions.html">Accordions</a>
-                                                            </li>
-                                                            <li><a href="template-alerts.html">Alerts</a>
-                                                            </li>
-                                                            <li><a href="template-buttons.html">Buttons</a>
-                                                            </li>
-                                                            <li><a href="template-content-boxes.html">Content boxes</a>
-                                                            </li>
-                                                            <li><a href="template-blocks.html">Horizontal blocks</a>
-                                                            </li>
-                                                            <li><a href="template-pagination.html">Pagination</a>
-                                                            </li>
-                                                            <li><a href="template-tabs.html">Tabs</a>
-                                                            </li>
-                                                            <li><a href="template-typography.html">Typography</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Header variations</h5>
-                                                        <ul>
-                                                            <li><a href="template-header-default.html">Default sticky header</a>
-                                                            </li>
-                                                            <li><a href="template-header-nosticky.html">No sticky header</a>
-                                                            </li>
-                                                            <li><a href="template-header-light.html">Light header</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>-->
+                               
                                 <li class="dropdown use-yamm yamm-fw">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portafolio <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -195,9 +143,6 @@ _________________________________________________________ -->
                                                             <li><a href="{{ url('Facerca') }}">Acerca de Nosotros</a>
                                                             </li>
                                  
-                                        
-                                                            <li><a href="{{ url('Fservicios') }}">Nuestros Servicios</a>
-                                                            </li>
                                                         </ul>
                                                         
                                                     </div>
@@ -206,147 +151,7 @@ _________________________________________________________ -->
                                         </li>
                                     </ul>
                                 </li>
-                                <!-- ========== FULL WIDTH MEGAMENU ================== 
-                                <li class="dropdown use-yamm yamm-fw">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">All Pages <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-sm-3">
-                                                        <h5>Home</h5>
-                                                        <ul>
-                                                            <li><a href="index.html">Option 1: Default Page</a>
-                                                            </li>
-                                                            <li><a href="index2.html">Option 2: Application</a>
-                                                            </li>
-                                                            <li><a href="index3.html">Option 3: Startup</a>
-                                                            </li>
-                                                            <li><a href="index4.html">Option 4: Agency</a>
-                                                            </li>
-                                                            <li><a href="index5.html">Option 5: Portfolio</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>About</h5>
-                                                        <ul>
-                                                            <li><a href="about.html">About us</a>
-                                                            </li>
-                                                            <li><a href="team.html">Our team</a>
-                                                            </li>
-                                                            <li><a href="team-member.html">Team member</a>
-                                                            </li>
-                                                            <li><a href="services.html">Services</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>Marketing</h5>
-                                                        <ul>
-                                                            <li><a href="packages.html">Packages</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Portfolio</h5>
-                                                        <ul>
-                                                            <li><a href="portfolio-2.html">2 columns</a>
-                                                            </li>
-                                                            <li><a href="portfolio-no-space-2.html">2 columns with negative space</a>
-                                                            </li>
-                                                            <li><a href="portfolio-3.html">3 columns</a>
-                                                            </li>
-                                                            <li><a href="portfolio-no-space-3.html">3 columns with negative space</a>
-                                                            </li>
-                                                            <li><a href="portfolio-4.html">4 columns</a>
-                                                            </li>
-                                                            <li><a href="portfolio-no-space-4.html">4 columns with negative space</a>
-                                                            </li>
-                                                            <li><a href="portfolio-detail.html">Portfolio - detail</a>
-                                                            </li>
-                                                            <li><a href="portfolio-detail-2.html">Portfolio - detail 2</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>User pages</h5>
-                                                        <ul>
-                                                            <li><a href="customer-register.html">Register / login</a>
-                                                            </li>
-                                                            <li><a href="customer-orders.html">Orders history</a>
-                                                            </li>
-                                                            <li><a href="customer-order.html">Order history detail</a>
-                                                            </li>
-                                                            <li><a href="customer-wishlist.html">Wishlist</a>
-                                                            </li>
-                                                            <li><a href="customer-account.html">Customer account / change password</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Shop</h5>
-                                                        <ul>
-                                                            <li><a href="shop-category.html">Category - sidebar right</a>
-                                                            </li>
-                                                            <li><a href="shop-category-left.html">Category - sidebar left</a>
-                                                            </li>
-                                                            <li><a href="shop-category-full.html">Category - full width</a>
-                                                            </li>
-                                                            <li><a href="shop-detail.html">Product detail</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>Shop - order process</h5>
-                                                        <ul>
-                                                            <li><a href="shop-basket.html">Shopping cart</a>
-                                                            </li>
-                                                            <li><a href="shop-checkout1.html">Checkout - step 1</a>
-                                                            </li>
-                                                            <li><a href="shop-checkout2.html">Checkout - step 2</a>
-                                                            </li>
-                                                            <li><a href="shop-checkout3.html">Checkout - step 3</a>
-                                                            </li>
-                                                            <li><a href="shop-checkout4.html">Checkout - step 4</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Contact</h5>
-                                                        <ul>
-                                                            <li><a href="contact.html">Contact</a>
-                                                            </li>
-                                                            <li><a href="contact2.html">Contact - version 2</a>
-                                                            </li>
-                                                            <li><a href="contact3.html">Contact - version 3</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>Pages</h5>
-                                                        <ul>
-                                                            <li><a href="text.html">Text page</a>
-                                                            </li>
-                                                            <li><a href="text-left.html">Text page - left sidebar</a>
-                                                            </li>
-                                                            <li><a href="text-full.html">Text page - full width</a>
-                                                            </li>
-                                                            <li><a href="faq.html">FAQ</a>
-                                                            </li>
-                                                            <li><a href="404.html">404 page</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>Blog</h5>
-                                                        <ul>
-                                                            <li><a href="blog.html">Blog listing big</a>
-                                                            </li>
-                                                            <li><a href="blog-medium.html">Blog listing medium</a>
-                                                            </li>
-                                                            <li><a href="blog-small.html">Blog listing small</a>
-                                                            </li>
-                                                            <li><a href="blog-post.html">Blog Post</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </li>
-                                    </ul>
-                                </li>
-                                <! ========== FULL WIDTH MEGAMENU END ================== -->
-
+                                
                                 <li class="dropdown">
                                     <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -391,41 +196,7 @@ _________________________________________________________ -->
 
         </header>
 
-        <!-- *** LOGIN MODAL ***
-_________________________________________________________ -->
-
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="Login">Customer login</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form action="customer-orders.html" method="post">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="email_modal" placeholder="email">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="password_modal" placeholder="password">
-                            </div>
-
-                            <p class="text-center">
-                                <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
-                            </p>
-
-                        </form>
-
-                        <p class="text-center text-muted">Not registered yet?</p>
-                        <p class="text-center text-muted"><a href="customer-register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- *** LOGIN MODAL END *** -->
+      
 
         <section>
             <!-- *** HOMEPAGE CAROUSEL ***
@@ -547,121 +318,7 @@ _________________________________________________________ -->
             </div>
         </section>
 
-        <!-- <section class="bar background-pentagon no-mb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Testimonials</h2>
-                        </div>
-
-                        <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.</p>
-
-
-                        <!-- *** TESTIMONIALS CAROUSEL ***
- _________________________________________________________ 
-
-                        <ul class="owl-carousel testimonials same-height-row">
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown
-                                            belly, slightly domed and divided by arches into stiff sections.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-1.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened to
-                                            me? " he thought. It wasn't a dream.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-2.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-
-                                        <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice, gilded
-                                            frame.</p>
-                                    </div>
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-3.png">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item">
-                                <div class="testimonial same-height-always">
-                                    <div class="text">
-                                        <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                            weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which made
-                                            him feel quite sad.</p>
-                                    </div>
-
-                                    <div class="bottom">
-                                        <div class="icon"><i class="fa fa-quote-left"></i>
-                                        </div>
-                                        <div class="name-picture">
-                                            <img class="" alt="" src="fcss/img/person-4.jpg">
-                                            <h5>John McIntyre</h5>
-                                            <p>CEO, TransTech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <!-- /.owl-carousel 
-
-                        <!-- *** TESTIMONIALS CAROUSEL END *** 
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <!-- /.bar -->
+       
 
         <section class="bar background-image-fixed-2 no-mb color-white text-center">
             <div class="dark-mask"></div>
@@ -705,15 +362,14 @@ _________________________________________________________ -->
                                     <div class="bg"></div>
                                     <div class="text">
                                         <p class="buttons">
-                                            <a href="{{ url('FCursosinfo') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
+                                            <a href="{{ url('Fcursoslist') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Ver ofertas</a>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4><a href="{{ url('FCursosinfo') }}">Cursos</a></h4>
+                                    <h4><a href="{{ url('Fcursoslist') }}">Cursos</a></h4>
                                     </p>
                                     <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="{{ url('FCursosinfo') }}" class="btn btn-template-main">Continuar leyendo</a>
                                     </p>
                                 </div>
                             </div>
@@ -730,15 +386,14 @@ _________________________________________________________ -->
                                     <div class="bg"></div>
                                     <div class="text">
                                         <p class="buttons">
-                                            <a href="{{ url('FDiplomadosinfo') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
+                                            <a href="{{ url('Fdiplomadoslist') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Ver ofertas</a>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4><a href="{{ url('FDiplomadosinfo') }}">Diplomados</a></h4>
+                                    <h4><a href="{{ url('Fdiplomadoslist') }}">Diplomados</a></h4>
                                     </p>
                                     <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="{{ url('FDiplomadosinfo') }}" class="btn btn-template-main">Continuar leyendo</a>
                                     </p>
                                 </div>
                             </div>
@@ -755,15 +410,14 @@ _________________________________________________________ -->
                                     <div class="bg"></div>
                                     <div class="text">
                                         <p class="buttons">
-                                            <a href="{{ url('FConvocatoriasinfo') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
+                                            <a href="{{ url('Fconvocatoriaslist') }}" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Ver ofertas</a>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4><a href="{{ url('FConvocatoriasinfo') }}">Convocatorias</a></h4>
+                                    <h4><a href="{{ url('Fconvocatoriaslist') }}">Convocatorias</a></h4>
                                     </p>
                                     <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
-                                    <p class="read-more"><a href="{{ url('FConvocatoriasinfo') }}" class="btn btn-template-main">Continuar leyendo</a>
                                     </p>
                                 </div>
                             </div>
@@ -780,15 +434,13 @@ _________________________________________________________ -->
                                     <div class="bg"></div>
                                     <div class="text">
                                         <p class="buttons">
-                                            <a href="#" class="btn btn-template-transparent-primary"><i class="fa fa-link"></i> Leer mas</a>
                                         </p>
                                     </div>
                                 </div>
                                 <div class="content">
                                     <h4><a href="blog-post.html">Bolsa de Trabajo</a></h4>
                                     </p>
-                                    <p class="intro">Am terminated it excellence invitation projection as. She graceful shy believed distance use nay. Lively is people.</p>
-                                    <p class="read-more"><a href="#" class="btn btn-template-main">Continuar leyendo</a>
+                                    <p class="intro">Vinculacion con las mejores ofertas laborales.  ¡¡¡ Proximamente !!!</p>
                                     </p>
                                 </div>
                             </div>
@@ -808,40 +460,6 @@ _________________________________________________________ -->
         </section>
         <!-- /.bar -->
 
-      <!--  <section class="bar background-gray no-mb">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="heading text-center">
-                            <h2>Nuestros Colaboradores</h2>
-                        </div>
-
-                        <ul class="owl-carousel customers">
-                            <li class="item">
-                                <img src="fcss/img/customer-1.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-2.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-3.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-4.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-5.png" alt="" class="img-responsive">
-                            </li>
-                            <li class="item">
-                                <img src="fcss/img/customer-6.png" alt="" class="img-responsive">
-                            </li>
-                        </ul>
-                        <!-- /.owl-carousel 
-                    </div>
-
-                </div>
-            </div>
-        </section>-->
 
 
         <!-- *** GET IT ***
@@ -853,7 +471,7 @@ _________________________________________________________ -->
                     <h3>¿Te gustaria unirte a nuestro equipo y publicar tus Cursos o Diplomados?</h3>
                 </div>
                 <div class="col-md-4 col-sm-12">
-                    <a href="#" class="btn btn-template-transparent-primary">Envianos un email</a>
+                    <a href="Fcontacto" class="btn btn-template-transparent-primary">Dejanos un mensaje</a>
                 </div>
             </div>
         </div>

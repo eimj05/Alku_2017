@@ -66,17 +66,30 @@ class Cursos1Controller extends Controller
      */
     public function create()
     {
-
+    
         $idu = Auth::id();
-        $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
-        $intereses= Intereses1::lists('tipoInteres','id');
+        $rol = DB::table('cliente_roles1')->where('cliente_id','=', $idu)->value('roles1_id');
+
+        if($rol ==1) 
+        {
         
+        $ubicacion= Ubicacion::all()->lists('title', 'id');
+        $intereses= Intereses1::lists('tipoInteres','id');
 
-
-       // return view('curso1.cursos1.create')->with('intereses', $intereses);
         return view('curso1.cursos1.create', compact('intereses','ubicacion'));
 
+        }
+        elseif($rol ==2)
+        {
+        
+        $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
+        $intereses= Intereses1::lists('tipoInteres','id');
+
+        return view('curso1.cursos1.create', compact('intereses','ubicacion'));
+
+        }
     }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -147,7 +160,30 @@ class Cursos1Controller extends Controller
     {
         $id = Crypt::decrypt($id);
         $idu = Auth::id();
+        $rol = DB::table('cliente_roles1')->where('cliente_id','=', $idu)->value('roles1_id');
 
+
+        if($rol ==1) 
+        {
+        
+
+        $ubicacion= Ubicacion::all()->lists('title', 'id');
+
+        $cursos1 = Cursos1::findOrFail($id);
+
+        $intereses= Intereses1::lists('tipoInteres','id');
+
+        $selectedInteres = DB::table('cursos1s')->where('id','=', $id)->value('interes');
+
+        $selectedUbicacion = DB::table('curso_ubicacion1')->where('curso_id','=', $id)->value('ubicacion_id');
+
+
+        return view('curso1.cursos1.edit', compact('cursos1','ubicacion','intereses','selectedInteres','selectedUbicacion'));
+
+        }
+        elseif($rol ==2)
+        {
+        
         $ubicacion= Ubicacion::where('created_by','=', $idu)->lists('title', 'id');
 
         $cursos1 = Cursos1::findOrFail($id);
@@ -160,6 +196,11 @@ class Cursos1Controller extends Controller
 
 
         return view('curso1.cursos1.edit', compact('cursos1','ubicacion','intereses','selectedInteres','selectedUbicacion'));
+
+
+        }
+
+
     }
 
     public function ubicacion($id)

@@ -64,14 +64,7 @@ _________________________________________________________ -->
                             <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>  <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                             </p>
                         </div>
-                      <!--  <div class="col-xs-7">
-                            <div class="social">
-                                <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                                <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                                <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                                <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
-                            </div>
--->
+                     
                            <div class="login">
                                 @if (Auth::guest())
                                 <a href="{{ url('/login') }}"><i class="fa fa-sign-in"></i> <span class="hidden-xs text-uppercase">Iniciar Sesion</span></a>
@@ -123,52 +116,7 @@ _________________________________________________________ -->
                                     <a href="/" class="btn btn-link" >Inicio </a>
                                     
                                 </li>
-                               <!-- <li class="dropdown use-yamm yamm-fw">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Caracteristicas<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-sm-6">
-                                                        <img src="fcss/img/template-easy-customize.png" class="img-responsive hidden-xs" alt="">
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Shortcodes</h5>
-                                                        <ul>
-                                                            <li><a href="template-accordions.html">Accordions</a>
-                                                            </li>
-                                                            <li><a href="template-alerts.html">Alerts</a>
-                                                            </li>
-                                                            <li><a href="template-buttons.html">Buttons</a>
-                                                            </li>
-                                                            <li><a href="template-content-boxes.html">Content boxes</a>
-                                                            </li>
-                                                            <li><a href="template-blocks.html">Horizontal blocks</a>
-                                                            </li>
-                                                            <li><a href="template-pagination.html">Pagination</a>
-                                                            </li>
-                                                            <li><a href="template-tabs.html">Tabs</a>
-                                                            </li>
-                                                            <li><a href="template-typography.html">Typography</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Header variations</h5>
-                                                        <ul>
-                                                            <li><a href="template-header-default.html">Default sticky header</a>
-                                                            </li>
-                                                            <li><a href="template-header-nosticky.html">No sticky header</a>
-                                                            </li>
-                                                            <li><a href="template-header-light.html">Light header</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>-->
+                               
                                 <li class="dropdown use-yamm yamm-fw">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portafolio <b class="caret"></b></a>
                                     <ul class="dropdown-menu">
@@ -197,8 +145,7 @@ _________________________________________________________ -->
                                                             </li>
                                                         
                                         
-                                                            <li><a href="{{ url('Fservicios') }}">Nuestros Servicios</a>
-                                                            </li>
+                                        
                                                         </ul>
                                                         
                                                     </div>
@@ -207,146 +154,7 @@ _________________________________________________________ -->
                                         </li>
                                     </ul>
                                 </li>
-                                <!-- ========== FULL WIDTH MEGAMENU ================== 
-                                <li class="dropdown use-yamm yamm-fw">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="200">All Pages <b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <div class="yamm-content">
-                                                <div class="row">
-                                                    <div class="col-sm-3">
-                                                        <h5>Home</h5>
-                                                        <ul>
-                                                            <li><a href="index.html">Option 1: Default Page</a>
-                                                            </li>
-                                                            <li><a href="index2.html">Option 2: Application</a>
-                                                            </li>
-                                                            <li><a href="index3.html">Option 3: Startup</a>
-                                                            </li>
-                                                            <li><a href="index4.html">Option 4: Agency</a>
-                                                            </li>
-                                                            <li><a href="index5.html">Option 5: Portfolio</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>About</h5>
-                                                        <ul>
-                                                            <li><a href="about.html">About us</a>
-                                                            </li>
-                                                            <li><a href="team.html">Our team</a>
-                                                            </li>
-                                                            <li><a href="team-member.html">Team member</a>
-                                                            </li>
-                                                            <li><a href="services.html">Services</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>Marketing</h5>
-                                                        <ul>
-                                                            <li><a href="packages.html">Packages</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Portfolio</h5>
-                                                        <ul>
-                                                            <li><a href="portfolio-2.html">2 columns</a>
-                                                            </li>
-                                                            <li><a href="portfolio-no-space-2.html">2 columns with negative space</a>
-                                                            </li>
-                                                            <li><a href="portfolio-3.html">3 columns</a>
-                                                            </li>
-                                                            <li><a href="portfolio-no-space-3.html">3 columns with negative space</a>
-                                                            </li>
-                                                            <li><a href="portfolio-4.html">4 columns</a>
-                                                            </li>
-                                                            <li><a href="portfolio-no-space-4.html">4 columns with negative space</a>
-                                                            </li>
-                                                            <li><a href="portfolio-detail.html">Portfolio - detail</a>
-                                                            </li>
-                                                            <li><a href="portfolio-detail-2.html">Portfolio - detail 2</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>User pages</h5>
-                                                        <ul>
-                                                            <li><a href="customer-register.html">Register / login</a>
-                                                            </li>
-                                                            <li><a href="customer-orders.html">Orders history</a>
-                                                            </li>
-                                                            <li><a href="customer-order.html">Order history detail</a>
-                                                            </li>
-                                                            <li><a href="customer-wishlist.html">Wishlist</a>
-                                                            </li>
-                                                            <li><a href="customer-account.html">Customer account / change password</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Shop</h5>
-                                                        <ul>
-                                                            <li><a href="shop-category.html">Category - sidebar right</a>
-                                                            </li>
-                                                            <li><a href="shop-category-left.html">Category - sidebar left</a>
-                                                            </li>
-                                                            <li><a href="shop-category-full.html">Category - full width</a>
-                                                            </li>
-                                                            <li><a href="shop-detail.html">Product detail</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>Shop - order process</h5>
-                                                        <ul>
-                                                            <li><a href="shop-basket.html">Shopping cart</a>
-                                                            </li>
-                                                            <li><a href="shop-checkout1.html">Checkout - step 1</a>
-                                                            </li>
-                                                            <li><a href="shop-checkout2.html">Checkout - step 2</a>
-                                                            </li>
-                                                            <li><a href="shop-checkout3.html">Checkout - step 3</a>
-                                                            </li>
-                                                            <li><a href="shop-checkout4.html">Checkout - step 4</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="col-sm-3">
-                                                        <h5>Contact</h5>
-                                                        <ul>
-                                                            <li><a href="contact.html">Contact</a>
-                                                            </li>
-                                                            <li><a href="contact2.html">Contact - version 2</a>
-                                                            </li>
-                                                            <li><a href="contact3.html">Contact - version 3</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>Pages</h5>
-                                                        <ul>
-                                                            <li><a href="text.html">Text page</a>
-                                                            </li>
-                                                            <li><a href="text-left.html">Text page - left sidebar</a>
-                                                            </li>
-                                                            <li><a href="text-full.html">Text page - full width</a>
-                                                            </li>
-                                                            <li><a href="faq.html">FAQ</a>
-                                                            </li>
-                                                            <li><a href="404.html">404 page</a>
-                                                            </li>
-                                                        </ul>
-                                                        <h5>Blog</h5>
-                                                        <ul>
-                                                            <li><a href="blog.html">Blog listing big</a>
-                                                            </li>
-                                                            <li><a href="blog-medium.html">Blog listing medium</a>
-                                                            </li>
-                                                            <li><a href="blog-small.html">Blog listing small</a>
-                                                            </li>
-                                                            <li><a href="blog-post.html">Blog Post</a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            
-                                        </li>
-                                    </ul>
-                                </li>
-                                <! ========== FULL WIDTH MEGAMENU END ================== -->
+                                
 
                                 <li class="dropdown">
                                     <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Contacto <b class="caret"></b></a>
@@ -392,41 +200,6 @@ _________________________________________________________ -->
 
         </header>
 
-        <!-- *** LOGIN MODAL ***
-_________________________________________________________ -->
-
-        <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title" id="Login">Customer login</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form action="customer-orders.html" method="post">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="email_modal" placeholder="email">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="password_modal" placeholder="password">
-                            </div>
-
-                            <p class="text-center">
-                                <button class="btn btn-template-main"><i class="fa fa-sign-in"></i> Log in</button>
-                            </p>
-
-                        </form>
-
-                        <p class="text-center text-muted">Not registered yet?</p>
-                        <p class="text-center text-muted"><a href="customer-register.html"><strong>Register now</strong></a>! It is easy and done in 1&nbsp;minute and gives you access to special discounts and much more!</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- *** LOGIN MODAL END *** -->
 
         <div id="heading-breadcrumbs">
             <div class="container">
@@ -454,11 +227,10 @@ _________________________________________________________ -->
                         <div class="col-md-12">
 
                             <div class="heading">
-                                <h2>Acerca de Ph3</h2>
+                                <h2>Acerca de Ph3 y ALKU</h2>
                             </div>
 
-                            <p class="lead">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean
-                                ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                            <p class="lead">PH3 es una empresa joven creada en Merida, Yucatan., en el 2017 y el giro es el desarrollo de aplicaciones Web y Moviles. ALKU es una plataforma de difusion y vinculación de Cursos, Diplomados y Convocatorias. </p>
 
                         </div>
                     </div>
@@ -472,7 +244,7 @@ _________________________________________________________ -->
 
                                                 <a data-toggle="collapse" data-parent="#accordionThree" href="#collapse3a">
 
-                                                    Accordion item no.1
+                                                    Cursos
 
                                                 </a>
 
@@ -482,25 +254,24 @@ _________________________________________________________ -->
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="fcss/img/template-easy-customize.png" alt="" class="img-responsive">
+                                                    <img src="fcss/img/template-mac.png" alt="" class="img-responsive">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see
-                                                        his brown belly, slightly domed and divided by arches into stiff sections.</p>
-                                                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see
-                                                        his brown belly, slightly domed and divided by arches into stiff sections.</p>
+                                                    <p>Contamos con una amplia gama de Cursos de diferentes categorias, tales como: Programacion, Redes, Testing y Diseño.</p>
+                                                    <p>Los Cursos son impartidos de forma presencial por personal que cuenta con el conocimiento y amplia experiencia del ramo. </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
 
                                                 <a data-toggle="collapse" data-parent="#accordionThree" href="#collapse3b">
 
-                                                    Accordion item no.2
+                                                    Diplomados
 
                                                 </a>
 
@@ -510,25 +281,26 @@ _________________________________________________________ -->
                                         <div class="panel-body">
                                             <div class="row">
                                                 <div class="col-md-4">
-                                                    <img src="fcss/img/template-easy-code.png" alt="" class="img-responsive">
+                                                    <img src="fcss/img/template-easy-customize.png" alt="" class="img-responsive">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window
-                                                        at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                                    <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window
-                                                        at the dull weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
+                                                    <p>Contamos con una amplia gama de Diplomados de diferentes categorias, tales como: Programacion, Redes, Testing y Diseño.</p>
+                                                    <p>Los Diplomados son impartidos de forma presencial por personal que cuenta con el conocimiento y amplia experiencia del ramo. </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
+
+
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
 
                                                 <a data-toggle="collapse" data-parent="#accordionThree" href="#collapse3c">
 
-                                                    Accordion item no.3 a little too small
+                                                    Convocatorias
 
                                                 </a>
 
@@ -536,20 +308,26 @@ _________________________________________________________ -->
                                     </div>
                                     <div id="collapse3c" class="panel-collapse collapse">
                                         <div class="panel-body">
-                                            <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-
-                                            <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice,
-                                                gilded frame.</p>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img src="fcss/img/template-easy-code.png" alt="" class="img-responsive">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <p>Contamos con las convocatorias mas atractivas de diferentes dependencias.</p>
+                                                    <p>Convocatorias de dependencias tales como: SEJUVE, INADEM, entre otras.</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+       
                             </div>
                         </div>
 
                         <div class="col-md-4">
                             <div class="video">
                                 <div class="embed-responsive embed-responsive-4by3">
-                                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/upZJpGrppJA"></iframe>
+                                    <iframe width="854" height="480" src="https://www.youtube.com/embed/WN3KMTSzv-U" frameborder="0" allowfullscreen></iframe> 
                                 </div>
 
                             </div>
@@ -565,17 +343,13 @@ _________________________________________________________ -->
 
                             <div class="progress">
                                 <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                                    SEO
+                                    Android Development
                                 </div>
                             </div>
+                           
                             <div class="progress">
-                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
-                                    Search Engine Marketing
-                                </div>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-                                    Webdesign
+                                <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                    Web Development
                                 </div>
                             </div>
                         </div>
@@ -584,9 +358,8 @@ _________________________________________________________ -->
                                 <h2>Nuestros servicios</h2>
                             </div>
                             <ul class="ul-icons">
-                                <li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li><i class="fa fa-check"></i>Aliquam tincidunt mauris eu risus.</li>
-                                <li><i class="fa fa-check"></i>Vestibulum auctor dapibus neque.</li>
+                                <li><i class="fa fa-check"></i>Desarrollo de Aplicaciones WEB</li>
+                                <li><i class="fa fa-check"></i>Desarrollo de Aplicaciones para dispositivos Android</li>
                             </ul>
                         </div>
                         <div class="col-md-4">
@@ -595,9 +368,10 @@ _________________________________________________________ -->
                             </div>
 
                             <ul class="ul-icons">
-                                <li><i class="fa fa-check"></i>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                                <li><i class="fa fa-check"></i>Aliquam tincidunt mauris eu risus.</li>
-                                <li><i class="fa fa-check"></i>Vestibulum auctor dapibus neque.</li>
+                                <li><i class="fa fa-check"></i>Integridad y Ética</li>
+                                <li><i class="fa fa-check"></i>Trabajo en equipo</li>
+                                <li><i class="fa fa-check"></i>Servicio</li>
+                                <li><i class="fa fa-check"></i>Innovación y mejora continua</li>
                             </ul>
                         </div>
                     </div>
@@ -623,20 +397,17 @@ _________________________________________________________ -->
                         <div class="col-md-3 col-sm-3">
                             <div class="team-member" data-animate="fadeInUp">
                                 <div class="image">
-                                    <a href="team-member.html">
-                                        <img src="fcss/img/person-1.jpg" alt="" class="img-responsive img-circle">
+                                    <a href="">
+                                        <img src="" alt="" class="img-responsive img-circle">
                                     </a>
                                 </div>
-                                <h3><a href="team-member.html">Han Solo</a></h3>
-                                <p class="role">Founder</p>
+                                <h3><a href="team-member.html"></a></h3>
+                                <p class="role"></p>
                                 <div class="social">
-                                    <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                                    
                                 </div>
                                 <div class="text">
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <!-- /.team-member -->
@@ -645,11 +416,11 @@ _________________________________________________________ -->
                             <div class="team-member">
                                 <div class="image">
                                     <a href="team-member.html">
-                                        <img src="fcss/img/person-2.jpg" alt="" class="img-responsive img-circle">
+                                        <img src="fcss/img/chepo.jpeg" alt="" class="img-responsive img-circle">
                                     </a>
                                 </div>
-                                <h3><a href="team-member.html">Luke Skywalker</a></h3>
-                                <p class="role">CTO</p>
+                                <h3><a href="team-member.html">Jose Herrera</a></h3>
+                                <p class="role">Android Developer</p>
 
                                 <div class="social">
                                     <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
@@ -658,7 +429,7 @@ _________________________________________________________ -->
                                     <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                                 </div>
                                 <div class="text">
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                                    <p>Ing. en Electronica egresado del tecnologico., Originario de Merida, Yuc., con experiencia en docencia del area de Sistemas y desarrollo de aplicaciones Android.</p>
                                 </div>
                             </div>
                             <!-- /.team-member -->
@@ -667,11 +438,11 @@ _________________________________________________________ -->
                             <div class="team-member">
                                 <div class="image">
                                     <a href="team-member.html">
-                                        <img src="fcss/img/person-3.png" alt="" class="img-responsive img-circle">
+                                        <img src="fcss/img/juan.jpeg" alt="" class="img-responsive img-circle">
                                     </a>
                                 </div>
-                                <h3><a href="team-member.html">Princess Leia</a></h3>
-                                <p class="role">Team Leader</p>
+                                <h3><a href="team-member.html">Juan Espinosa</a></h3>
+                                <p class="role">Web Developer</p>
                                 <div class="social">
                                     <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
                                     <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
@@ -679,7 +450,7 @@ _________________________________________________________ -->
                                     <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                                 </div>
                                 <div class="text">
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                                    <p>Lic. en Sistemas egresado de la Universidad Cristobal Colon., Originario de Veracruz, Ver., con experiencia en pruebas de software y desarrollo de aplicaciones Web.</p>
                                 </div>
                             </div>
                             <!-- /.team-member -->
@@ -687,20 +458,17 @@ _________________________________________________________ -->
                         <div class="col-md-3 col-sm-3" data-animate="fadeInUp">
                             <div class="team-member">
                                 <div class="image">
-                                    <a href="team-member.html">
-                                        <img src="fcss/img/person-4.jpg" alt="" class="img-responsive img-circle">
+                                    <a href="">
+                                        <img src="" alt="" class="img-responsive img-circle">
                                     </a>
                                 </div>
-                                <h3><a href="team-member.html">Jabba Hut</a></h3>
-                                <p class="role">Lead Developer</p>
+                                <h3><a href=""></a></h3>
+                                <p class="role"></p>
                                 <div class="social">
-                                    <a href="#" class="external facebook" data-animate-hover="pulse"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="external gplus" data-animate-hover="pulse"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#" class="external twitter" data-animate-hover="pulse"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
+                                    
                                 </div>
                                 <div class="text">
-                                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                                    <p></p>
                                 </div>
                             </div>
                             <!-- /.team-member -->
@@ -708,129 +476,13 @@ _________________________________________________________ -->
                     </div>
                     <!-- /.row -->
 
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="see-more">
-                                <a href="portfolio-4.html" class="btn btn-template-main">See all our team members</a>
-                            </div>
-                        </div>
-                    </div>
+                
 
                 </div>
                 <!-- /.container -->
             </section>
 
             
-
-            <section class="bar background-pentagon no-mb">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="heading text-center">
-                                <h2>Testimonials</h2>
-                            </div>
-
-                            <p class="lead">We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us.</p>
-
-
-                            <!-- *** TESTIMONIALS CAROUSEL ***
- _________________________________________________________ -->
-
-                            <ul class="owl-carousel testimonials same-height-row">
-                                <li class="item">
-                                    <div class="testimonial same-height-always">
-                                        <div class="text">
-                                            <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown
-                                                belly, slightly domed and divided by arches into stiff sections.</p>
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="icon"><i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="name-picture">
-                                                <img class="" alt="" src="fcss/img/person-1.jpg">
-                                                <h5>John McIntyre</h5>
-                                                <p>CEO, TransTech</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="testimonial same-height-always">
-                                        <div class="text">
-                                            <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked. "What's happened
-                                                to me? " he thought. It wasn't a dream.</p>
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="icon"><i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="name-picture">
-                                                <img class="" alt="" src="fcss/img/person-2.jpg">
-                                                <h5>John McIntyre</h5>
-                                                <p>CEO, TransTech</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="testimonial same-height-always">
-                                        <div class="text">
-                                            <p>His room, a proper human room although a little too small, lay peacefully between its four familiar walls.</p>
-
-                                            <p>A collection of textile samples lay spread out on the table - Samsa was a travelling salesman - and above it there hung a picture that he had recently cut out of an illustrated magazine and housed in a nice,
-                                                gilded frame.</p>
-                                        </div>
-                                        <div class="bottom">
-                                            <div class="icon"><i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="name-picture">
-                                                <img class="" alt="" src="fcss/img/person-3.png">
-                                                <h5>John McIntyre</h5>
-                                                <p>CEO, TransTech</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="testimonial same-height-always">
-                                        <div class="text">
-                                            <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                                weather. Drops of rain could be heard hitting the pane, which made him feel quite sad.</p>
-                                        </div>
-
-                                        <div class="bottom">
-                                            <div class="icon"><i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="name-picture">
-                                                <img class="" alt="" src="fcss/img/person-4.jpg">
-                                                <h5>John McIntyre</h5>
-                                                <p>CEO, TransTech</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="item">
-                                    <div class="testimonial same-height-always">
-                                        <div class="text">
-                                            <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned to look out the window at the dull
-                                                weather. Drops of rain could be heard hitting the pane, which made him feel quite sad. Gregor then turned to look out the window at the dull weather. Drops of rain could be heard hitting the pane, which
-                                                made him feel quite sad.</p>
-                                        </div>
-
-                                        <div class="bottom">
-                                            <div class="icon"><i class="fa fa-quote-left"></i>
-                                            </div>
-                                            <div class="name-picture">
-                                                <img class="" alt="" src="fcss/img/person-4.jpg">
-                                                <h5>John McIntyre</h5>
-                                                <p>CEO, TransTech</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                            <!-- /.owl-carousel -->
-
-                            <!-- *** TESTIMONIALS CAROUSEL END *** -->
                         </div>
 
                     </div>
@@ -851,7 +503,7 @@ _________________________________________________________ -->
                     <h3>¿Te gustaria unirte a nuestro equipo y publicar tus Cursos o Diplomados?</h3>
                 </div>
                 <div class="col-md-4 col-sm-12">
-                    <a href="#" class="btn btn-template-transparent-primary">Envianos un email</a>
+                    <a href="Fcontacto" class="btn btn-template-transparent-primary">Dejanos un mensaje</a>
                 </div>
             </div>
         </div>
@@ -872,7 +524,7 @@ _________________________________________________________ -->
                 <div class="col-md-6 col-sm-6">
                     <h4>Acerca de Nosotros</h4>
 
-                    <p>Somos una empresa joven, que ofrece la plataforma "Alku" para la difusion de Cursos, Diplomados y Convocatorias. </p>
+                    <p>PH3 es una empresa joven creada en Merida, Yucatan., en el 2017 y el giro es el desarrollo de aplicaciones Web y Moviles. La aplicacion desarrollada para este sitio es ALKU, una plataforma de vinculación de Cursos, Diplomados y Convocatorias. </p>
 
 
                     
@@ -913,7 +565,7 @@ _________________________________________________________ -->
                         <strong>Yucatan, Mexico</strong>
                     </p>
 
-                    <a href="contact.html" class="btn btn-small btn-template-main">Ir a la pagina de Contacto</a>
+                    <a href="Fcontacto" class="btn btn-small btn-template-main">Ir a la pagina de Contacto</a>
 
                     <hr class="hidden-md hidden-lg hidden-sm">
 
