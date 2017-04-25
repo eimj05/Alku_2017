@@ -369,7 +369,7 @@ _________________________________________________________ -->
                                 <div class="content">
                                     <h4><a href="{{ url('Fcursoslist') }}">Cursos</a></h4>
                                     </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
+                                    <p class="intro">Los Cursos permiten que adquieras nuevas ideas practicas al igual que la satisfaccion del crecimiento a nivel profesional.</p>
                                     </p>
                                 </div>
                             </div>
@@ -393,7 +393,7 @@ _________________________________________________________ -->
                                 <div class="content">
                                     <h4><a href="{{ url('Fdiplomadoslist') }}">Diplomados</a></h4>
                                     </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
+                                    <p class="intro">Los Diplomados nos permiten profundizar y/o actulizarnos en temas especificos con la finalidad de afianzar conocimientos en áreas donde las necesidades de la sociedad lo ameritan. </p>
                                     </p>
                                 </div>
                             </div>
@@ -417,7 +417,7 @@ _________________________________________________________ -->
                                 <div class="content">
                                     <h4><a href="{{ url('Fconvocatoriaslist') }}">Convocatorias</a></h4>
                                     </p>
-                                    <p class="intro">Fifth abundantly made Give sixth hath. Cattle creature i be don't them behold green moved fowl Moved life us beast good yielding. Have bring.</p>
+                                    <p class="intro">Las Convocatorias son publicaciones publicas o privadas que convocan a las personas para que sean informados de algun tramite o participen en alguno concurso para obtener los beneficios de dicho evento.</p>
                                     </p>
                                 </div>
                             </div>
@@ -492,7 +492,7 @@ _________________________________________________________ -->
                 <div class="col-md-6 col-sm-6">
                     <h4>Acerca de Nosotros</h4>
 
-                    <p>Somos una empresa joven, que ofrece la plataforma "Alku" para la difusion de Cursos, Diplomados y Convocatorias. </p>
+                    <p>PH3 es una empresa joven creada en Merida, Yucatan., en el 2017 y el giro es el desarrollo de aplicaciones Web y Moviles. La aplicacion desarrollada para este sitio es ALKU, una plataforma de vinculación de Cursos, Diplomados y Convocatorias. </p>
 
 
                     
