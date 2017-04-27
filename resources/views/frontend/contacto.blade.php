@@ -228,9 +228,9 @@ _________________________________________________________ -->
                                 <h2>Aqui estamos para ayudarte</h2>
                             </div>
 
-                            <p class="lead"> ¿Necesitas ayuda? Informacion adicional sobre algunos de nuestros Cursos, Diplomados o Convocatorias, Te invitamos a dejarnos un mensaje con tus datos y la informacion requerida. </p>
-                             <p class="lead"> ¿Interesado en ofertar Cursos o Diplomados? Registrate y dejanos un mensaje con tus datos, nosotros te contactaremos a la brevedad posible.</p>
-                            <p> Por favor sientete libre de contactarnos, Nuestro cento de servicio trabaja para resolver tus dudas lo mas pronto posible.</p>
+                            <p class="lead"> ¿Necesitas ayuda? Información adicional sobre algunos de nuestros Cursos, Diplomados o Convocatorias, Te invitamos a dejarnos un mensaje con tus datos y la información requerida. </p>
+                             <p class="lead"> ¿Interesado en ofertar Cursos o Diplomados? Regístrate y déjanos un mensaje con tus datos, nosotros te contactaremos a la brevedad posible.</p>
+                            <p> Por favor siéntete libre de contactarnos, Nuestro centro de servicio trabaja para resolver tus dudas lo más pronto posible.</p>
 
                             <div class="heading">
                                 <h3>Formulario de Contacto</h3>
@@ -306,7 +306,7 @@ _________________________________________________________ -->
 
                             <h3 class="text-uppercase">Soporte Tecnico</h3>
 
-                            <p class="text-muted">Por favor sientete libre de enviarnos un email y te contactaremos lo mas pronto posible.</p>
+                            <p class="text-muted">Por favor siéntete libre de enviarnos un email y te contactaremos lo más pronto posible.</p>
                             <ul>
                                 <li><strong><a href="mailto:">alku@ph3.com.mx</a></strong>
                                 </li>

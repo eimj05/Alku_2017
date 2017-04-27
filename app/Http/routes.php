@@ -40,9 +40,7 @@ Route::get('/', function () {
         return view('frontend.acerca'); 
     });
 
-    Route::get('Fservicios', function (){
-        return view('frontend.fservicios'); 
-    });
+        
 
 
    Route::get('Fcursoslist', 'FrontendController@cursosindex');

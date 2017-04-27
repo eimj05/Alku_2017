@@ -300,7 +300,7 @@ _________________________________________________________ -->
                                     <i class="fa fa-area-chart"></i>
                                 </div>
                                 <h3><a href="{{ url('Fdiplomadoslist') }}">Diplomados</a></h3>
-                                <p>Contamos con una amplia gama de Diplomados de diferentes intereses, tales como Diseño Web, Marketing, Seguridad Informatica.</p>
+                                <p>Contamos con una amplia gama de Diplomados de diferentes intereses, tales como Diseño Web, Marketing, Seguridad Informática.</p>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -328,7 +328,7 @@ _________________________________________________________ -->
                         <div class="icon icon-lg"><i class="fa fa-file-code-o"></i>
                         </div>
                         <h3 class="text-uppercase">¿Te gustaria ver el contenido desde tu Smartphone?</h3>
-                        <p class="lead">Descarga nuestra aplicacion desde Google Play, Buscanos como Alku</p>
+                        <p class="lead">Descarga nuestra aplicación desde Google Play, Búscanos como ALKU</p>
                         <!--<p class="text-center">
                             <a href="index2.html" class="btn btn-template-transparent-black btn-lg">Check other homepage</a>
                         </p>-->
@@ -346,7 +346,7 @@ _________________________________________________________ -->
                         <h2>¿Que Ofrece nuestra plataforma?</h2>
                     </div>
 
-                    <p class="lead">    Alku es una plataforma digital que su objetivo principal es la difusion y vinculacion de Cursos, Diplomados y Convocatorias, con nosotros encontraras la oferta mas actual del mercado. Proximamente vinculo con diferentes empresas para bolsa de trabajo. <span class="accent">Checa nuestras ofertas!</span>
+                    <p class="lead"> ALKU es una plataforma digital que su objetivo principal es la difusión y vinculación de Cursos, Diplomados y Convocatorias, con nosotros encontraras la oferta más actual del mercado. Próximamente vínculo con diferentes empresas para bolsa de trabajo.<span class="accent">¡Checa nuestras ofertas!</span>
                     </p>
 
                     <!-- *** BLOG HOMEPAGE ***
@@ -369,7 +369,7 @@ _________________________________________________________ -->
                                 <div class="content">
                                     <h4><a href="{{ url('Fcursoslist') }}">Cursos</a></h4>
                                     </p>
-                                    <p class="intro">Los Cursos permiten que adquieras nuevas ideas practicas al igual que la satisfaccion del crecimiento a nivel profesional.</p>
+                                    <p class="intro">Los Cursos permiten que adquieras nuevas ideas practicas al igual que la satisfacción del crecimiento a nivel profesional.</p>
                                     </p>
                                 </div>
                             </div>
@@ -393,7 +393,7 @@ _________________________________________________________ -->
                                 <div class="content">
                                     <h4><a href="{{ url('Fdiplomadoslist') }}">Diplomados</a></h4>
                                     </p>
-                                    <p class="intro">Los Diplomados nos permiten profundizar y/o actulizarnos en temas especificos con la finalidad de afianzar conocimientos en áreas donde las necesidades de la sociedad lo ameritan. </p>
+                                    <p class="intro">Los Diplomados nos permiten profundizar y/o actualizarnos en temas específicos con la finalidad de afianzar conocimientos en áreas donde las necesidades de la sociedad lo ameritan.</p>
                                     </p>
                                 </div>
                             </div>
@@ -417,7 +417,7 @@ _________________________________________________________ -->
                                 <div class="content">
                                     <h4><a href="{{ url('Fconvocatoriaslist') }}">Convocatorias</a></h4>
                                     </p>
-                                    <p class="intro">Las Convocatorias son publicaciones publicas o privadas que convocan a las personas para que sean informados de algun tramite o participen en alguno concurso para obtener los beneficios de dicho evento.</p>
+                                    <p class="intro">Las Convocatorias son publicaciones públicas o privadas que convocan a las personas para que sean informados de algún tramite o participen en alguno concurso para obtener los beneficios de dicho evento.</p>
                                     </p>
                                 </div>
                             </div>
@@ -440,7 +440,7 @@ _________________________________________________________ -->
                                 <div class="content">
                                     <h4><a href="blog-post.html">Bolsa de Trabajo</a></h4>
                                     </p>
-                                    <p class="intro">Vinculacion con las mejores ofertas laborales.  ¡¡¡ Proximamente !!!</p>
+                                    <p class="intro">Vinculación con las mejores ofertas laborales.  ¡¡¡ Próximamente !!!</p>
                                     </p>
                                 </div>
                             </div>
@@ -492,7 +492,7 @@ _________________________________________________________ -->
                 <div class="col-md-6 col-sm-6">
                     <h4>Acerca de Nosotros</h4>
 
-                    <p>PH3 es una empresa joven creada en Merida, Yucatan., en el 2017 y el giro es el desarrollo de aplicaciones Web y Moviles. La aplicacion desarrollada para este sitio es ALKU, una plataforma de vinculación de Cursos, Diplomados y Convocatorias. </p>
+                    <p>PH3 es una empresa joven creada en Mérida, Yucatán., en el 2017 y el giro es el desarrollo de aplicaciones Web y Móviles. La aplicación desarrollada para este sitio es ALKU, una plataforma de vinculación de Cursos, Diplomados y Convocatorias. </p>
 
 
                     
@@ -533,7 +533,7 @@ _________________________________________________________ -->
                         <strong>Yucatan, Mexico</strong>
                     </p>
 
-                    <a href="contact.html" class="btn btn-small btn-template-main">Ir a la pagina de Contacto</a>
+                    <a href="Fcontacto" class="btn btn-small btn-template-main">Ir a la pagina de Contacto</a>
 
                     <hr class="hidden-md hidden-lg hidden-sm">
 

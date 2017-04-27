@@ -230,7 +230,7 @@ _________________________________________________________ -->
                                 <h2>Acerca de Ph3 y ALKU</h2>
                             </div>
 
-                            <p class="lead">PH3 es una empresa joven creada en Merida, Yucatan., en el 2017 y el giro es el desarrollo de aplicaciones Web y Moviles. ALKU es una plataforma de difusion y vinculación de Cursos, Diplomados y Convocatorias. </p>
+                            <p class="lead">PH3 es una empresa joven creada en Mérida, Yucatán., en el 2017 y el giro es el desarrollo de aplicaciones Web y Móviles. La aplicación desarrollada para este sitio es ALKU, una plataforma de vinculación de Cursos, Diplomados y Convocatorias. </p>
 
                         </div>
                     </div>
@@ -257,7 +257,7 @@ _________________________________________________________ -->
                                                     <img src="fcss/img/template-mac.png" alt="" class="img-responsive">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <p>Contamos con una amplia gama de Cursos de diferentes categorias, tales como: Programacion, Redes, Testing y Diseño.</p>
+                                                    <p>Contamos con una amplia gama de Cursos de diferentes categorías, tales como: Programación, Redes, Testing, idiomas y Diseño.</p>
                                                     <p>Los Cursos son impartidos de forma presencial por personal que cuenta con el conocimiento y amplia experiencia del ramo. </p>
                                                 </div>
                                             </div>
@@ -284,7 +284,7 @@ _________________________________________________________ -->
                                                     <img src="fcss/img/template-easy-customize.png" alt="" class="img-responsive">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <p>Contamos con una amplia gama de Diplomados de diferentes categorias, tales como: Programacion, Redes, Testing y Diseño.</p>
+                                                    <p>Contamos con una amplia gama de Diplomados de diferentes categorías, tales como: Programación, Redes, Testing y Diseño.</p>
                                                     <p>Los Diplomados son impartidos de forma presencial por personal que cuenta con el conocimiento y amplia experiencia del ramo. </p>
                                                 </div>
                                             </div>
@@ -313,7 +313,7 @@ _________________________________________________________ -->
                                                     <img src="fcss/img/template-easy-code.png" alt="" class="img-responsive">
                                                 </div>
                                                 <div class="col-md-8">
-                                                    <p>Contamos con las convocatorias mas atractivas de diferentes dependencias.</p>
+                                                    <p>Contamos con las convocatorias más atractivas de diferentes dependencias.</p>
                                                     <p>Convocatorias de dependencias tales como: SEJUVE, INADEM, entre otras.</p>
                                                 </div>
                                             </div>
@@ -429,7 +429,7 @@ _________________________________________________________ -->
                                     <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                                 </div>
                                 <div class="text">
-                                    <p>Ing. en Electronica egresado del tecnologico., Originario de Merida, Yuc., con experiencia en docencia del area de Sistemas y desarrollo de aplicaciones Android.</p>
+                                    <p>Ing. Industrial Logístico egresado de la UADY, Originario de Mérida, Yuc., con experiencia en docencia del área de Sistemas y desarrollo de aplicaciones Android.</p>
                                 </div>
                             </div>
                             <!-- /.team-member -->
@@ -450,7 +450,7 @@ _________________________________________________________ -->
                                     <a href="#" class="email" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
                                 </div>
                                 <div class="text">
-                                    <p>Lic. en Sistemas egresado de la Universidad Cristobal Colon., Originario de Veracruz, Ver., con experiencia en pruebas de software y desarrollo de aplicaciones Web.</p>
+                                    <p>Lic. en Sistemas egresado de la Universidad Cristóbal Colon., Originario de Veracruz, Ver., con experiencia en pruebas de software y desarrollo de aplicaciones Web.</p>
                                 </div>
                             </div>
                             <!-- /.team-member -->
@@ -524,7 +524,7 @@ _________________________________________________________ -->
                 <div class="col-md-6 col-sm-6">
                     <h4>Acerca de Nosotros</h4>
 
-                    <p>PH3 es una empresa joven creada en Merida, Yucatan., en el 2017 y el giro es el desarrollo de aplicaciones Web y Moviles. La aplicacion desarrollada para este sitio es ALKU, una plataforma de vinculación de Cursos, Diplomados y Convocatorias. </p>
+                    <p>PH3 es una empresa joven creada en Mérida, Yucatán., en el 2017 y el giro es el desarrollo de aplicaciones Web y Móviles. La aplicación desarrollada para este sitio es ALKU, una plataforma de vinculación de Cursos, Diplomados y Convocatorias. </p>
 
 
                     
