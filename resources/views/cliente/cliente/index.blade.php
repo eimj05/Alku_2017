@@ -24,7 +24,7 @@
                     <td>
                         @foreach($roles as $rol)
                         
-                        @if($rol->cliente_id === $item->id)
+                        @if($rol->cliente_id ==  $item->id)
                             {{ $rol->roles1_id }}
                         @endif
                         @endforeach

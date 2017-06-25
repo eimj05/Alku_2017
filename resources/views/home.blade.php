@@ -24,5 +24,5 @@
 				<img src="img/logopro.png" class="img-responsive center-block" alt="Cinque Terre" width="600" height="500">
 			</div>
 		</div>
-	</div>
+	
 @endsection

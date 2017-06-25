@@ -325,8 +325,16 @@ _________________________________________________________ -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="icon icon-lg"><i class="fa fa-file-code-o"></i>
+                        <div class="image" align="center">
+
+                            <a href="https://play.google.com/store/apps/details?id=mx.com.alku.alku">
+                                 <img img src="fcss/img/web_hi_res_512.png" alt="" class="img-responsive">
+                            </a>
+                                        
                         </div>
+                        <p></p>
+                    
+                    </div>
                         <h3 class="text-uppercase">¿Te gustaria ver el contenido desde tu Smartphone?</h3>
                         <p class="lead">Descarga nuestra aplicación desde Google Play, Búscanos como ALKU</p>
                         <!--<p class="text-center">
